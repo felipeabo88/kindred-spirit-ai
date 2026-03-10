@@ -21,21 +21,22 @@ const FrustrationSection = () => {
           </h2>
         </AnimateOnScroll>
         <AnimateOnScroll delay={100} className="flex flex-wrap justify-center gap-4">
-          {frustrations.map((f) => (
+          {frustrations.map((f, i) => (
             <span
               key={f}
-              className="inline-flex items-center gap-2.5 rounded-full border-2 border-destructive/20 bg-destructive/5 px-7 py-4 text-sm font-semibold text-foreground hover:border-destructive/40 hover:bg-destructive/10 transition-all duration-300"
+              className="inline-flex items-center gap-2.5 rounded-full border-2 border-destructive/20 bg-destructive/5 px-7 py-4 text-sm font-semibold text-foreground hover:border-destructive/50 hover:bg-destructive/10 transition-all duration-300 cursor-default group/pill hover:scale-105 hover:-translate-y-0.5"
+              style={{ animationDelay: `${i * 80}ms` }}
             >
-              <X className="h-4 w-4 text-destructive" />
+              <X className="h-4 w-4 text-destructive group-hover/pill:rotate-90 transition-transform duration-300" />
               {f}
             </span>
           ))}
         </AnimateOnScroll>
         <AnimateOnScroll delay={200}>
-          <div className="rounded-3xl border border-border bg-background p-10 md:p-12 text-center shadow-card hover:shadow-card-hover transition-all duration-300">
+          <div className="rounded-3xl border border-border bg-background p-10 md:p-12 text-center shadow-card hover:shadow-card-hover transition-all duration-500 group/alert hover:-translate-y-1">
             <div className="flex justify-center mb-5">
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-destructive/10">
-                <AlertCircle className="h-7 w-7 text-destructive" />
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-destructive/10 group-hover/alert:bg-destructive/15 group-hover/alert:scale-110 transition-all duration-300">
+                <AlertCircle className="h-7 w-7 text-destructive group-hover/alert:animate-wiggle" />
               </div>
             </div>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">

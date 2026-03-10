@@ -24,12 +24,12 @@ const ProblemSection = () => {
         </AnimateOnScroll>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-7">
           {symptoms.map(({ icon: Icon, label }, i) => (
-            <AnimateOnScroll key={label} delay={i * 80} animation="animate-scale-in">
-              <div className="group flex flex-col items-center gap-5 rounded-3xl bg-section-alt p-7 md:p-10 shadow-card hover:shadow-card-hover transition-all duration-400 text-center cursor-default hover:-translate-y-3 border border-border hover:border-primary/20 h-full">
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-light group-hover:gradient-primary transition-all duration-300 group-hover:shadow-cta group-hover:scale-110">
+            <AnimateOnScroll key={label} delay={i * 100} animation="animate-scale-in">
+              <div className="group flex flex-col items-center gap-5 rounded-3xl bg-section-alt p-7 md:p-10 shadow-card card-interactive text-center cursor-default border border-border hover:border-primary/20 h-full">
+                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-light group-hover:gradient-primary transition-all duration-500 group-hover:shadow-cta group-hover:scale-110 group-hover:-rotate-3">
                   <Icon className="h-7 w-7 text-primary group-hover:text-cta-foreground transition-colors duration-300" />
                 </div>
-                <span className="text-sm md:text-base font-semibold text-foreground leading-snug">{label}</span>
+                <span className="text-sm md:text-base font-semibold text-foreground leading-snug group-hover:text-primary transition-colors duration-300">{label}</span>
               </div>
             </AnimateOnScroll>
           ))}
@@ -39,7 +39,7 @@ const ProblemSection = () => {
             Muitas pessoas começam a evitar movimentos por causa da dor e aos
             poucos perdem a confiança no próprio joelho.
           </p>
-          <Button variant="ctaOutline" size="lg" asChild>
+          <Button variant="ctaOutline" size="lg" className="btn-shine" asChild>
             <a href="#metodo">Descobrir como funciona</a>
           </Button>
         </AnimateOnScroll>
