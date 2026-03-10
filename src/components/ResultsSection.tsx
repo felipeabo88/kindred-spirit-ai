@@ -38,16 +38,16 @@ const ResultsSection = () => {
         </AnimateOnScroll>
         <div className="grid md:grid-cols-3 gap-7">
           {testimonials.map((t, i) => (
-            <AnimateOnScroll key={t.name} delay={i * 120}>
-              <div className="rounded-3xl bg-background p-9 space-y-6 shadow-card hover:shadow-card-hover transition-all duration-400 h-full relative border border-border hover:border-primary/20 hover:-translate-y-2">
-                <Quote className="absolute top-8 right-8 h-12 w-12 text-primary/[0.07]" />
+            <AnimateOnScroll key={t.name} delay={i * 150} animation="animate-slide-up">
+              <div className="group/card rounded-3xl bg-background p-9 space-y-6 shadow-card card-interactive h-full relative border border-border hover:border-primary/20">
+                <Quote className="absolute top-8 right-8 h-12 w-12 text-primary/[0.07] group-hover/card:text-primary/[0.15] group-hover/card:scale-110 transition-all duration-500" />
                 <div className="flex gap-1">
                   {Array.from({ length: t.stars }).map((_, j) => (
-                    <Star key={j} className="h-5 w-5 fill-primary text-primary" />
+                    <Star key={j} className="h-5 w-5 fill-primary text-primary group-hover/card:scale-110 transition-transform duration-300" style={{ transitionDelay: `${j * 50}ms` }} />
                   ))}
                 </div>
                 <p className="text-foreground leading-relaxed italic text-[15px]">"{t.text}"</p>
-                <div className="pt-4 border-t border-border">
+                <div className="pt-4 border-t border-border group-hover/card:border-primary/15 transition-colors duration-300">
                   <p className="font-bold text-foreground text-base">{t.name}</p>
                   <p className="text-sm text-muted-foreground">{t.role}</p>
                 </div>

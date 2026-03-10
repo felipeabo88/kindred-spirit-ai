@@ -45,11 +45,11 @@ const FaqSection = () => {
               <AccordionItem
                 key={i}
                 value={`faq-${i}`}
-                className="rounded-2xl bg-section-alt px-8 border border-border data-[state=open]:shadow-card-hover data-[state=open]:border-primary/20 transition-all duration-300 hover:border-primary/10"
+                className="rounded-2xl bg-section-alt px-8 border border-border data-[state=open]:shadow-card-hover data-[state=open]:border-primary/20 transition-all duration-500 hover:border-primary/10 hover:-translate-y-0.5 group/faq"
               >
                 <AccordionTrigger className="text-left text-base md:text-lg font-bold text-foreground hover:no-underline py-7 gap-4">
                   <span className="flex items-center gap-3">
-                    <HelpCircle className="h-5 w-5 text-primary shrink-0" />
+                    <HelpCircle className="h-5 w-5 text-primary shrink-0 group-hover/faq:rotate-12 transition-transform duration-300" />
                     {faq.q}
                   </span>
                 </AccordionTrigger>
@@ -62,9 +62,9 @@ const FaqSection = () => {
         </AnimateOnScroll>
         <AnimateOnScroll delay={200} className="text-center space-y-4">
           <p className="text-muted-foreground text-lg">Ainda tem dúvidas?</p>
-          <Button variant="cta" size="lg" asChild className="gap-2">
+          <Button variant="cta" size="lg" asChild className="gap-2 btn-shine group">
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="h-5 w-5" />
+              <MessageCircle className="h-5 w-5 group-hover:animate-wiggle" />
               Fale conosco pelo WhatsApp
             </a>
           </Button>
