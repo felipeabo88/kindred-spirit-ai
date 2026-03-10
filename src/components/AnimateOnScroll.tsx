@@ -5,6 +5,7 @@ interface AnimateOnScrollProps {
   className?: string;
   animation?: string;
   delay?: number;
+  threshold?: number;
 }
 
 const AnimateOnScroll = ({
@@ -12,6 +13,7 @@ const AnimateOnScroll = ({
   className = "",
   animation = "animate-fade-in",
   delay = 0,
+  threshold = 0.12,
 }: AnimateOnScrollProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -24,18 +26,21 @@ const AnimateOnScroll = ({
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.15 }
+      { threshold, rootMargin: "0px 0px -40px 0px" }
     );
 
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
-  }, []);
+  }, [threshold]);
 
   return (
     <div
       ref={ref}
-      className={`${className} ${isVisible ? animation : "opacity-0"}`}
-      style={{ animationDelay: `${delay}ms` }}
+      className={`${className} transition-opacity ${isVisible ? animation : "opacity-0 translate-y-4"}`}
+      style={{
+        animationDelay: `${delay}ms`,
+        animationFillMode: "forwards",
+      }}
     >
       {children}
     </div>
