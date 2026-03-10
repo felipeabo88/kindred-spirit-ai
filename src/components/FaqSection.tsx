@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 const faqs = [
   {
@@ -26,27 +27,32 @@ const faqs = [
 
 const FaqSection = () => {
   return (
-    <section className="bg-background py-16 md:py-24">
-      <div className="container max-w-3xl space-y-10">
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center">
-          Perguntas frequentes
-        </h2>
-        <Accordion type="single" collapsible className="space-y-3">
-          {faqs.map((faq, i) => (
-            <AccordionItem
-              key={i}
-              value={`faq-${i}`}
-              className="rounded-xl bg-section-alt px-6 border-none"
-            >
-              <AccordionTrigger className="text-left text-base font-semibold text-foreground hover:no-underline">
-                {faq.q}
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed">
-                {faq.a}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+    <section className="bg-background py-20 md:py-28">
+      <div className="container max-w-3xl space-y-12">
+        <AnimateOnScroll className="text-center space-y-4">
+          <span className="text-sm font-bold uppercase tracking-widest text-primary">Dúvidas</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+            Perguntas frequentes
+          </h2>
+        </AnimateOnScroll>
+        <AnimateOnScroll delay={100}>
+          <Accordion type="single" collapsible className="space-y-3">
+            {faqs.map((faq, i) => (
+              <AccordionItem
+                key={i}
+                value={`faq-${i}`}
+                className="rounded-2xl bg-section-alt px-6 border-none shadow-card data-[state=open]:shadow-card-hover transition-shadow"
+              >
+                <AccordionTrigger className="text-left text-base md:text-lg font-bold text-foreground hover:no-underline py-5">
+                  {faq.q}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed pb-5">
+                  {faq.a}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </AnimateOnScroll>
       </div>
     </section>
   );
