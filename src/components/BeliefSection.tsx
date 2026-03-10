@@ -16,51 +16,53 @@ const truths = [
 
 const BeliefSection = () => {
   return (
-    <section className="bg-background py-24 md:py-32">
-      <div className="container max-w-4xl space-y-14">
-        <AnimateOnScroll className="text-center space-y-4 max-w-3xl mx-auto">
-          <span className="text-sm font-bold uppercase tracking-[0.2em] text-primary font-body">Mude sua perspectiva</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground leading-tight">
+    <section className="bg-background py-24 md:py-36 relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-80 h-80 rounded-full bg-primary/[0.03] blur-3xl" />
+      <div className="container max-w-4xl space-y-16">
+        <AnimateOnScroll className="text-center space-y-5 max-w-3xl mx-auto">
+          <span className="inline-block text-sm font-bold uppercase tracking-[0.2em] text-primary font-body bg-primary/10 px-4 py-1.5 rounded-full">Mude sua perspectiva</span>
+          <h2 className="text-3xl md:text-4xl lg:text-[3.25rem] font-extrabold text-foreground leading-tight">
             A dor no joelho nem sempre significa que você precisa parar de se
             movimentar
           </h2>
         </AnimateOnScroll>
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-7">
           <AnimateOnScroll animation="animate-fade-in-left">
-            <div className="space-y-6 rounded-3xl bg-section-alt p-9 shadow-card h-full border border-destructive/10">
-              <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-destructive/10">
-                  <XCircle className="h-5 w-5 text-destructive" />
+            <div className="space-y-7 rounded-3xl bg-section-alt p-9 md:p-10 shadow-card h-full border border-destructive/10 hover:shadow-card-hover transition-all duration-300">
+              <div className="flex items-center gap-3.5">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-destructive/10">
+                  <XCircle className="h-6 w-6 text-destructive" />
                 </div>
                 <h3 className="font-bold text-xl text-foreground font-heading">Crenças comuns</h3>
               </div>
-              <ul className="space-y-4">
+              <ul className="space-y-5">
                 {myths.map((m) => (
-                  <li key={m} className="flex items-center gap-3 text-muted-foreground">
-                    <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-destructive/10">
+                  <li key={m} className="flex items-center gap-3.5 text-muted-foreground">
+                    <span className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-destructive/10">
                       <XCircle className="h-4 w-4 text-destructive" />
                     </span>
-                    <span className="line-through">{m}</span>
+                    <span className="line-through text-base">{m}</span>
                   </li>
                 ))}
               </ul>
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="animate-fade-in-right">
-            <div className="space-y-6 rounded-3xl p-9 gradient-primary text-cta-foreground h-full shadow-cta">
-              <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-cta-foreground/20">
-                  <CheckCircle className="h-5 w-5" />
+            <div className="space-y-7 rounded-3xl p-9 md:p-10 gradient-primary text-cta-foreground h-full shadow-cta hover:shadow-cta-hover transition-all duration-300 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-48 h-48 rounded-full bg-cta-foreground/[0.05] blur-3xl" />
+              <div className="flex items-center gap-3.5 relative z-10">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-cta-foreground/20">
+                  <CheckCircle className="h-6 w-6" />
                 </div>
                 <h3 className="font-bold text-xl font-heading">O caminho correto</h3>
               </div>
-              <ul className="space-y-4">
+              <ul className="space-y-5 relative z-10">
                 {truths.map((t) => (
-                  <li key={t} className="flex items-center gap-3">
-                    <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-cta-foreground/20">
+                  <li key={t} className="flex items-center gap-3.5">
+                    <span className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-cta-foreground/20">
                       <ArrowRight className="h-4 w-4" />
                     </span>
-                    <span className="font-medium">{t}</span>
+                    <span className="font-semibold text-base">{t}</span>
                   </li>
                 ))}
               </ul>
