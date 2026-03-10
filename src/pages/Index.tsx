@@ -1,12 +1,13 @@
+import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import MethodSection from "@/components/MethodSection";
+import AboutSection from "@/components/AboutSection";
+import HowItWorksSection from "@/components/HowItWorksSection";
 import ProblemSection from "@/components/ProblemSection";
 import FrustrationSection from "@/components/FrustrationSection";
 import BeliefSection from "@/components/BeliefSection";
-import MethodSection from "@/components/MethodSection";
-import HowItWorksSection from "@/components/HowItWorksSection";
-import ResultsSection from "@/components/ResultsSection";
-import AboutSection from "@/components/AboutSection";
 import CtaSection from "@/components/CtaSection";
+import ResultsSection from "@/components/ResultsSection";
 import FaqSection from "@/components/FaqSection";
 import Footer from "@/components/Footer";
 import WhatsAppFab from "@/components/WhatsAppFab";
@@ -14,15 +15,16 @@ import WhatsAppFab from "@/components/WhatsAppFab";
 const Index = () => {
   return (
     <>
+      <Navbar />
       <HeroSection />
+      <MethodSection />
+      <AboutSection />
+      <HowItWorksSection />
       <ProblemSection />
       <FrustrationSection />
       <BeliefSection />
-      <MethodSection />
-      <HowItWorksSection />
-      <ResultsSection />
-      <AboutSection />
       <CtaSection />
+      <ResultsSection />
       <FaqSection />
       <Footer />
       <WhatsAppFab />
