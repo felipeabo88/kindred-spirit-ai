@@ -13,19 +13,20 @@ const symptoms = [
 
 const ProblemSection = () => {
   return (
-    <section className="bg-background py-24 md:py-32 relative overflow-hidden">
-      <div className="container space-y-14">
-        <AnimateOnScroll className="text-center max-w-2xl mx-auto space-y-4">
-          <span className="text-sm font-bold uppercase tracking-[0.2em] text-primary font-body">Identifique seu problema</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground leading-tight">
+    <section className="bg-background py-24 md:py-36 relative overflow-hidden">
+      <div className="absolute top-10 left-0 w-80 h-80 rounded-full bg-destructive/[0.03] blur-3xl" />
+      <div className="container space-y-16">
+        <AnimateOnScroll className="text-center max-w-2xl mx-auto space-y-5">
+          <span className="inline-block text-sm font-bold uppercase tracking-[0.2em] text-primary font-body bg-primary/10 px-4 py-1.5 rounded-full">Identifique seu problema</span>
+          <h2 className="text-3xl md:text-4xl lg:text-[3.25rem] font-extrabold text-foreground leading-tight">
             Você sente dor no joelho quando:
           </h2>
         </AnimateOnScroll>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-7">
           {symptoms.map(({ icon: Icon, label }, i) => (
             <AnimateOnScroll key={label} delay={i * 80} animation="animate-scale-in">
-              <div className="group flex flex-col items-center gap-5 rounded-3xl bg-section-alt p-7 md:p-9 shadow-card hover:shadow-card-hover transition-all duration-300 text-center cursor-default hover:-translate-y-2 border border-border hover:border-primary/20 h-full">
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-light group-hover:gradient-primary transition-all duration-300">
+              <div className="group flex flex-col items-center gap-5 rounded-3xl bg-section-alt p-7 md:p-10 shadow-card hover:shadow-card-hover transition-all duration-400 text-center cursor-default hover:-translate-y-3 border border-border hover:border-primary/20 h-full">
+                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-light group-hover:gradient-primary transition-all duration-300 group-hover:shadow-cta group-hover:scale-110">
                   <Icon className="h-7 w-7 text-primary group-hover:text-cta-foreground transition-colors duration-300" />
                 </div>
                 <span className="text-sm md:text-base font-semibold text-foreground leading-snug">{label}</span>
@@ -33,7 +34,7 @@ const ProblemSection = () => {
             </AnimateOnScroll>
           ))}
         </div>
-        <AnimateOnScroll className="text-center space-y-6 max-w-2xl mx-auto">
+        <AnimateOnScroll className="text-center space-y-7 max-w-2xl mx-auto">
           <p className="text-muted-foreground text-lg leading-relaxed">
             Muitas pessoas começam a evitar movimentos por causa da dor e aos
             poucos perdem a confiança no próprio joelho.

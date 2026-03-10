@@ -7,7 +7,7 @@ import {
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { Button } from "@/components/ui/button";
 import { WHATSAPP_URL } from "@/components/WhatsAppFab";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, HelpCircle } from "lucide-react";
 
 const faqs = [
   {
@@ -30,33 +30,37 @@ const faqs = [
 
 const FaqSection = () => {
   return (
-    <section id="duvidas" className="bg-background py-24 md:py-32">
-      <div className="container max-w-3xl space-y-14">
-        <AnimateOnScroll className="text-center space-y-4">
-          <span className="text-sm font-bold uppercase tracking-[0.2em] text-primary font-body">Dúvidas</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground leading-tight">
+    <section id="duvidas" className="bg-background py-24 md:py-36 relative overflow-hidden">
+      <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-primary/[0.03] blur-3xl" />
+      <div className="container max-w-3xl space-y-16">
+        <AnimateOnScroll className="text-center space-y-5">
+          <span className="inline-block text-sm font-bold uppercase tracking-[0.2em] text-primary font-body bg-primary/10 px-4 py-1.5 rounded-full">Dúvidas</span>
+          <h2 className="text-3xl md:text-4xl lg:text-[3.25rem] font-extrabold text-foreground leading-tight">
             Dúvidas frequentes
           </h2>
         </AnimateOnScroll>
         <AnimateOnScroll delay={100}>
-          <Accordion type="single" collapsible className="space-y-4">
+          <Accordion type="single" collapsible className="space-y-5">
             {faqs.map((faq, i) => (
               <AccordionItem
                 key={i}
                 value={`faq-${i}`}
-                className="rounded-2xl bg-section-alt px-7 border border-border data-[state=open]:shadow-card-hover data-[state=open]:border-primary/20 transition-all"
+                className="rounded-2xl bg-section-alt px-8 border border-border data-[state=open]:shadow-card-hover data-[state=open]:border-primary/20 transition-all duration-300 hover:border-primary/10"
               >
-                <AccordionTrigger className="text-left text-base md:text-lg font-bold text-foreground hover:no-underline py-6">
-                  {faq.q}
+                <AccordionTrigger className="text-left text-base md:text-lg font-bold text-foreground hover:no-underline py-7 gap-4">
+                  <span className="flex items-center gap-3">
+                    <HelpCircle className="h-5 w-5 text-primary shrink-0" />
+                    {faq.q}
+                  </span>
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed pb-6 text-[15px]">
+                <AccordionContent className="text-muted-foreground leading-relaxed pb-7 text-[15px] pl-8">
                   {faq.a}
                 </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
         </AnimateOnScroll>
-        <AnimateOnScroll delay={200} className="text-center space-y-3">
+        <AnimateOnScroll delay={200} className="text-center space-y-4">
           <p className="text-muted-foreground text-lg">Ainda tem dúvidas?</p>
           <Button variant="cta" size="lg" asChild className="gap-2">
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
