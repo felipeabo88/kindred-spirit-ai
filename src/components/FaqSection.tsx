@@ -5,6 +5,9 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
+import { Button } from "@/components/ui/button";
+import { WHATSAPP_URL } from "@/components/WhatsAppFab";
+import { MessageCircle } from "lucide-react";
 
 const faqs = [
   {
@@ -27,31 +30,40 @@ const faqs = [
 
 const FaqSection = () => {
   return (
-    <section className="bg-background py-20 md:py-28">
-      <div className="container max-w-3xl space-y-12">
+    <section id="duvidas" className="bg-background py-24 md:py-32">
+      <div className="container max-w-3xl space-y-14">
         <AnimateOnScroll className="text-center space-y-4">
-          <span className="text-sm font-bold uppercase tracking-widest text-primary">Dúvidas</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
-            Perguntas frequentes
+          <span className="text-sm font-bold uppercase tracking-[0.2em] text-primary font-body">Dúvidas</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground leading-tight">
+            Dúvidas frequentes
           </h2>
         </AnimateOnScroll>
         <AnimateOnScroll delay={100}>
-          <Accordion type="single" collapsible className="space-y-3">
+          <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, i) => (
               <AccordionItem
                 key={i}
                 value={`faq-${i}`}
-                className="rounded-2xl bg-section-alt px-6 border-none shadow-card data-[state=open]:shadow-card-hover transition-shadow"
+                className="rounded-2xl bg-section-alt px-7 border border-border data-[state=open]:shadow-card-hover data-[state=open]:border-primary/20 transition-all"
               >
-                <AccordionTrigger className="text-left text-base md:text-lg font-bold text-foreground hover:no-underline py-5">
+                <AccordionTrigger className="text-left text-base md:text-lg font-bold text-foreground hover:no-underline py-6">
                   {faq.q}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed pb-5">
+                <AccordionContent className="text-muted-foreground leading-relaxed pb-6 text-[15px]">
                   {faq.a}
                 </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
+        </AnimateOnScroll>
+        <AnimateOnScroll delay={200} className="text-center space-y-3">
+          <p className="text-muted-foreground text-lg">Ainda tem dúvidas?</p>
+          <Button variant="cta" size="lg" asChild className="gap-2">
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+              <MessageCircle className="h-5 w-5" />
+              Fale conosco pelo WhatsApp
+            </a>
+          </Button>
         </AnimateOnScroll>
       </div>
     </section>

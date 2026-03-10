@@ -13,19 +13,18 @@ const symptoms = [
 
 const ProblemSection = () => {
   return (
-    <section className="bg-section-alt py-20 md:py-28 relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-1 gradient-primary" />
-      <div className="container space-y-12">
+    <section className="bg-background py-24 md:py-32 relative overflow-hidden">
+      <div className="container space-y-14">
         <AnimateOnScroll className="text-center max-w-2xl mx-auto space-y-4">
-          <span className="text-sm font-bold uppercase tracking-widest text-primary">Identifique seu problema</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+          <span className="text-sm font-bold uppercase tracking-[0.2em] text-primary font-body">Identifique seu problema</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground leading-tight">
             Você sente dor no joelho quando:
           </h2>
         </AnimateOnScroll>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-6">
           {symptoms.map(({ icon: Icon, label }, i) => (
             <AnimateOnScroll key={label} delay={i * 80} animation="animate-scale-in">
-              <div className="group flex flex-col items-center gap-4 rounded-2xl bg-background p-6 md:p-8 shadow-card hover:shadow-card-hover transition-all duration-300 text-center cursor-default hover:-translate-y-1">
+              <div className="group flex flex-col items-center gap-5 rounded-3xl bg-section-alt p-7 md:p-9 shadow-card hover:shadow-card-hover transition-all duration-300 text-center cursor-default hover:-translate-y-2 border border-border hover:border-primary/20 h-full">
                 <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-light group-hover:gradient-primary transition-all duration-300">
                   <Icon className="h-7 w-7 text-primary group-hover:text-cta-foreground transition-colors duration-300" />
                 </div>

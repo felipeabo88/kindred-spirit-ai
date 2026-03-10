@@ -24,26 +24,29 @@ const testimonials = [
 
 const ResultsSection = () => {
   return (
-    <section className="bg-background py-20 md:py-28">
-      <div className="container space-y-14">
+    <section id="depoimentos" className="bg-section-alt py-24 md:py-32">
+      <div className="container space-y-16">
         <AnimateOnScroll className="text-center space-y-4 max-w-2xl mx-auto">
-          <span className="text-sm font-bold uppercase tracking-widest text-primary">Resultados reais</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+          <span className="text-sm font-bold uppercase tracking-[0.2em] text-primary font-body">Depoimentos</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground leading-tight">
             Pessoas que recuperaram seus joelhos
           </h2>
+          <p className="text-lg text-muted-foreground">
+            Melhor do que eu falar sobre mim — veja o que estão falando:
+          </p>
         </AnimateOnScroll>
         <div className="grid md:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
-            <AnimateOnScroll key={t.name} delay={i * 100}>
-              <div className="rounded-2xl bg-section-alt p-7 space-y-5 shadow-card hover:shadow-card-hover transition-all duration-300 h-full relative">
-                <Quote className="absolute top-6 right-6 h-8 w-8 text-primary/10" />
+            <AnimateOnScroll key={t.name} delay={i * 120}>
+              <div className="rounded-3xl bg-background p-8 space-y-5 shadow-card hover:shadow-card-hover transition-all duration-300 h-full relative border border-border hover:border-primary/20">
+                <Quote className="absolute top-7 right-7 h-10 w-10 text-primary/[0.08]" />
                 <div className="flex gap-0.5">
                   {Array.from({ length: t.stars }).map((_, j) => (
                     <Star key={j} className="h-5 w-5 fill-primary text-primary" />
                   ))}
                 </div>
-                <p className="text-foreground leading-relaxed italic">"{t.text}"</p>
-                <div className="pt-2 border-t border-border">
+                <p className="text-foreground leading-relaxed italic text-[15px]">"{t.text}"</p>
+                <div className="pt-3 border-t border-border">
                   <p className="font-bold text-foreground">{t.name}</p>
                   <p className="text-sm text-muted-foreground">{t.role}</p>
                 </div>

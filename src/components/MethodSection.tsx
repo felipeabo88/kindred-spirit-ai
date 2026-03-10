@@ -12,31 +12,36 @@ const steps = [
 
 const MethodSection = () => {
   return (
-    <section id="metodo" className="bg-background py-20 md:py-28 relative">
-      <div className="container space-y-14">
+    <section id="metodo" className="bg-section-alt py-24 md:py-32 relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-1 gradient-primary" />
+      <div className="absolute top-20 right-0 w-80 h-80 rounded-full bg-primary/[0.03] blur-3xl" />
+      <div className="container space-y-16">
         <AnimateOnScroll className="text-center space-y-4 max-w-2xl mx-auto">
-          <span className="text-sm font-bold uppercase tracking-widest text-primary">Nosso método</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+          <span className="text-sm font-bold uppercase tracking-[0.2em] text-primary font-body">Nosso método</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground leading-tight">
             Método de recuperação do joelho
           </h2>
+          <p className="text-muted-foreground text-lg mt-2">
+            Minha missão é te ajudar a recuperar seu movimento respeitando esses 4 pilares:
+          </p>
         </AnimateOnScroll>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {steps.map(({ icon: Icon, title, desc }, i) => (
-            <AnimateOnScroll key={title} delay={i * 100} animation="animate-fade-in">
-              <div className="group relative rounded-2xl bg-section-alt p-7 space-y-5 hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 h-full border border-transparent hover:border-primary/20">
-                <span className="absolute top-5 right-5 text-5xl font-extrabold text-primary/[0.07]">
+            <AnimateOnScroll key={title} delay={i * 120} animation="animate-scale-in">
+              <div className="group relative rounded-3xl bg-background p-8 space-y-5 shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-2 h-full border border-border hover:border-primary/30">
+                <span className="absolute top-6 right-6 text-6xl font-extrabold text-primary/[0.06] font-heading">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl gradient-primary shadow-cta">
-                  <Icon className="h-6 w-6 text-cta-foreground" />
+                <div className="flex h-16 w-16 items-center justify-center rounded-2xl gradient-primary shadow-cta">
+                  <Icon className="h-7 w-7 text-cta-foreground" />
                 </div>
-                <h3 className="text-lg font-bold text-foreground">{title}</h3>
+                <h3 className="text-lg font-bold text-foreground font-heading">{title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{desc}</p>
               </div>
             </AnimateOnScroll>
           ))}
         </div>
-        <AnimateOnScroll className="text-center">
+        <AnimateOnScroll className="text-center pt-4">
           <Button variant="cta" size="xl" className="group" asChild>
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
               Começar consultoria online
