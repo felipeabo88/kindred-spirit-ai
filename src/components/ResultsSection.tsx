@@ -8,9 +8,6 @@ import client3 from "@/assets/clients/client-3.png";
 import client4 from "@/assets/clients/client-4.png";
 import client5 from "@/assets/clients/client-5.png";
 import client6 from "@/assets/clients/client-6.png";
-import client7 from "@/assets/clients/client-7.png";
-import client8 from "@/assets/clients/client-8.png";
-import client9 from "@/assets/clients/client-9.png";
 
 const testimonials = [
   {
@@ -50,8 +47,6 @@ const testimonials = [
     stars: 5,
   },
 ];
-
-const allPhotos = [client1, client2, client3, client4, client5, client6, client7, client8, client9];
 
 const StarRating = ({ count }: { count: number }) => (
   <div className="flex gap-0.5">
@@ -93,39 +88,10 @@ const ResultsSection = () => {
 
   return (
     <section id="depoimentos" className="bg-section-alt py-24 md:py-36 relative overflow-hidden">
-      {/* Decorative blobs */}
       <div className="absolute top-0 left-0 w-96 h-96 rounded-full bg-primary/[0.03] blur-3xl" />
       <div className="absolute bottom-0 right-0 w-72 h-72 rounded-full bg-primary/[0.04] blur-3xl" />
 
       <div className="container space-y-14">
-        {/* Avatar strip */}
-        <AnimateOnScroll className="flex flex-col items-center gap-6">
-          <div className="flex -space-x-3">
-            {allPhotos.map((photo, i) => (
-              <div
-                key={i}
-                className="relative h-12 w-12 md:h-14 md:w-14 rounded-full border-[3px] border-background shadow-card overflow-hidden transition-transform duration-300 hover:scale-110 hover:z-10"
-              >
-                <img
-                  src={photo}
-                  alt={`Cliente ${i + 1}`}
-                  className="h-full w-full object-cover"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-            <div className="relative h-12 w-12 md:h-14 md:w-14 rounded-full border-[3px] border-background shadow-card overflow-hidden flex items-center justify-center bg-primary/10 text-primary font-bold text-xs">
-              +50
-            </div>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <StarRating count={5} />
-            <span className="text-sm text-muted-foreground font-medium ml-1">
-              4.9 no Google · +50 avaliações
-            </span>
-          </div>
-        </AnimateOnScroll>
-
         {/* Header */}
         <AnimateOnScroll className="text-center space-y-4 max-w-3xl mx-auto">
           <span className="inline-block text-sm font-bold uppercase tracking-[0.2em] text-primary font-body bg-primary/10 px-4 py-1.5 rounded-full">
@@ -174,15 +140,12 @@ const ResultsSection = () => {
                 >
                   <AnimateOnScroll delay={i * 120} animation="animate-slide-up">
                     <div className="group/card rounded-2xl bg-background p-7 md:p-8 space-y-5 shadow-card card-interactive h-full border border-border hover:border-primary/20 transition-all duration-300">
-                      {/* Stars */}
                       <StarRating count={t.stars} />
 
-                      {/* Quote */}
                       <p className="text-foreground leading-relaxed text-[15px] min-h-[80px]">
                         "{t.text}"
                       </p>
 
-                      {/* Author */}
                       <div className="flex items-center gap-3 pt-4 border-t border-border group-hover/card:border-primary/15 transition-colors duration-300">
                         <div className="h-12 w-12 rounded-full overflow-hidden shrink-0 border-2 border-primary/20 shadow-sm">
                           <img
