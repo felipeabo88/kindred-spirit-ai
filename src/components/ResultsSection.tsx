@@ -93,17 +93,17 @@ const ResultsSection = () => {
         </AnimateOnScroll>
 
         {/* Avatar strip */}
-        <AnimateOnScroll className="flex justify-center items-center gap-[-8px]">
+        <AnimateOnScroll className="flex justify-center items-center">
           <div className="flex -space-x-3">
-            {testimonials.map((t, i) => (
+            {[...testimonials.map(t => t.photo), ...extraAvatars].map((photo, i) => (
               <div
-                key={t.name}
+                key={i}
                 className="relative h-14 w-14 md:h-16 md:w-16 rounded-full border-[3px] border-background shadow-card overflow-hidden transition-transform duration-300 hover:scale-110 hover:z-10"
                 style={{ animationDelay: `${i * 80}ms` }}
               >
                 <img
-                  src={t.photo}
-                  alt={t.name}
+                  src={photo}
+                  alt={`Aluno ${i + 1}`}
                   className="h-full w-full object-cover"
                   loading="lazy"
                 />
@@ -111,7 +111,7 @@ const ResultsSection = () => {
             ))}
           </div>
           <span className="ml-4 text-sm text-muted-foreground font-medium">
-            +{testimonials.length} alunos transformados
+            +{testimonials.length + extraAvatars.length} alunos transformados
           </span>
         </AnimateOnScroll>
 
