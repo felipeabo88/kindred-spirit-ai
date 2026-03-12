@@ -2,7 +2,7 @@ import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect, useCallback } from "react";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 
-const testimonials = [
+const rawTestimonials = [
   {
     name: "Carlos M.",
     text: "Tinha dor no joelho há 3 anos e já tinha tentado de tudo. Com a consultoria online, em 2 meses voltei a correr sem dor. Recomendo demais!",
@@ -46,6 +46,15 @@ const testimonials = [
     avatar: "MC",
   },
 ];
+
+// Sort: 5-star first, then by text length (longer = more detailed = featured)
+const FEATURED_MIN_LENGTH = 100;
+const testimonials = [...rawTestimonials]
+  .sort((a, b) => {
+    if (b.stars !== a.stars) return b.stars - a.stars;
+    return b.text.length - a.text.length;
+  })
+  .map((t) => ({ ...t, featured: t.stars === 5 && t.text.length >= FEATURED_MIN_LENGTH }));
 
 const GOOGLE_LOGO = (
   <svg viewBox="0 0 24 24" className="h-5 w-5" aria-label="Google">
