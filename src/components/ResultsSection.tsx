@@ -153,30 +153,44 @@ const ResultsSection = () => {
                   style={{ width: `${100 / itemsPerView}%` }}
                 >
                   <AnimateOnScroll delay={i * 100} animation="animate-slide-up">
-                    <div className="group/card rounded-2xl bg-background p-7 md:p-8 space-y-5 shadow-card card-interactive h-full relative border border-border hover:border-primary/20">
+                    <div className={`group/card rounded-2xl bg-background p-7 md:p-8 space-y-5 shadow-card card-interactive h-full relative border transition-all duration-300 ${
+                      t.featured
+                        ? "border-primary/30 ring-1 ring-primary/10 shadow-cta"
+                        : "border-border hover:border-primary/20"
+                    }`}>
+                      {/* Featured badge */}
+                      {t.featured && (
+                        <div className="absolute -top-3 left-6 bg-primary text-primary-foreground text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-cta">
+                          ⭐ Destaque
+                        </div>
+                      )}
                       {/* Google icon */}
                       <div className="absolute top-6 right-6 opacity-60 group-hover/card:opacity-100 transition-opacity duration-300">
                         {GOOGLE_LOGO}
                       </div>
                       {/* Quote */}
-                      <Quote className="h-8 w-8 text-primary/10 group-hover/card:text-primary/20 transition-colors duration-300" />
+                      <Quote className={`h-8 w-8 transition-colors duration-300 ${t.featured ? "text-primary/20" : "text-primary/10 group-hover/card:text-primary/20"}`} />
                       {/* Stars */}
                       <div className="flex gap-0.5">
                         {Array.from({ length: t.stars }).map((_, j) => (
                           <Star
                             key={j}
-                            className="h-4.5 w-4.5 fill-[#FBBC05] text-[#FBBC05] group-hover/card:scale-110 transition-transform duration-300"
+                            className={`fill-[#FBBC05] text-[#FBBC05] group-hover/card:scale-110 transition-transform duration-300 ${t.featured ? "h-5 w-5" : "h-4 w-4"}`}
                             style={{ transitionDelay: `${j * 40}ms` }}
                           />
                         ))}
                       </div>
                       {/* Text */}
-                      <p className="text-foreground leading-relaxed text-[15px] line-clamp-5">
+                      <p className={`text-foreground leading-relaxed ${t.featured ? "text-base font-medium" : "text-[15px] line-clamp-5"}`}>
                         "{t.text}"
                       </p>
                       {/* Author */}
                       <div className="flex items-center gap-3 pt-3 border-t border-border group-hover/card:border-primary/15 transition-colors duration-300">
-                        <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-sm font-bold text-primary shrink-0">
+                        <div className={`rounded-full flex items-center justify-center font-bold shrink-0 ${
+                          t.featured
+                            ? "h-11 w-11 bg-primary text-primary-foreground text-sm"
+                            : "h-10 w-10 bg-primary/10 text-primary text-sm"
+                        }`}>
                           {t.avatar}
                         </div>
                         <div>
