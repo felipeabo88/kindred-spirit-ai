@@ -157,7 +157,6 @@ const ResultsSection = () => {
                         </div>
                         <div>
                           <p className="font-bold text-foreground text-sm">{t.name}</p>
-                          <p className="text-xs text-muted-foreground">Paciente</p>
                         </div>
                       </div>
                     </div>
