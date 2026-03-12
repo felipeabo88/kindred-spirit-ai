@@ -1,4 +1,4 @@
-import { Quote, ChevronLeft, ChevronRight } from "lucide-react";
+import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect, useCallback } from "react";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 
@@ -16,47 +16,65 @@ const testimonials = [
   {
     name: "Carlos M.",
     text: "Tinha dor no joelho há 3 anos e já tinha tentado de tudo. Com a consultoria online, em 2 meses voltei a correr sem dor. Recomendo demais!",
-    avatar: "CM",
     photo: client1,
+    stars: 5,
   },
   {
     name: "Ana P.",
     text: "Achei que seria impossível me recuperar sem ir presencialmente, mas o acompanhamento online foi incrível. Hoje subo escadas sem pensar duas vezes.",
-    avatar: "AP",
     photo: client2,
+    stars: 5,
   },
   {
     name: "Roberto S.",
     text: "A consultoria me deu confiança para voltar a treinar. O método é muito claro e os exercícios são progressivos. Resultado real!",
-    avatar: "RS",
     photo: client3,
+    stars: 5,
   },
   {
     name: "Fernanda L.",
     text: "Depois de uma cirurgia no joelho, encontrei o Felipe e foi a melhor decisão. Profissional atencioso, com método sério. Estou 100% recuperada!",
-    avatar: "FL",
     photo: client4,
+    stars: 5,
   },
   {
     name: "João V.",
     text: "Excelente profissional! Me ajudou a entender minha dor e tratar de forma progressiva. Hoje treino pesado sem nenhum desconforto.",
-    avatar: "JV",
     photo: client5,
+    stars: 5,
   },
   {
     name: "Mariana C.",
     text: "O atendimento online superou minhas expectativas. Felipe é extremamente dedicado e competente. Meus joelhos nunca estiveram tão bem!",
-    avatar: "MC",
     photo: client6,
+    stars: 5,
   },
 ];
 
-const extraAvatars = [client7, client8, client9];
+const allPhotos = [client1, client2, client3, client4, client5, client6, client7, client8, client9];
+
+const StarRating = ({ count }: { count: number }) => (
+  <div className="flex gap-0.5">
+    {Array.from({ length: count }).map((_, i) => (
+      <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
+    ))}
+  </div>
+);
 
 const ResultsSection = () => {
   const [current, setCurrent] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const itemsPerView = typeof window !== "undefined" && window.innerWidth >= 768 ? 3 : 1;
+  const [itemsPerView, setItemsPerView] = useState(1);
+
+  useEffect(() => {
+    const update = () => {
+      setItemsPerView(window.innerWidth >= 1024 ? 3 : window.innerWidth >= 768 ? 2 : 1);
+    };
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
+
   const maxIndex = Math.max(0, testimonials.length - itemsPerView);
 
   const next = useCallback(() => {
@@ -69,50 +87,57 @@ const ResultsSection = () => {
 
   useEffect(() => {
     if (!isAutoPlaying) return;
-    const timer = setInterval(next, 4500);
+    const timer = setInterval(next, 5000);
     return () => clearInterval(timer);
   }, [isAutoPlaying, next]);
 
   return (
     <section id="depoimentos" className="bg-section-alt py-24 md:py-36 relative overflow-hidden">
+      {/* Decorative blobs */}
       <div className="absolute top-0 left-0 w-96 h-96 rounded-full bg-primary/[0.03] blur-3xl" />
       <div className="absolute bottom-0 right-0 w-72 h-72 rounded-full bg-primary/[0.04] blur-3xl" />
 
-      <div className="container space-y-12">
-        {/* Header */}
-        <AnimateOnScroll className="text-center space-y-4 max-w-2xl mx-auto">
-          <span className="inline-block text-sm font-bold uppercase tracking-[0.2em] text-primary font-body bg-primary/10 px-4 py-1.5 rounded-full">
-            Prova social
-          </span>
-          <h2 className="text-3xl md:text-4xl lg:text-[3.25rem] font-extrabold text-foreground leading-tight">
-            Depoimentos
-          </h2>
-          <p className="text-muted-foreground text-lg">
-            Veja o que nossos alunos dizem sobre a transformação que viveram.
-          </p>
-        </AnimateOnScroll>
-
+      <div className="container space-y-14">
         {/* Avatar strip */}
-        <AnimateOnScroll className="flex justify-center items-center">
+        <AnimateOnScroll className="flex flex-col items-center gap-6">
           <div className="flex -space-x-3">
-            {[...testimonials.map(t => t.photo), ...extraAvatars].map((photo, i) => (
+            {allPhotos.map((photo, i) => (
               <div
                 key={i}
-                className="relative h-14 w-14 md:h-16 md:w-16 rounded-full border-[3px] border-background shadow-card overflow-hidden transition-transform duration-300 hover:scale-110 hover:z-10"
-                style={{ animationDelay: `${i * 80}ms` }}
+                className="relative h-12 w-12 md:h-14 md:w-14 rounded-full border-[3px] border-background shadow-card overflow-hidden transition-transform duration-300 hover:scale-110 hover:z-10"
               >
                 <img
                   src={photo}
-                  alt={`Aluno ${i + 1}`}
+                  alt={`Cliente ${i + 1}`}
                   className="h-full w-full object-cover"
                   loading="lazy"
                 />
               </div>
             ))}
+            <div className="relative h-12 w-12 md:h-14 md:w-14 rounded-full border-[3px] border-background shadow-card overflow-hidden flex items-center justify-center bg-primary/10 text-primary font-bold text-xs">
+              +50
+            </div>
           </div>
-          <span className="ml-4 text-sm text-muted-foreground font-medium">
-            +{testimonials.length + extraAvatars.length} alunos transformados
+          <div className="flex items-center gap-1.5">
+            <StarRating count={5} />
+            <span className="text-sm text-muted-foreground font-medium ml-1">
+              4.9 no Google · +50 avaliações
+            </span>
+          </div>
+        </AnimateOnScroll>
+
+        {/* Header */}
+        <AnimateOnScroll className="text-center space-y-4 max-w-3xl mx-auto">
+          <span className="inline-block text-sm font-bold uppercase tracking-[0.2em] text-primary font-body bg-primary/10 px-4 py-1.5 rounded-full">
+            Depoimentos reais
           </span>
+          <h2 className="text-3xl md:text-4xl lg:text-[3.25rem] font-extrabold text-foreground leading-tight">
+            Pessoas que recuperaram o{" "}
+            <span className="text-gradient">movimento do joelho</span>
+          </h2>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Histórias reais de quem deixou a dor para trás e voltou a viver com liberdade.
+          </p>
         </AnimateOnScroll>
 
         {/* Carousel */}
@@ -147,14 +172,19 @@ const ResultsSection = () => {
                   className="flex-shrink-0 px-3"
                   style={{ width: `${100 / itemsPerView}%` }}
                 >
-                  <AnimateOnScroll delay={i * 100} animation="animate-slide-up">
+                  <AnimateOnScroll delay={i * 120} animation="animate-slide-up">
                     <div className="group/card rounded-2xl bg-background p-7 md:p-8 space-y-5 shadow-card card-interactive h-full border border-border hover:border-primary/20 transition-all duration-300">
-                      <Quote className="h-7 w-7 text-primary/10 group-hover/card:text-primary/20 transition-colors duration-300" />
-                      <p className="text-foreground leading-relaxed text-[15px]">
+                      {/* Stars */}
+                      <StarRating count={t.stars} />
+
+                      {/* Quote */}
+                      <p className="text-foreground leading-relaxed text-[15px] min-h-[80px]">
                         "{t.text}"
                       </p>
-                      <div className="flex items-center gap-3 pt-3 border-t border-border group-hover/card:border-primary/15 transition-colors duration-300">
-                        <div className="h-11 w-11 rounded-full overflow-hidden shrink-0 border-2 border-primary/20">
+
+                      {/* Author */}
+                      <div className="flex items-center gap-3 pt-4 border-t border-border group-hover/card:border-primary/15 transition-colors duration-300">
+                        <div className="h-12 w-12 rounded-full overflow-hidden shrink-0 border-2 border-primary/20 shadow-sm">
                           <img
                             src={t.photo}
                             alt={t.name}
@@ -164,7 +194,7 @@ const ResultsSection = () => {
                         </div>
                         <div>
                           <p className="font-bold text-foreground text-sm">{t.name}</p>
-                          <p className="text-xs text-muted-foreground">Aluno(a)</p>
+                          <p className="text-xs text-muted-foreground">Paciente</p>
                         </div>
                       </div>
                     </div>
