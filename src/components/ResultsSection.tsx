@@ -2,44 +2,56 @@ import { Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect, useCallback } from "react";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 
+import client1 from "@/assets/clients/client-1.png";
+import client2 from "@/assets/clients/client-2.png";
+import client3 from "@/assets/clients/client-3.png";
+import client4 from "@/assets/clients/client-4.png";
+import client5 from "@/assets/clients/client-5.png";
+import client6 from "@/assets/clients/client-6.png";
+import client7 from "@/assets/clients/client-7.png";
+import client8 from "@/assets/clients/client-8.png";
+import client9 from "@/assets/clients/client-9.png";
+
 const testimonials = [
   {
     name: "Carlos M.",
     text: "Tinha dor no joelho há 3 anos e já tinha tentado de tudo. Com a consultoria online, em 2 meses voltei a correr sem dor. Recomendo demais!",
     avatar: "CM",
-    photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop&crop=face",
+    photo: client1,
   },
   {
     name: "Ana P.",
     text: "Achei que seria impossível me recuperar sem ir presencialmente, mas o acompanhamento online foi incrível. Hoje subo escadas sem pensar duas vezes.",
     avatar: "AP",
-    photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&h=120&fit=crop&crop=face",
+    photo: client2,
   },
   {
     name: "Roberto S.",
     text: "A consultoria me deu confiança para voltar a treinar. O método é muito claro e os exercícios são progressivos. Resultado real!",
     avatar: "RS",
-    photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&h=120&fit=crop&crop=face",
+    photo: client3,
   },
   {
     name: "Fernanda L.",
     text: "Depois de uma cirurgia no joelho, encontrei o Felipe e foi a melhor decisão. Profissional atencioso, com método sério. Estou 100% recuperada!",
     avatar: "FL",
-    photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&h=120&fit=crop&crop=face",
+    photo: client4,
   },
   {
     name: "João V.",
     text: "Excelente profissional! Me ajudou a entender minha dor e tratar de forma progressiva. Hoje treino pesado sem nenhum desconforto.",
     avatar: "JV",
-    photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&h=120&fit=crop&crop=face",
+    photo: client5,
   },
   {
     name: "Mariana C.",
     text: "O atendimento online superou minhas expectativas. Felipe é extremamente dedicado e competente. Meus joelhos nunca estiveram tão bem!",
     avatar: "MC",
-    photo: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=120&h=120&fit=crop&crop=face",
+    photo: client6,
   },
 ];
+
+const extraAvatars = [client7, client8, client9];
 
 const ResultsSection = () => {
   const [current, setCurrent] = useState(0);
@@ -81,17 +93,17 @@ const ResultsSection = () => {
         </AnimateOnScroll>
 
         {/* Avatar strip */}
-        <AnimateOnScroll className="flex justify-center items-center gap-[-8px]">
+        <AnimateOnScroll className="flex justify-center items-center">
           <div className="flex -space-x-3">
-            {testimonials.map((t, i) => (
+            {[...testimonials.map(t => t.photo), ...extraAvatars].map((photo, i) => (
               <div
-                key={t.name}
+                key={i}
                 className="relative h-14 w-14 md:h-16 md:w-16 rounded-full border-[3px] border-background shadow-card overflow-hidden transition-transform duration-300 hover:scale-110 hover:z-10"
                 style={{ animationDelay: `${i * 80}ms` }}
               >
                 <img
-                  src={t.photo}
-                  alt={t.name}
+                  src={photo}
+                  alt={`Aluno ${i + 1}`}
                   className="h-full w-full object-cover"
                   loading="lazy"
                 />
@@ -99,7 +111,7 @@ const ResultsSection = () => {
             ))}
           </div>
           <span className="ml-4 text-sm text-muted-foreground font-medium">
-            +{testimonials.length} alunos transformados
+            +{testimonials.length + extraAvatars.length} alunos transformados
           </span>
         </AnimateOnScroll>
 
