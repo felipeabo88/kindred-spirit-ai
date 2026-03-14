@@ -45,15 +45,25 @@ const AboutSection = () => {
               Sobre o profissional
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Sou especialista em treinamento baseado em <strong className="text-foreground">movimento humano</strong>.
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Ajudo pessoas com dor no joelho a recuperar mobilidade, força e
-              confiança para voltar às suas atividades físicas através de uma{" "}
-              <strong className="text-foreground">consultoria online personalizada</strong>.
+              Me chamo <strong className="text-foreground">Felipe Augusto</strong>, sou Profissional de Educação Física, faixa preta de judô e especialista em <strong className="text-foreground">reabilitação e movimento humano</strong>.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Minha verdadeira motivação é ser um agente da transformação na vida dos meus alunos. Quero impactá-los positivamente e guiá-los na busca por uma vida sem dor e com movimento.
+              Graduado em Educação Física pela Universidade Federal do Rio Grande do Norte (UFRN), com pós-graduação em Fisiologia do Exercício, atualmente também sou estudante de Fisioterapia e possuo certificação internacional em <strong className="text-foreground">NeuroKinetic Therapy (NKT) – Level 1</strong>, um método avançado de avaliação e correção de padrões de movimento.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              Minha trajetória no movimento começou no esporte. Fui atleta de judô por 14 anos, período em que conquistei diversos títulos em competições pelo Brasil e alcancei a faixa preta na modalidade, experiência que consolidou minha compreensão sobre desempenho físico, prevenção de lesões e recuperação funcional.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              Ao longo da minha carreira, busquei constante aperfeiçoamento em áreas relacionadas ao movimento humano, reabilitação e treinamento físico, participando de cursos e formações em diferentes regiões do país.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              Hoje meu trabalho é dedicado a ajudar pessoas que convivem com dores e limitações de movimento, especialmente relacionadas ao joelho, a recuperarem a mobilidade, a confiança no corpo e a liberdade de se movimentar novamente.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              Através da <strong className="text-foreground">consultoria online</strong>, já acompanhei alunos por videoconferência em diferentes países, incluindo Estados Unidos, Alemanha, Holanda, Japão e Argentina, auxiliando pessoas ao redor do mundo a retomarem suas atividades com mais segurança e qualidade de vida.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              Meu foco é sempre identificar a verdadeira causa das dores e disfunções de movimento, aplicando estratégias específicas de correção e fortalecimento para promover uma recuperação segura e duradoura.
             </p>
             <div className="grid grid-cols-3 gap-4 pt-4">
               {stats.map(({ icon: Icon, value, label }) => (
