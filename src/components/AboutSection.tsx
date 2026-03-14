@@ -74,23 +74,21 @@ const AboutSection = () => {
 
             <div className="space-y-4 text-[0.938rem] text-muted-foreground leading-[1.8] font-body">
               <p>
-                Graduado em Educação Física pela Universidade Federal do Rio Grande do Norte (UFRN), com pós-graduação em Fisiologia do Exercício, atualmente também sou estudante de Fisioterapia e possuo certificação internacional em{" "}
-                <strong className="text-foreground font-semibold">NeuroKinetic Therapy (NKT) – Level 1</strong>, um método avançado de avaliação e correção de padrões de movimento.
+                Me chamo Felipe Augusto, sou Profissional de Educação Física, faixa preta de judô e especialista em{" "}
+                <strong className="text-foreground font-semibold">reabilitação e movimento humano</strong>.
               </p>
               <p>
-                Minha trajetória no movimento começou no esporte. Fui atleta de judô por 14 anos, período em que conquistei diversos títulos em competições pelo Brasil e alcancei a faixa preta na modalidade — experiência que consolidou minha compreensão sobre desempenho físico, prevenção de lesões e recuperação funcional.
+                Sou graduado em Educação Física pela UFRN, com pós-graduação em Fisiologia do Exercício, atualmente estudante de Fisioterapia e certificado internacionalmente em{" "}
+                <strong className="text-foreground font-semibold">NeuroKinetic Therapy (NKT) – Level 1</strong>.
               </p>
               <p>
-                Ao longo da minha carreira, busquei constante aperfeiçoamento em áreas relacionadas ao movimento humano, reabilitação e treinamento físico, participando de cursos e formações em diferentes regiões do país.
+                Fui atleta de judô por 14 anos, conquistando diversos títulos e alcançando a faixa preta na modalidade.
               </p>
               <p>
-                Hoje meu trabalho é dedicado a ajudar pessoas que convivem com dores e limitações de movimento, especialmente relacionadas ao joelho, a recuperarem a mobilidade, a confiança no corpo e a liberdade de se movimentar novamente.
+                Hoje ajudo pessoas com dores e limitações de movimento, especialmente no joelho, a recuperarem mobilidade e confiança no movimento.
               </p>
               <p>
-                Através da <strong className="text-foreground font-semibold">consultoria online</strong>, já acompanhei alunos por videoconferência em diferentes países, incluindo Estados Unidos, Alemanha, Holanda, Japão e Argentina, auxiliando pessoas ao redor do mundo a retomarem suas atividades com mais segurança e qualidade de vida.
-              </p>
-              <p>
-                Meu foco é sempre identificar a verdadeira causa das dores e disfunções de movimento, aplicando estratégias específicas de correção e fortalecimento para promover uma recuperação segura e duradoura.
+                Através da <strong className="text-foreground font-semibold">consultoria online</strong>, acompanho alunos de diversas regiões do Brasil e também de países como Estados Unidos, Alemanha, Holanda, Japão e Argentina.
               </p>
             </div>
 
