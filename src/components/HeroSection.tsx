@@ -27,12 +27,11 @@ const HeroSection = () => {
               <Sparkles className="h-3.5 w-3.5 animate-pulse-soft" />
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-[3.75rem] xl:text-[4.25rem] font-extrabold leading-[1.06] tracking-tight text-foreground">
-              Volte a se movimentar com liberdade,{" "}
-              <span className="text-gradient-animated italic">sem dor no joelho.</span>
+              Já tentou de tudo para melhorar a dor no joelho e{" "}
+              <span className="text-gradient-animated italic">nada resolveu?</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
-              Consultoria online especializada em dor no joelho para quem quer
-              voltar a se movimentar sem depender de remédios ou cirurgia.
+              Conheça minha consultoria online especializada, desenvolvida para ajudar você a recuperar o movimento e reduzir a dor sem depender de remédios ou cirurgia.
             </p>
             <ul className="space-y-4">
               {benefits.map((b, i) => (
