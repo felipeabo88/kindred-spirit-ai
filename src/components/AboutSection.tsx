@@ -39,6 +39,18 @@ const AboutSection = () => {
               Me chamo Felipe Augusto, sou Profissional de Educação Física, faixa preta de judô e especialista em reabilitação e movimento humano.
             </p>
 
+            {/* Credentials grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {credentials.map(({ icon: Icon, label }) => (
+                <div
+                  key={label}
+                  className="flex items-center gap-3 p-3 rounded-xl bg-section-alt border border-border"
+                >
+                  <Icon className="h-4 w-4 text-primary shrink-0" />
+                  <span className="text-sm text-foreground font-medium leading-snug">{label}</span>
+                </div>
+              ))}
+            </div>
 
             <div className="space-y-5 text-base text-muted-foreground leading-[1.85] font-body">
               <p>
