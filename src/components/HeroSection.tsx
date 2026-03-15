@@ -31,7 +31,9 @@ const HeroSection = () => {
               <span className="text-gradient-animated italic">sem dor no joelho.</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
-              Conheça minha consultoria online especializada, desenvolvida para ajudar você a recuperar o movimento e reduzir a dor sem depender de remédios ou cirurgia.
+              Se você já tentou de tudo e ainda não conseguiu melhorar da dor no joelho, conheça minha consultoria online especializada.
+              <br /><br />
+              Um método focado em ajudar você a voltar a se movimentar sem depender de remédios ou cirurgia.
             </p>
             <ul className="space-y-4">
               {benefits.map((b, i) => (
