@@ -5,9 +5,9 @@ import { WHATSAPP_URL } from "@/components/WhatsAppFab";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 const benefits = [
-  "Avaliação completa de movimento",
-  "Exercícios 100% personalizados",
-  "Acompanhamento profissional online",
+  "Avaliação completa do movimento para identificar a causa da dor",
+  "Exercícios personalizados para você",
+  "Suporte profissional online pelo WhatsApp",
 ];
 
 const HeroSection = () => {
