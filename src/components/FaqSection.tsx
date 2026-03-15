@@ -12,19 +12,39 @@ import { MessageCircle, HelpCircle } from "lucide-react";
 const faqs = [
   {
     q: "Funciona mesmo sendo online?",
-    a: "Sim! A consultoria online permite avaliar seu movimento por vídeo, prescrever exercícios personalizados e acompanhar sua evolução semanalmente. Muitos dos meus melhores resultados vieram de atendimentos 100% online.",
+    a: "Sim. A consultoria online permite avaliar seu movimento por vídeo, identificar padrões que podem estar contribuindo para a dor e prescrever exercícios personalizados para o seu caso. O acompanhamento é feito de forma próxima e individual, com ajustes conforme sua evolução.",
   },
   {
-    q: "Posso começar mesmo com dor?",
-    a: "Sim. O programa começa com exercícios leves e seguros, respeitando o nível de dor atual. A progressão é gradual e monitorada.",
+    q: "Posso começar mesmo sentindo dor?",
+    a: "Sim. O programa começa com exercícios seguros e adaptados ao seu nível atual de dor e a sua realidade. A progressão é gradual, respeitando os limites do seu corpo e priorizando movimentos que ajudam na recuperação.",
   },
   {
-    q: "Quanto tempo para melhorar?",
-    a: "Os primeiros resultados costumam aparecer nas primeiras semanas. O tempo total depende do caso, mas em média de 8 a 12 semanas há uma melhora significativa.",
+    q: "Quanto tempo leva para começar a melhorar?",
+    a: "Muitas pessoas já percebem mudanças nas primeiras semanas. O tempo varia de acordo com cada caso, mas em média entre 2 e 12 semanas é possível observar uma melhora significativa na dor e no movimento.",
   },
   {
     q: "Preciso ir à academia?",
-    a: "Não necessariamente. Os exercícios podem ser adaptados para fazer em casa com pouco ou nenhum equipamento. Se tiver acesso a academia, aproveitamos os recursos disponíveis.",
+    a: "Não necessariamente. Os exercícios podem ser adaptados para serem feitos em casa com pouco ou nenhum equipamento. Caso você tenha acesso a academia, podemos aproveitar melhor os recursos disponíveis.",
+  },
+  {
+    q: "E se eu já tentei outros tratamentos e não resolveu?",
+    a: "Isso é mais comum do que parece. Muitas vezes a dor persiste porque a causa real do problema não foi identificada. O foco da consultoria é justamente avaliar o movimento para entender o que está contribuindo para a dor e trabalhar na correção disso.",
+  },
+  {
+    q: "Como funciona o acompanhamento?",
+    a: "Após iniciar a consultoria, você recebe um plano de exercícios personalizado baseado na avaliação do seu movimento. O acompanhamento é feito de forma contínua, com ajustes conforme sua evolução e suporte direto para esclarecer dúvidas ao longo do processo.",
+  },
+  {
+    q: "Esse método serve para o meu caso?",
+    a: "Cada pessoa tem uma história e um nível de dor diferente. Por isso o processo começa com uma avaliação do movimento para entender o seu caso específico e definir os exercícios mais adequados para você.",
+  },
+  {
+    q: "A consultoria é apenas para quem tem dor no joelho?",
+    a: "Não. Embora muitas pessoas procurem a consultoria por causa de dores no joelho, também acompanho alunos que desejam outros objetivos, como emagrecimento, ganho de massa muscular, melhora da performance ou condicionamento físico.",
+  },
+  {
+    q: "Depois que eu melhorar da dor, posso treinar para outros objetivos?",
+    a: "Sim. O objetivo da consultoria é justamente ajudar você a recuperar o movimento e criar uma base segura para evoluir no treinamento. Depois que a dor deixa de ser um problema, é possível direcionar os treinos para objetivos como performance, estética ou condicionamento físico.",
   },
 ];
 
@@ -38,6 +58,10 @@ const FaqSection = () => {
           <h2 className="text-3xl md:text-4xl lg:text-[3.25rem] font-extrabold text-foreground leading-tight">
             Dúvidas frequentes
           </h2>
+          <p className="text-muted-foreground text-lg max-w-xl mx-auto">
+            Ainda tem dúvidas sobre como funciona a consultoria?<br />
+            Veja algumas respostas para as perguntas mais comuns.
+          </p>
         </AnimateOnScroll>
         <AnimateOnScroll delay={100}>
           <Accordion type="single" collapsible className="space-y-5">
@@ -61,7 +85,7 @@ const FaqSection = () => {
           </Accordion>
         </AnimateOnScroll>
         <AnimateOnScroll delay={200} className="text-center space-y-4">
-          <p className="text-muted-foreground text-lg">Ainda tem dúvidas?</p>
+          <p className="text-muted-foreground text-lg">Se ainda tiver alguma dúvida, clique no botão abaixo e fale diretamente comigo.</p>
           <Button variant="cta" size="lg" asChild className="gap-2 btn-shine group">
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
               <MessageCircle className="h-5 w-5 group-hover:animate-wiggle" />
