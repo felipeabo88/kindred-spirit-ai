@@ -4,11 +4,11 @@ import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 const symptoms = [
   { icon: TrendingDown, label: "Dor ao subir escadas" },
-  { icon: Footprints, label: "Formigamento ou dor que desce para o pé" },
-  { icon: AlertTriangle, label: "Medo de se movimentar" },
-  { icon: Activity, label: "Dificuldade para correr" },
-  { icon: Ban, label: "Limitação nas atividades do dia a dia" },
-  { icon: XCircle, label: "Não conseguir se movimentar como antes" },
+  { icon: Activity, label: "Dor ao levantar da cama pela manhã" },
+  { icon: Ban, label: "Dor ao levantar depois de ficar muito tempo sentado" },
+  { icon: AlertTriangle, label: "Dor ao agachar ou levantar de uma cadeira" },
+  { icon: Footprints, label: "Dificuldade para caminhar ou correr por mais tempo" },
+  { icon: XCircle, label: "Sensação de que seu corpo não se movimenta como antes" },
 ];
 
 const ProblemSection = () => {
@@ -19,7 +19,7 @@ const ProblemSection = () => {
         <AnimateOnScroll className="text-center max-w-2xl mx-auto space-y-5">
           <span className="inline-block text-sm font-bold uppercase tracking-[0.2em] text-primary font-body bg-primary/10 px-4 py-1.5 rounded-full">Identifique seu problema</span>
           <h2 className="text-3xl md:text-4xl lg:text-[3.25rem] font-extrabold text-foreground leading-tight">
-            Você sente dor no joelho quando:
+            A dor no joelho aparece em situações como estas?
           </h2>
         </AnimateOnScroll>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-7">
@@ -36,8 +36,7 @@ const ProblemSection = () => {
         </div>
         <AnimateOnScroll className="text-center space-y-7 max-w-2xl mx-auto">
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Muitas pessoas começam a evitar movimentos por causa da dor e aos
-            poucos perdem a confiança no próprio joelho.
+            Se você se identificou com alguma dessas situações, talvez seu corpo esteja compensando um problema no movimento.
           </p>
           <Button variant="ctaOutline" size="lg" className="btn-shine" asChild>
             <a href="#metodo">Descobrir como funciona</a>
