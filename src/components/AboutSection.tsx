@@ -37,6 +37,11 @@ const AboutSection = () => {
                 className="relative rounded-3xl shadow-elegant w-full max-w-[400px] mx-auto object-cover aspect-[3/4] z-10 group-hover/img:scale-[1.02] transition-transform duration-700"
                 loading="lazy"
               />
+              <div className="relative z-10 mt-6 flex flex-col gap-4">
+                <img src={aboutPhoto1} alt="Felipe Augusto" className="rounded-2xl shadow-card w-full max-w-[400px] mx-auto object-cover" loading="lazy" />
+                <img src={aboutPhoto2} alt="Felipe Augusto no judô" className="rounded-2xl shadow-card w-full max-w-[400px] mx-auto object-cover" loading="lazy" />
+                <img src={aboutPhoto3} alt="Felipe Augusto carregando a tocha olímpica Rio 2016" className="rounded-2xl shadow-card w-full max-w-[400px] mx-auto object-cover" loading="lazy" />
+              </div>
             </div>
           </AnimateOnScroll>
 
