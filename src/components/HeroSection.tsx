@@ -48,17 +48,13 @@ const HeroSection = () => {
                 </li>
               ))}
             </ul>
-            <div className="space-y-4 pt-2">
+            <div className="pt-2">
               <Button variant="cta" size="xl" className="group text-base btn-shine animate-glow-pulse" asChild>
                 <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                  Começar consultoria online
+                  Quero voltar a me movimentar
                   <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1.5" />
                 </a>
               </Button>
-              <p className="text-sm text-muted-foreground pl-1 flex items-center gap-1.5">
-                <span className="inline-block w-2 h-2 rounded-full bg-primary animate-pulse-soft" />
-                Atendimento online para qualquer cidade do Brasil
-              </p>
             </div>
           </AnimateOnScroll>
 
