@@ -4,11 +4,11 @@ import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 const symptoms = [
   { icon: TrendingDown, label: "Dor ao subir escadas" },
-  { icon: Footprints, label: "Formigamento ou dor que desce para o pé" },
-  { icon: AlertTriangle, label: "Medo de se movimentar" },
-  { icon: Activity, label: "Dificuldade para correr" },
-  { icon: Ban, label: "Limitação nas atividades do dia a dia" },
-  { icon: XCircle, label: "Não conseguir se movimentar como antes" },
+  { icon: Activity, label: "Dor ao levantar da cama pela manhã" },
+  { icon: Ban, label: "Dor ao levantar depois de ficar muito tempo sentado" },
+  { icon: AlertTriangle, label: "Dor ao agachar ou levantar de uma cadeira" },
+  { icon: Footprints, label: "Dificuldade para caminhar ou correr por mais tempo" },
+  { icon: XCircle, label: "Sensação de que seu corpo não se movimenta como antes" },
 ];
 
 const ProblemSection = () => {
