@@ -4,15 +4,7 @@ import aboutPhoto3 from "@/assets/about/tocha.jpg";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { Button } from "@/components/ui/button";
 import { WHATSAPP_URL } from "@/components/WhatsAppFab";
-import { X, AlertCircle, ArrowRight, Stethoscope, Pill, Dumbbell as PilatesIcon, Syringe } from "lucide-react";
-
-const attempts = [
-  { icon: Stethoscope, text: "Médicos especialistas" },
-  { icon: PilatesIcon, text: "Fisioterapia convencional" },
-  { icon: PilatesIcon, text: "Pilates" },
-  { icon: Syringe, text: "Infiltrações" },
-  { icon: Pill, text: "Suplementos como colágeno" },
-];
+import { ArrowRight } from "lucide-react";
 
 const AboutSection = () => {
   return (
@@ -23,66 +15,41 @@ const AboutSection = () => {
         <div className="grid md:grid-cols-[400px_1fr] gap-16 items-start">
           <AnimateOnScroll animation="animate-fade-in-left">
             <div className="relative md:sticky md:top-28 flex flex-col gap-4">
-                <img src={aboutPhoto1} alt="Pessoa com dor no joelho" className="rounded-2xl shadow-card w-full max-w-[400px] mx-auto object-cover" loading="lazy" />
-                <img src={aboutPhoto2} alt="Tentativas de tratamento" className="rounded-2xl shadow-card w-full max-w-[400px] mx-auto object-cover" loading="lazy" />
-                <img src={aboutPhoto3} alt="Superação da dor" className="rounded-2xl shadow-card w-full max-w-[400px] mx-auto object-cover" loading="lazy" />
+                <img src={aboutPhoto1} alt="Felipe Augusto - Profissional de Educação Física" className="rounded-2xl shadow-card w-full max-w-[400px] mx-auto object-cover" loading="lazy" />
+                <img src={aboutPhoto2} alt="Felipe Augusto - Judô" className="rounded-2xl shadow-card w-full max-w-[400px] mx-auto object-cover" loading="lazy" />
+                <img src={aboutPhoto3} alt="Felipe Augusto - Trajetória" className="rounded-2xl shadow-card w-full max-w-[400px] mx-auto object-cover" loading="lazy" />
             </div>
           </AnimateOnScroll>
 
           <AnimateOnScroll animation="animate-fade-in-right" className="space-y-6">
             <span className="inline-block text-sm font-bold uppercase tracking-[0.2em] text-primary font-body bg-primary/10 px-4 py-1.5 rounded-full">
-              Frustração comum
+              Sobre
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-[3.25rem] font-extrabold text-foreground leading-tight font-heading">
-              Talvez você já tenha tentado de tudo
+              Felipe Augusto
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed font-body">
-              Muitas pessoas passam por uma verdadeira{" "}
-              <strong className="text-foreground font-semibold">jornada de frustração</strong> antes de encontrar a solução certa.
-            </p>
-
-            {/* Attempted solutions */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 py-2">
-              {attempts.map(({ icon: Icon, text }) => (
-                <div
-                  key={text}
-                  className="flex items-center gap-3 p-3 rounded-xl bg-section-alt border border-border group hover:border-destructive/30 transition-all duration-300"
-                >
-                  <X className="h-4 w-4 text-destructive shrink-0 group-hover:rotate-90 transition-transform duration-300" />
-                  <span className="text-sm text-foreground font-medium leading-snug">{text}</span>
-                </div>
-              ))}
-            </div>
 
             <div className="space-y-4 text-[0.938rem] text-muted-foreground leading-[1.8] font-body">
               <p>
-                Você já foi ao médico, fez exames, tentou fisioterapia, pilates, infiltrações e até suplementos como colágeno — mas a{" "}
-                <strong className="text-foreground font-semibold">dor continua voltando</strong>.
+                Me chamo <strong className="text-foreground font-semibold">Felipe Augusto</strong>, sou Profissional de Educação Física, faixa preta de judô e especialista em reabilitação e movimento humano.
               </p>
               <p>
-                Isso acontece porque a maioria dos tratamentos trata apenas os{" "}
-                <strong className="text-foreground font-semibold">sintomas</strong>, sem investigar a verdadeira causa do problema.
+                Sou graduado em Educação Física pela <strong className="text-foreground font-semibold">UFRN</strong>, com pós-graduação em Fisiologia do Exercício, atualmente estudante de Fisioterapia e certificado internacionalmente em <strong className="text-foreground font-semibold">NeuroKinetic Therapy (NKT) – Level 1</strong>.
               </p>
               <p>
-                Enquanto a raiz da dor não for identificada e corrigida, o ciclo de frustração se repete.
+                Fui atleta de judô por <strong className="text-foreground font-semibold">14 anos</strong>, conquistando diversos títulos e alcançando a faixa preta na modalidade.
               </p>
               <p>
-                Você merece um acompanhamento que vá além do alívio temporário e te devolva a{" "}
-                <strong className="text-foreground font-semibold">confiança no seu próprio movimento</strong>.
+                Hoje ajudo pessoas com dores e limitações de movimento, especialmente no joelho, a recuperarem <strong className="text-foreground font-semibold">mobilidade e confiança no movimento</strong>.
               </p>
-            </div>
-
-            {/* Alert card */}
-            <div className="rounded-2xl border border-destructive/20 bg-destructive/5 p-6 flex items-start gap-4">
-              <AlertCircle className="h-6 w-6 text-destructive shrink-0 mt-0.5" />
-              <p className="text-sm text-foreground leading-relaxed">
-                <strong>A causa real do problema não foi tratada.</strong> Por isso a dor persiste mesmo após várias tentativas.
+              <p>
+                Através da consultoria online, acompanho alunos de diversas regiões do Brasil e também de países como <strong className="text-foreground font-semibold">Estados Unidos, Alemanha, Holanda, Japão e Argentina</strong>.
               </p>
             </div>
 
             <Button variant="cta" size="lg" className="group mt-3 btn-shine" asChild>
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                Quero uma abordagem diferente
+                Fale comigo
                 <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1.5" />
               </a>
             </Button>
