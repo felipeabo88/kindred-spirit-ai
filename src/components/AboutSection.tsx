@@ -34,7 +34,7 @@ const AboutSection = () => {
                 Me chamo <strong className="text-foreground font-semibold">Felipe Augusto</strong>, sou Profissional de Educação Física, faixa preta de judô e especialista em reabilitação e movimento humano.
               </p>
               <p>
-                Sou graduado em Educação Física pela <strong className="text-foreground font-semibold">UFRN</strong>, com pós-graduação em Fisiologia do Exercício, atualmente estudante de Fisioterapia e certificado internacionalmente em <strong className="text-foreground font-semibold">NeuroKinetic Therapy (NKT) – Level 1</strong>.
+                Sou graduado em Educação Física pela <strong className="text-foreground font-semibold">UFRN</strong>, com pós-graduação em Fisiologia do Exercício, atualmente estudante de Fisioterapia e certificado internacionalmente em <strong className="text-foreground font-semibold">NeuroKinetic Therapy (NKT)</strong>.
               </p>
               <p>
                 Fui atleta de judô por <strong className="text-foreground font-semibold">14 anos</strong>, conquistando diversos títulos e alcançando a faixa preta na modalidade.
