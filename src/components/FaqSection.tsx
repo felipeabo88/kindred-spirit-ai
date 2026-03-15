@@ -89,7 +89,7 @@ const FaqSection = () => {
           <Button variant="cta" size="lg" asChild className="gap-2 btn-shine group">
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
               <MessageCircle className="h-5 w-5 group-hover:animate-wiggle" />
-              Fale conosco pelo WhatsApp
+              Tire sua dúvida pessoalmente comigo
             </a>
           </Button>
         </AnimateOnScroll>
