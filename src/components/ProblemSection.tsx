@@ -36,8 +36,7 @@ const ProblemSection = () => {
         </div>
         <AnimateOnScroll className="text-center space-y-7 max-w-2xl mx-auto">
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Muitas pessoas começam a evitar movimentos por causa da dor e aos
-            poucos perdem a confiança no próprio joelho.
+            Se você se identificou com alguma dessas situações, talvez seu corpo esteja compensando um problema no movimento.
           </p>
           <Button variant="ctaOutline" size="lg" className="btn-shine" asChild>
             <a href="#metodo">Descobrir como funciona</a>
