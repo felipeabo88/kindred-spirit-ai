@@ -9,6 +9,7 @@ import { ArrowRight, GraduationCap, Award, Globe, Dumbbell } from "lucide-react"
 const credentials = [
   { icon: GraduationCap, label: "Graduado em Educação Física — UFRN" },
   { icon: Award, label: "Pós-graduação em Fisiologia do Exercício" },
+  { icon: Dumbbell, label: "Estudante de Fisioterapia" },
   { icon: Award, label: "Certificação internacional NKT" },
   { icon: Globe, label: "Alunos em 5+ países pelo mundo" },
 ];
@@ -36,7 +37,7 @@ const AboutSection = () => {
               Felipe Augusto
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed font-body">
-              Profissional de Educação Física, faixa preta de judô e especialista em reabilitação e movimento humano.
+              Me chamo Felipe Augusto, sou Profissional de Educação Física, faixa preta de judô e especialista em reabilitação e movimento humano.
             </p>
 
             {/* Credentials grid */}
@@ -53,6 +54,9 @@ const AboutSection = () => {
             </div>
 
             <div className="space-y-5 text-base text-muted-foreground leading-[1.85] font-body">
+              <p>
+                Sou graduado em Educação Física pela UFRN, com pós-graduação em Fisiologia do Exercício, atualmente estudante de Fisioterapia e certificado internacionalmente em <strong className="text-foreground font-semibold">NeuroKinetic Therapy (NKT)</strong>.
+              </p>
               <p>
                 Fui atleta de judô por <strong className="text-foreground font-semibold">14 anos</strong>, conquistando diversos títulos e alcançando a faixa preta na modalidade.
               </p>
