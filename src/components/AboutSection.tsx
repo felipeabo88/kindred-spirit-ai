@@ -13,7 +13,7 @@ const stats = [
 const credentials = [
   { icon: GraduationCap, text: "Graduado em Educação Física — UFRN" },
   { icon: Award, text: "Pós-graduação em Fisiologia do Exercício" },
-  { icon: Dumbbell, text: "Certificação internacional NKT — Level 1" },
+  { icon: Dumbbell, text: "Certificação internacional NKT" },
   { icon: Globe, text: "Alunos em 5+ países pelo mundo" },
 ];
 
@@ -79,7 +79,7 @@ const AboutSection = () => {
               </p>
               <p>
                 Sou graduado em Educação Física pela UFRN, com pós-graduação em Fisiologia do Exercício, atualmente estudante de Fisioterapia e certificado internacionalmente em{" "}
-                <strong className="text-foreground font-semibold">NeuroKinetic Therapy (NKT) – Level 1</strong>.
+                <strong className="text-foreground font-semibold">NeuroKinetic Therapy (NKT)</strong>.
               </p>
               <p>
                 Fui atleta de judô por 14 anos, conquistando diversos títulos e alcançando a faixa preta na modalidade.
