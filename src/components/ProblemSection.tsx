@@ -17,7 +17,7 @@ const ProblemSection = () => {
       <div className="absolute top-10 left-0 w-80 h-80 rounded-full bg-destructive/[0.03] blur-3xl" />
       <div className="container space-y-16">
         <AnimateOnScroll className="text-center max-w-2xl mx-auto space-y-5">
-          <span className="inline-block text-sm font-bold uppercase tracking-[0.2em] text-primary font-body bg-primary/10 px-4 py-1.5 rounded-full">Identifique seu problema</span>
+          
           <h2 className="text-3xl md:text-4xl lg:text-[3.25rem] font-extrabold text-foreground leading-tight">
             A dor no joelho aparece em situações como estas?
           </h2>
