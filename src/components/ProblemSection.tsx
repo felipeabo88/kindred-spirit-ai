@@ -19,7 +19,7 @@ const ProblemSection = () => {
         <AnimateOnScroll className="text-center max-w-2xl mx-auto space-y-5">
           <span className="inline-block text-sm font-bold uppercase tracking-[0.2em] text-primary font-body bg-primary/10 px-4 py-1.5 rounded-full">Identifique seu problema</span>
           <h2 className="text-3xl md:text-4xl lg:text-[3.25rem] font-extrabold text-foreground leading-tight">
-            Você sente dor no joelho quando:
+            A dor no joelho aparece em situações como estas?
           </h2>
         </AnimateOnScroll>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-7">
