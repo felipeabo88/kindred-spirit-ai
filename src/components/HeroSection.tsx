@@ -1,13 +1,13 @@
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Video, ArrowRight, Sparkles } from "lucide-react";
+import { Video, ArrowRight, Sparkles, ScanSearch, Dumbbell, MessageCircle, type LucideIcon } from "lucide-react";
 import heroImg from "@/assets/hero-knee.jpg";
 import { WHATSAPP_URL } from "@/components/WhatsAppFab";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 
-const benefits = [
-  "Avaliação completa do movimento para identificar a causa da dor",
-  "Exercícios personalizados para você",
-  "Suporte profissional online pelo WhatsApp",
+const benefits: { text: string; icon: LucideIcon }[] = [
+  { text: "Avaliação completa do movimento para identificar a causa da dor", icon: ScanSearch },
+  { text: "Exercícios personalizados para você", icon: Dumbbell },
+  { text: "Suporte profissional online pelo WhatsApp", icon: MessageCircle },
 ];
 
 const HeroSection = () => {
