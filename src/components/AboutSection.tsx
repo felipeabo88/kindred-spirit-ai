@@ -4,15 +4,7 @@ import aboutPhoto3 from "@/assets/about/tocha.jpg";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { Button } from "@/components/ui/button";
 import { WHATSAPP_URL } from "@/components/WhatsAppFab";
-import { ArrowRight, GraduationCap, Award, Globe, Dumbbell } from "lucide-react";
-
-const credentials = [
-  { icon: GraduationCap, label: "Graduado em Educação Física — UFRN" },
-  { icon: Award, label: "Pós-graduação em Fisiologia do Exercício" },
-  { icon: Dumbbell, label: "Estudante de Fisioterapia" },
-  { icon: Award, label: "Certificação internacional NKT" },
-  { icon: Globe, label: "Alunos em 5+ países pelo mundo" },
-];
+import { ArrowRight } from "lucide-react";
 
 const AboutSection = () => {
   return (
@@ -40,18 +32,6 @@ const AboutSection = () => {
               Me chamo Felipe Augusto, sou Profissional de Educação Física, faixa preta de judô e especialista em reabilitação e movimento humano.
             </p>
 
-            {/* Credentials grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {credentials.map(({ icon: Icon, label }) => (
-                <div
-                  key={label}
-                  className="flex items-center gap-3 p-3 rounded-xl bg-section-alt border border-border"
-                >
-                  <Icon className="h-4 w-4 text-primary shrink-0" />
-                  <span className="text-sm text-foreground font-medium leading-snug">{label}</span>
-                </div>
-              ))}
-            </div>
 
             <div className="space-y-5 text-base text-muted-foreground leading-[1.85] font-body">
               <p>
