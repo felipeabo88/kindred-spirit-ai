@@ -34,16 +34,6 @@ const AboutSection = () => {
                 className="relative rounded-3xl shadow-elegant w-full max-w-[400px] mx-auto object-cover aspect-[3/4] z-10 group-hover/img:scale-[1.02] transition-transform duration-700"
                 loading="lazy"
               />
-              {/* Floating motivation badge */}
-              <div className="absolute -bottom-4 -right-4 md:-right-8 rounded-2xl bg-background shadow-card-hover p-4 flex items-center gap-3 animate-float z-20 border border-border hover:shadow-elegant transition-shadow duration-300">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full gradient-primary">
-                  <Heart className="h-5 w-5 text-cta-foreground" />
-                </div>
-                <div>
-                  <p className="text-sm font-bold text-foreground">Paixão por</p>
-                  <p className="text-xs text-muted-foreground">transformar vidas</p>
-                </div>
-              </div>
             </div>
           </AnimateOnScroll>
 
