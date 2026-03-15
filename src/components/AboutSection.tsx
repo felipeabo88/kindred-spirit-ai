@@ -1,4 +1,3 @@
-import professionalImg from "@/assets/professional.jpg";
 import aboutPhoto1 from "@/assets/about/foto05.png";
 import aboutPhoto2 from "@/assets/about/judo.jpg";
 import aboutPhoto3 from "@/assets/about/tocha.jpg";
@@ -28,20 +27,10 @@ const AboutSection = () => {
       <div className="container max-w-6xl relative">
         <div className="grid md:grid-cols-[400px_1fr] gap-16 items-start">
           <AnimateOnScroll animation="animate-fade-in-left">
-            <div className="relative group/img md:sticky md:top-28">
-              <div className="absolute -inset-5 rounded-[2rem] bg-secondary/60 -rotate-2 group-hover/img:-rotate-3 transition-transform duration-700" />
-              <div className="absolute -inset-5 rounded-[2rem] gradient-primary opacity-[0.08] rotate-1 group-hover/img:rotate-2 transition-transform duration-700" />
-              <img
-                src={professionalImg}
-                alt="Felipe Augusto — Especialista em reabilitação e movimento humano"
-                className="relative rounded-3xl shadow-elegant w-full max-w-[400px] mx-auto object-cover aspect-[3/4] z-10 group-hover/img:scale-[1.02] transition-transform duration-700"
-                loading="lazy"
-              />
-              <div className="relative z-10 mt-6 flex flex-col gap-4">
+            <div className="relative md:sticky md:top-28 flex flex-col gap-4">
                 <img src={aboutPhoto1} alt="Felipe Augusto" className="rounded-2xl shadow-card w-full max-w-[400px] mx-auto object-cover" loading="lazy" />
                 <img src={aboutPhoto2} alt="Felipe Augusto no judô" className="rounded-2xl shadow-card w-full max-w-[400px] mx-auto object-cover" loading="lazy" />
                 <img src={aboutPhoto3} alt="Felipe Augusto carregando a tocha olímpica Rio 2016" className="rounded-2xl shadow-card w-full max-w-[400px] mx-auto object-cover" loading="lazy" />
-              </div>
             </div>
           </AnimateOnScroll>
 
