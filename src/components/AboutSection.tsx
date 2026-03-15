@@ -7,12 +7,10 @@ import { WHATSAPP_URL } from "@/components/WhatsAppFab";
 import { ArrowRight, GraduationCap, Award, Globe, Dumbbell } from "lucide-react";
 
 const credentials = [
-  { icon: GraduationCap, label: "Educação Física — UFRN" },
-  { icon: Award, label: "Pós em Fisiologia do Exercício" },
-  { icon: Award, label: "NKT — Certificação Internacional" },
-  { icon: Dumbbell, label: "Faixa Preta de Judô — 14 anos" },
-  { icon: GraduationCap, label: "Estudante de Fisioterapia" },
-  { icon: Globe, label: "Consultoria Online Global" },
+  { icon: GraduationCap, label: "Graduado em Educação Física — UFRN" },
+  { icon: Award, label: "Pós-graduação em Fisiologia do Exercício" },
+  { icon: Award, label: "Certificação internacional NKT" },
+  { icon: Globe, label: "Alunos em 5+ países pelo mundo" },
 ];
 
 const AboutSection = () => {
