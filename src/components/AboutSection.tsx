@@ -1,4 +1,3 @@
-import professionalImg from "@/assets/professional.jpg";
 import aboutPhoto1 from "@/assets/about/foto05.png";
 import aboutPhoto2 from "@/assets/about/judo.jpg";
 import aboutPhoto3 from "@/assets/about/tocha.jpg";
