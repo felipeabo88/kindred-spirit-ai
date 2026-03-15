@@ -4,7 +4,16 @@ import aboutPhoto3 from "@/assets/about/tocha.jpg";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { Button } from "@/components/ui/button";
 import { WHATSAPP_URL } from "@/components/WhatsAppFab";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, GraduationCap, Award, Globe, Dumbbell } from "lucide-react";
+
+const credentials = [
+  { icon: GraduationCap, label: "Educação Física — UFRN" },
+  { icon: Award, label: "Pós em Fisiologia do Exercício" },
+  { icon: Award, label: "NKT — Certificação Internacional" },
+  { icon: Dumbbell, label: "Faixa Preta de Judô — 14 anos" },
+  { icon: GraduationCap, label: "Estudante de Fisioterapia" },
+  { icon: Globe, label: "Consultoria Online Global" },
+];
 
 const AboutSection = () => {
   return (
@@ -21,21 +30,31 @@ const AboutSection = () => {
             </div>
           </AnimateOnScroll>
 
-          <AnimateOnScroll animation="animate-fade-in-right" className="space-y-6">
+          <AnimateOnScroll animation="animate-fade-in-right" className="space-y-8">
             <span className="inline-block text-sm font-bold uppercase tracking-[0.2em] text-primary font-body bg-primary/10 px-4 py-1.5 rounded-full">
               Sobre
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-[3.25rem] font-extrabold text-foreground leading-tight font-heading">
               Felipe Augusto
             </h2>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed font-body">
+              Profissional de Educação Física, faixa preta de judô e especialista em reabilitação e movimento humano.
+            </p>
 
-            <div className="space-y-4 text-[0.938rem] text-muted-foreground leading-[1.8] font-body">
-              <p>
-                Me chamo <strong className="text-foreground font-semibold">Felipe Augusto</strong>, sou Profissional de Educação Física, faixa preta de judô e especialista em reabilitação e movimento humano.
-              </p>
-              <p>
-                Sou graduado em Educação Física pela <strong className="text-foreground font-semibold">UFRN</strong>, com pós-graduação em Fisiologia do Exercício, atualmente estudante de Fisioterapia e certificado internacionalmente em <strong className="text-foreground font-semibold">NeuroKinetic Therapy (NKT)</strong>.
-              </p>
+            {/* Credentials grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {credentials.map(({ icon: Icon, label }) => (
+                <div
+                  key={label}
+                  className="flex items-center gap-3 p-3 rounded-xl bg-section-alt border border-border"
+                >
+                  <Icon className="h-4 w-4 text-primary shrink-0" />
+                  <span className="text-sm text-foreground font-medium leading-snug">{label}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="space-y-5 text-base text-muted-foreground leading-[1.85] font-body">
               <p>
                 Fui atleta de judô por <strong className="text-foreground font-semibold">14 anos</strong>, conquistando diversos títulos e alcançando a faixa preta na modalidade.
               </p>
