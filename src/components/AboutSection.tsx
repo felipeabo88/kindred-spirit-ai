@@ -13,7 +13,7 @@ const stats = [
 const credentials = [
   { icon: GraduationCap, text: "Graduado em Educação Física — UFRN" },
   { icon: Award, text: "Pós-graduação em Fisiologia do Exercício" },
-  { icon: Dumbbell, text: "Certificação internacional NKT — Level 1" },
+  { icon: Dumbbell, text: "Certificação internacional NKT" },
   { icon: Globe, text: "Alunos em 5+ países pelo mundo" },
 ];
 
