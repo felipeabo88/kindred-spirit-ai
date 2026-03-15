@@ -32,7 +32,7 @@ const faqs = [
   },
   {
     q: "Como funciona o acompanhamento?",
-    a: "Após iniciar a consultoria, você recebe um plano de exercícios personalizado baseado na avaliação do seu movimento. O acompanhamento é feito de forma contínua, com ajustes conforme sua evolução e suporte direto para esclarecer dúvidas ao longo do processo.",
+    a: "Após iniciar a consultoria, você passa por uma série de avaliações para entender melhor seu movimento e identificar possíveis causas das dores ou limitações.\n\nCom base nessas avaliações, você recebe um plano de exercícios personalizado por meio de um aplicativo, totalmente adaptado ao seu caso.\n\nO acompanhamento é contínuo, com ajustes conforme sua evolução e suporte direto para esclarecer dúvidas ao longo do processo.",
   },
   {
     q: "Esse método serve para o meu caso?",
