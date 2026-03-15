@@ -39,12 +39,12 @@ const HeroSection = () => {
               </p>
             </div>
             <ul className="space-y-4">
-              {benefits.map((b, i) => (
-                <li key={b} className="flex items-center gap-3.5 text-foreground group/benefit cursor-default">
+              {benefits.map(({ text, icon: Icon }) => (
+                <li key={text} className="flex items-center gap-3.5 text-foreground group/benefit cursor-default">
                   <span className="flex h-8 w-8 items-center justify-center rounded-full gradient-primary shrink-0 shadow-cta group-hover/benefit:scale-110 group-hover/benefit:shadow-cta-hover transition-all duration-300">
-                    <CheckCircle className="h-4 w-4 text-cta-foreground" />
+                    <Icon className="h-4 w-4 text-cta-foreground" />
                   </span>
-                  <span className="font-semibold text-base group-hover/benefit:text-primary transition-colors duration-300">{b}</span>
+                  <span className="font-semibold text-base group-hover/benefit:text-primary transition-colors duration-300">{text}</span>
                 </li>
               ))}
             </ul>
