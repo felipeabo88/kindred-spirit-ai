@@ -30,11 +30,14 @@ const HeroSection = () => {
               Volte a se movimentar com liberdade,{" "}
               <span className="text-gradient-animated italic">sem dor no joelho.</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
-              Se você já tentou de tudo e ainda não conseguiu melhorar dessas dores, conheça minha consultoria online especializada.
-              <br /><br />
-              Um método focado em ajudar você a voltar a se movimentar sem depender de remédios ou cirurgia.
-            </p>
+            <div className="space-y-3 md:space-y-4 max-w-xl">
+              <p className="text-base md:text-xl text-muted-foreground leading-relaxed md:leading-relaxed">
+                Se você já tentou de tudo e ainda não conseguiu melhorar dessas dores, conheça minha consultoria online especializada.
+              </p>
+              <p className="text-base md:text-xl text-muted-foreground leading-relaxed md:leading-relaxed">
+                Um método focado em ajudar você a voltar a se movimentar sem depender de remédios ou cirurgia.
+              </p>
+            </div>
             <ul className="space-y-4">
               {benefits.map((b, i) => (
                 <li key={b} className="flex items-center gap-3.5 text-foreground group/benefit cursor-default">
