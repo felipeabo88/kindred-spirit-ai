@@ -79,7 +79,7 @@ const AboutSection = () => {
               </p>
               <p>
                 Sou graduado em Educação Física pela UFRN, com pós-graduação em Fisiologia do Exercício, atualmente estudante de Fisioterapia e certificado internacionalmente em{" "}
-                <strong className="text-foreground font-semibold">NeuroKinetic Therapy (NKT) – Level 1</strong>.
+                <strong className="text-foreground font-semibold">NeuroKinetic Therapy (NKT)</strong>.
               </p>
               <p>
                 Fui atleta de judô por 14 anos, conquistando diversos títulos e alcançando a faixa preta na modalidade.
