@@ -68,21 +68,6 @@ const HeroSection = () => {
               className="relative rounded-3xl shadow-elegant w-full object-cover aspect-[4/3] z-10 hover:scale-[1.02] transition-transform duration-700"
               loading="eager"
             />
-            {/* Floating badge */}
-            <div className="absolute -bottom-6 -left-4 md:-left-8 rounded-2xl bg-background shadow-card-hover p-5 flex items-center gap-4 animate-float z-20 border border-border hover:shadow-elegant transition-shadow duration-300">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full gradient-primary shadow-cta">
-                <CheckCircle className="h-5 w-5 text-cta-foreground" />
-              </div>
-              <div>
-                <p className="text-base font-extrabold text-foreground">+500 alunos</p>
-                <p className="text-sm text-muted-foreground">recuperados</p>
-              </div>
-            </div>
-            {/* Second floating badge */}
-            <div className="absolute -top-3 -right-3 md:-right-6 rounded-2xl bg-background shadow-card-hover px-5 py-3 animate-float z-20 border border-border hover:shadow-elegant transition-shadow duration-300" style={{ animationDelay: "1.5s" }}>
-              <p className="text-sm font-bold text-primary">⭐ 4.9/5</p>
-              <p className="text-xs text-muted-foreground">avaliações</p>
-            </div>
           </AnimateOnScroll>
         </div>
       </div>
