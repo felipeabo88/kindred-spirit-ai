@@ -1,12 +1,12 @@
 import { Button } from "@/components/ui/button";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 
-import stairsImg from "@/assets/problems/stairs.jpg";
-import morningBedImg from "@/assets/problems/morning-bed.jpg";
-import sittingImg from "@/assets/problems/sitting.jpg";
-import squatImg from "@/assets/problems/squat.jpg";
-import runningImg from "@/assets/problems/running.jpg";
-import limitationImg from "@/assets/problems/limitation.jpg";
+import stairsImg from "@/assets/problems/stairs.png";
+import morningBedImg from "@/assets/problems/morning-bed.png";
+import sittingImg from "@/assets/problems/sitting.png";
+import squatImg from "@/assets/problems/squat.png";
+import runningImg from "@/assets/problems/running.png";
+import limitationImg from "@/assets/problems/limitation.png";
 
 const symptoms = [
   { image: stairsImg, label: "Dor ao subir escadas" },
@@ -32,11 +32,11 @@ const ProblemSection = () => {
           {symptoms.map(({ image, label }, i) => (
             <AnimateOnScroll key={label} delay={i * 100} animation="animate-scale-in">
               <div className="group flex flex-col items-center gap-4 rounded-3xl bg-section-alt overflow-hidden shadow-card card-interactive text-center cursor-default border border-border hover:border-primary/20 h-full">
-                <div className="w-full aspect-square overflow-hidden">
+                <div className="w-full aspect-square overflow-hidden flex items-center justify-center p-6">
                   <img
                     src={image}
                     alt={label}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
                 </div>
