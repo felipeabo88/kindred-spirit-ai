@@ -1,12 +1,12 @@
 import { Button } from "@/components/ui/button";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 
-import stairsImg from "@/assets/problems/stairs.jpg";
-import morningBedImg from "@/assets/problems/morning-bed.jpg";
-import sittingImg from "@/assets/problems/sitting.jpg";
-import squatImg from "@/assets/problems/squat.jpg";
-import runningImg from "@/assets/problems/running.jpg";
-import limitationImg from "@/assets/problems/limitation.jpg";
+import stairsImg from "@/assets/problems/stairs.png";
+import morningBedImg from "@/assets/problems/morning-bed.png";
+import sittingImg from "@/assets/problems/sitting.png";
+import squatImg from "@/assets/problems/squat.png";
+import runningImg from "@/assets/problems/running.png";
+import limitationImg from "@/assets/problems/limitation.png";
 
 const symptoms = [
   { image: stairsImg, label: "Dor ao subir escadas" },
