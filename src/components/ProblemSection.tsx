@@ -1,14 +1,20 @@
 import { Button } from "@/components/ui/button";
-import { Footprints, AlertTriangle, Activity, Ban, XCircle, TrendingDown } from "lucide-react";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 
+import stairsImg from "@/assets/problems/stairs.jpg";
+import morningBedImg from "@/assets/problems/morning-bed.jpg";
+import sittingImg from "@/assets/problems/sitting.jpg";
+import squatImg from "@/assets/problems/squat.jpg";
+import runningImg from "@/assets/problems/running.jpg";
+import limitationImg from "@/assets/problems/limitation.jpg";
+
 const symptoms = [
-  { icon: TrendingDown, label: "Dor ao subir escadas" },
-  { icon: Activity, label: "Dor ao levantar da cama pela manhã" },
-  { icon: Ban, label: "Dor ao levantar depois de ficar muito tempo sentado" },
-  { icon: AlertTriangle, label: "Dor ao agachar ou levantar de uma cadeira" },
-  { icon: Footprints, label: "Dificuldade para caminhar ou correr por mais tempo" },
-  { icon: XCircle, label: "Sensação de que seu corpo não se movimenta como antes" },
+  { image: stairsImg, label: "Dor ao subir escadas" },
+  { image: morningBedImg, label: "Dor ao levantar da cama pela manhã" },
+  { image: sittingImg, label: "Dor ao levantar depois de ficar muito tempo sentado" },
+  { image: squatImg, label: "Dor ao agachar ou levantar de uma cadeira" },
+  { image: runningImg, label: "Dificuldade para caminhar ou correr por mais tempo" },
+  { image: limitationImg, label: "Sensação de que seu corpo não se movimenta como antes" },
 ];
 
 const ProblemSection = () => {
