@@ -1,14 +1,20 @@
 import { Button } from "@/components/ui/button";
-import { Footprints, AlertTriangle, Activity, Ban, XCircle, TrendingDown } from "lucide-react";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 
+import stairsImg from "@/assets/problems/stairs.jpg";
+import morningBedImg from "@/assets/problems/morning-bed.jpg";
+import sittingImg from "@/assets/problems/sitting.jpg";
+import squatImg from "@/assets/problems/squat.jpg";
+import runningImg from "@/assets/problems/running.jpg";
+import limitationImg from "@/assets/problems/limitation.jpg";
+
 const symptoms = [
-  { icon: TrendingDown, label: "Dor ao subir escadas" },
-  { icon: Activity, label: "Dor ao levantar da cama pela manhã" },
-  { icon: Ban, label: "Dor ao levantar depois de ficar muito tempo sentado" },
-  { icon: AlertTriangle, label: "Dor ao agachar ou levantar de uma cadeira" },
-  { icon: Footprints, label: "Dificuldade para caminhar ou correr por mais tempo" },
-  { icon: XCircle, label: "Sensação de que seu corpo não se movimenta como antes" },
+  { image: stairsImg, label: "Dor ao subir escadas" },
+  { image: morningBedImg, label: "Dor ao levantar da cama pela manhã" },
+  { image: sittingImg, label: "Dor ao levantar depois de ficar muito tempo sentado" },
+  { image: squatImg, label: "Dor ao agachar ou levantar de uma cadeira" },
+  { image: runningImg, label: "Dificuldade para caminhar ou correr por mais tempo" },
+  { image: limitationImg, label: "Sensação de que seu corpo não se movimenta como antes" },
 ];
 
 const ProblemSection = () => {
@@ -23,13 +29,18 @@ const ProblemSection = () => {
           </h2>
         </AnimateOnScroll>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-7">
-          {symptoms.map(({ icon: Icon, label }, i) => (
+          {symptoms.map(({ image, label }, i) => (
             <AnimateOnScroll key={label} delay={i * 100} animation="animate-scale-in">
-              <div className="group flex flex-col items-center gap-5 rounded-3xl bg-section-alt p-7 md:p-10 shadow-card card-interactive text-center cursor-default border border-border hover:border-primary/20 h-full">
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-light group-hover:gradient-primary transition-all duration-500 group-hover:shadow-cta group-hover:scale-110 group-hover:-rotate-3">
-                  <Icon className="h-7 w-7 text-primary group-hover:text-cta-foreground transition-colors duration-300" />
+              <div className="group flex flex-col items-center gap-4 rounded-3xl bg-section-alt overflow-hidden shadow-card card-interactive text-center cursor-default border border-border hover:border-primary/20 h-full">
+                <div className="w-full aspect-square overflow-hidden">
+                  <img
+                    src={image}
+                    alt={label}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
                 </div>
-                <span className="text-sm md:text-base font-semibold text-foreground leading-snug group-hover:text-primary transition-colors duration-300">{label}</span>
+                <span className="text-sm md:text-base font-semibold text-foreground leading-snug group-hover:text-primary transition-colors duration-300 px-5 pb-5">{label}</span>
               </div>
             </AnimateOnScroll>
           ))}
