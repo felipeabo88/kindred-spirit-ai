@@ -1,6 +1,4 @@
 import aboutPhoto1 from "@/assets/about/foto05.png";
-import aboutPhoto2 from "@/assets/about/judo.jpg";
-import aboutPhoto3 from "@/assets/about/tocha.jpg";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { Button } from "@/components/ui/button";
 import { WHATSAPP_URL } from "@/components/WhatsAppFab";
@@ -23,8 +21,6 @@ const AboutSection = () => {
           <AnimateOnScroll animation="animate-fade-in-left">
             <div className="relative md:sticky md:top-28 flex flex-col gap-4">
                 <img src={aboutPhoto1} alt="Felipe Augusto - Profissional de Educação Física" className="rounded-2xl shadow-card w-full max-w-[400px] mx-auto object-cover" loading="lazy" />
-                <img src={aboutPhoto2} alt="Felipe Augusto - Judô" className="rounded-2xl shadow-card w-full max-w-[400px] mx-auto object-cover" loading="lazy" />
-                <img src={aboutPhoto3} alt="Felipe Augusto - Trajetória" className="rounded-2xl shadow-card w-full max-w-[400px] mx-auto object-cover" loading="lazy" />
             </div>
           </AnimateOnScroll>
 
