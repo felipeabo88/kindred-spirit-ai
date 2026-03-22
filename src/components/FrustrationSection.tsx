@@ -31,22 +31,19 @@ const FrustrationSection = () => {
             Muitas pessoas passam por essas tentativas antes de encontrar o caminho certo.
           </p>
         </AnimateOnScroll>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-7">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 md:gap-7">
           {frustrations.map(({ label, image, desc }, i) => (
-            <AnimateOnScroll key={label} delay={i * 150} animation="animate-slide-up">
-              <div className="group relative rounded-3xl bg-background p-8 md:p-9 space-y-6 shadow-card card-interactive h-full border border-border hover:border-destructive/30">
-                <span className="absolute top-5 right-6 text-7xl font-extrabold text-destructive/[0.05] font-heading select-none group-hover:text-destructive/[0.1] transition-colors duration-500">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-destructive/10 shadow-sm group-hover:scale-110 group-hover:rotate-3 group-hover:bg-destructive/15 transition-all duration-500 p-3">
-                  <img src={image} alt={label} className="w-full h-full object-contain" />
+            <AnimateOnScroll key={label} delay={i * 100} animation="animate-scale-in">
+              <div className="group flex flex-col items-center gap-4 rounded-3xl bg-background overflow-hidden shadow-card card-interactive text-center cursor-default border border-border hover:border-destructive/30 h-full">
+                <div className="w-full aspect-square overflow-hidden flex items-center justify-center p-6">
+                  <img
+                    src={image}
+                    alt={label}
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
                 </div>
-                <h3 className="text-lg font-bold text-foreground font-heading leading-snug group-hover:text-destructive transition-colors duration-300 flex items-center gap-2">
-                  <X className="h-4 w-4 text-destructive shrink-0 group-hover:rotate-90 transition-transform duration-300" />
-                  {label}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{desc}</p>
-                <div className="absolute bottom-0 left-6 right-6 h-0.5 bg-destructive/60 rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                <span className="text-sm md:text-base font-semibold text-foreground leading-snug group-hover:text-destructive transition-colors duration-300 px-5 pb-5">{label}</span>
               </div>
             </AnimateOnScroll>
           ))}
