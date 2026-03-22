@@ -1,5 +1,5 @@
 import AnimateOnScroll from "@/components/AnimateOnScroll";
-import { X, AlertCircle } from "lucide-react";
+import { AlertCircle } from "lucide-react";
 
 import fisioterapiaImg from "@/assets/frustrations/fisioterapia.png";
 import medicosImg from "@/assets/frustrations/medicos.png";
