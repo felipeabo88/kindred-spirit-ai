@@ -13,7 +13,7 @@ const credentials = [
 
 const AboutSection = () => {
   return (
-    <section id="sobre" className="bg-background py-24 md:py-36 relative overflow-hidden">
+    <section id="sobre" className="bg-background py-16 md:py-36 relative overflow-hidden">
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-secondary/30 blur-3xl" />
       <div className="absolute top-20 right-0 w-[400px] h-[400px] rounded-full bg-primary/[0.03] blur-3xl animate-pulse-soft" />
       <div className="container max-w-6xl relative">
