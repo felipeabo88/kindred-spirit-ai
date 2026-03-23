@@ -31,8 +31,8 @@ const FrustrationSection = () => {
             Muitas pessoas passam por essas tentativas antes de encontrar o caminho certo.
           </p>
         </AnimateOnScroll>
-        <div className="flex flex-col items-center gap-5 md:gap-7">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-7 w-full max-w-4xl">
+        <div className="flex flex-col items-center gap-4 md:gap-7">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-7 w-full max-w-4xl">
             {frustrations.slice(0, 3).map(({ label, image }, i) => (
               <AnimateOnScroll key={label} delay={i * 100} animation="animate-scale-in">
                 <div className="group flex flex-col items-center gap-4 rounded-3xl bg-background overflow-hidden shadow-card card-interactive text-center cursor-default border border-border hover:border-destructive/30 h-full">
