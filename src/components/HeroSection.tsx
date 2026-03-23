@@ -12,7 +12,7 @@ const benefits: { text: string; icon: LucideIcon }[] = [
 
 const HeroSection = () => {
   return (
-    <section id="inicio" className="relative overflow-hidden gradient-hero pt-28 md:pt-40 pb-20 md:pb-32">
+    <section id="inicio" className="relative overflow-hidden gradient-hero pt-24 md:pt-40 pb-16 md:pb-32">
       {/* Decorative shapes */}
       <div className="absolute top-20 right-0 w-[600px] h-[600px] rounded-full bg-primary/[0.04] blur-3xl animate-pulse-soft" />
       <div className="absolute bottom-0 -left-20 w-[500px] h-[500px] rounded-full bg-secondary/40 blur-3xl" />
@@ -26,7 +26,7 @@ const HeroSection = () => {
               Consultoria 100% Online
               <Sparkles className="h-3.5 w-3.5 animate-pulse-soft" />
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-[3.75rem] xl:text-[4.25rem] font-extrabold leading-[1.06] tracking-tight text-foreground">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.75rem] xl:text-[4.25rem] font-extrabold leading-[1.08] tracking-tight text-foreground">
               Volte a se movimentar com liberdade,{" "}
               <span className="text-gradient-animated italic">sem dor no joelho.</span>
             </h1>
@@ -44,7 +44,7 @@ const HeroSection = () => {
                   <span className="flex h-8 w-8 items-center justify-center rounded-full gradient-primary shrink-0 shadow-cta group-hover/benefit:scale-110 group-hover/benefit:shadow-cta-hover transition-all duration-300">
                     <Icon className="h-4 w-4 text-cta-foreground" />
                   </span>
-                  <span className="font-semibold text-base group-hover/benefit:text-primary transition-colors duration-300">{text}</span>
+                  <span className="font-semibold text-sm sm:text-base group-hover/benefit:text-primary transition-colors duration-300">{text}</span>
                 </li>
               ))}
             </ul>

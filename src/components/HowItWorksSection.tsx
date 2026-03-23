@@ -12,10 +12,10 @@ const steps = [
 
 const HowItWorksSection = () => {
   return (
-    <section id="como-funciona" className="bg-section-alt py-24 md:py-36 relative overflow-hidden">
+    <section id="como-funciona" className="bg-section-alt py-16 md:py-36 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-primary/[0.03] blur-3xl animate-pulse-soft" />
       <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-secondary/20 blur-3xl" />
-      <div className="container max-w-4xl space-y-20 relative">
+      <div className="container max-w-4xl space-y-12 md:space-y-20 relative">
         <AnimateOnScroll className="text-center space-y-5">
           <span className="inline-block text-sm font-bold uppercase tracking-[0.2em] text-primary font-body bg-primary/10 px-4 py-1.5 rounded-full">Passo a passo</span>
           <h2 className="text-3xl md:text-4xl lg:text-[3.25rem] font-extrabold text-foreground leading-tight">
@@ -30,8 +30,8 @@ const HowItWorksSection = () => {
           <div className="absolute left-8 md:left-9 top-8 bottom-8 w-0.5 bg-gradient-to-b from-primary/30 via-primary/15 to-transparent hidden md:block" />
           {steps.map(({ icon: Icon, num, title, desc }, i) => (
             <AnimateOnScroll key={num} delay={i * 160} animation="animate-slide-up">
-              <div className="group flex items-start gap-7 md:gap-9 rounded-3xl bg-background p-8 md:p-10 shadow-card card-interactive relative border border-border hover:border-primary/20">
-                <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl gradient-primary text-cta-foreground font-bold text-lg shadow-cta relative z-10 font-body group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-cta-hover transition-all duration-500">
+              <div className="group flex items-start gap-4 md:gap-9 rounded-3xl bg-background p-5 md:p-10 shadow-card card-interactive relative border border-border hover:border-primary/20">
+                <div className="flex h-12 w-12 md:h-16 md:w-16 flex-shrink-0 items-center justify-center rounded-xl md:rounded-2xl gradient-primary text-cta-foreground font-bold text-base md:text-lg shadow-cta relative z-10 font-body group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-cta-hover transition-all duration-500">
                   {num}
                 </div>
                 <div className="space-y-2.5 pt-1">
@@ -47,7 +47,7 @@ const HowItWorksSection = () => {
           ))}
         </div>
         <AnimateOnScroll className="text-center">
-          <div className="rounded-3xl gradient-primary p-10 md:p-14 text-center space-y-6 shadow-elegant relative overflow-hidden group hover:shadow-cta-hover transition-shadow duration-500">
+          <div className="rounded-3xl gradient-primary p-7 md:p-14 text-center space-y-6 shadow-elegant relative overflow-hidden group hover:shadow-cta-hover transition-shadow duration-500">
             <div className="absolute top-0 right-0 w-60 h-60 rounded-full bg-cta-foreground/[0.05] blur-3xl group-hover:w-80 group-hover:h-80 transition-all duration-700" />
             <div className="absolute bottom-0 left-0 w-40 h-40 rounded-full bg-cta-foreground/[0.03] blur-3xl" />
             <p className="text-cta-foreground text-lg md:text-xl font-medium leading-relaxed max-w-xl mx-auto relative z-10">

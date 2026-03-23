@@ -50,7 +50,7 @@ const faqs = [
 
 const FaqSection = () => {
   return (
-    <section id="duvidas" className="bg-background py-24 md:py-36 relative overflow-hidden">
+    <section id="duvidas" className="bg-background py-16 md:py-36 relative overflow-hidden">
       <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-primary/[0.03] blur-3xl" />
       <div className="container max-w-3xl space-y-16">
         <AnimateOnScroll className="text-center space-y-5">
@@ -69,7 +69,7 @@ const FaqSection = () => {
               <AccordionItem
                 key={i}
                 value={`faq-${i}`}
-                className="rounded-2xl bg-section-alt px-8 border border-border data-[state=open]:shadow-card-hover data-[state=open]:border-primary/20 transition-all duration-500 hover:border-primary/10 hover:-translate-y-0.5 group/faq"
+                className="rounded-2xl bg-section-alt px-4 md:px-8 border border-border data-[state=open]:shadow-card-hover data-[state=open]:border-primary/20 transition-all duration-500 hover:border-primary/10 hover:-translate-y-0.5 group/faq"
               >
                 <AccordionTrigger className="text-left text-base md:text-lg font-bold text-foreground hover:no-underline py-7 gap-4">
                   <span className="flex items-center gap-3">

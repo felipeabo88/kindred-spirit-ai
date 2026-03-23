@@ -17,11 +17,11 @@ const frustrations = [
 
 const FrustrationSection = () => {
   return (
-    <section className="bg-section-alt py-24 md:py-36 relative overflow-hidden">
+    <section className="bg-section-alt py-16 md:py-36 relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-1.5 bg-destructive/40" />
       <div className="absolute top-20 right-0 w-96 h-96 rounded-full bg-destructive/[0.03] blur-3xl animate-pulse-soft" />
       <div className="absolute bottom-20 left-0 w-72 h-72 rounded-full bg-destructive/[0.05] blur-3xl" />
-      <div className="container space-y-20">
+      <div className="container space-y-12 md:space-y-20">
         <AnimateOnScroll className="text-center space-y-5 max-w-2xl mx-auto">
           <span className="inline-block text-sm font-bold uppercase tracking-[0.2em] text-destructive font-body bg-destructive/10 px-4 py-1.5 rounded-full">Frustração comum</span>
           <h2 className="text-3xl md:text-4xl lg:text-[3.25rem] font-extrabold text-foreground leading-tight">
@@ -31,8 +31,8 @@ const FrustrationSection = () => {
             Muitas pessoas passam por essas tentativas antes de encontrar o caminho certo.
           </p>
         </AnimateOnScroll>
-        <div className="flex flex-col items-center gap-5 md:gap-7">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-7 w-full max-w-4xl">
+        <div className="flex flex-col items-center gap-4 md:gap-7">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-7 w-full max-w-4xl">
             {frustrations.slice(0, 3).map(({ label, image }, i) => (
               <AnimateOnScroll key={label} delay={i * 100} animation="animate-scale-in">
                 <div className="group flex flex-col items-center gap-4 rounded-3xl bg-background overflow-hidden shadow-card card-interactive text-center cursor-default border border-border hover:border-destructive/30 h-full">
@@ -49,7 +49,7 @@ const FrustrationSection = () => {
               </AnimateOnScroll>
             ))}
           </div>
-          <div className="grid grid-cols-2 gap-5 md:gap-7 w-full max-w-2xl">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-7 w-full max-w-2xl">
             {frustrations.slice(3).map(({ label, image }, i) => (
               <AnimateOnScroll key={label} delay={(i + 3) * 100} animation="animate-scale-in">
                 <div className="group flex flex-col items-center gap-4 rounded-3xl bg-background overflow-hidden shadow-card card-interactive text-center cursor-default border border-border hover:border-destructive/30 h-full">
@@ -68,7 +68,7 @@ const FrustrationSection = () => {
           </div>
         </div>
         <AnimateOnScroll delay={200}>
-          <div className="rounded-3xl border border-border bg-background p-10 md:p-12 text-center shadow-card hover:shadow-card-hover transition-all duration-500 group/alert hover:-translate-y-1 max-w-3xl mx-auto">
+          <div className="rounded-3xl border border-border bg-background p-6 md:p-12 text-center shadow-card hover:shadow-card-hover transition-all duration-500 group/alert hover:-translate-y-1 max-w-3xl mx-auto">
             <div className="flex justify-center mb-5">
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-destructive/10 group-hover/alert:bg-destructive/15 group-hover/alert:scale-110 transition-all duration-300">
                 <AlertCircle className="h-7 w-7 text-destructive group-hover/alert:animate-wiggle" />
