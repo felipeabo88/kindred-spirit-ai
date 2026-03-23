@@ -15,7 +15,7 @@ const HowItWorksSection = () => {
     <section id="como-funciona" className="bg-section-alt py-16 md:py-36 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-primary/[0.03] blur-3xl animate-pulse-soft" />
       <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-secondary/20 blur-3xl" />
-      <div className="container max-w-4xl space-y-20 relative">
+      <div className="container max-w-4xl space-y-12 md:space-y-20 relative">
         <AnimateOnScroll className="text-center space-y-5">
           <span className="inline-block text-sm font-bold uppercase tracking-[0.2em] text-primary font-body bg-primary/10 px-4 py-1.5 rounded-full">Passo a passo</span>
           <h2 className="text-3xl md:text-4xl lg:text-[3.25rem] font-extrabold text-foreground leading-tight">
