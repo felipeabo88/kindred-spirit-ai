@@ -21,7 +21,7 @@ const FrustrationSection = () => {
       <div className="absolute top-0 left-0 w-full h-1.5 bg-destructive/40" />
       <div className="absolute top-20 right-0 w-96 h-96 rounded-full bg-destructive/[0.03] blur-3xl animate-pulse-soft" />
       <div className="absolute bottom-20 left-0 w-72 h-72 rounded-full bg-destructive/[0.05] blur-3xl" />
-      <div className="container space-y-20">
+      <div className="container space-y-12 md:space-y-20">
         <AnimateOnScroll className="text-center space-y-5 max-w-2xl mx-auto">
           <span className="inline-block text-sm font-bold uppercase tracking-[0.2em] text-destructive font-body bg-destructive/10 px-4 py-1.5 rounded-full">Frustração comum</span>
           <h2 className="text-3xl md:text-4xl lg:text-[3.25rem] font-extrabold text-foreground leading-tight">
