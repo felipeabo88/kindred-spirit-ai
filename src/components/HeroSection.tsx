@@ -44,7 +44,7 @@ const HeroSection = () => {
                   <span className="flex h-8 w-8 items-center justify-center rounded-full gradient-primary shrink-0 shadow-cta group-hover/benefit:scale-110 group-hover/benefit:shadow-cta-hover transition-all duration-300">
                     <Icon className="h-4 w-4 text-cta-foreground" />
                   </span>
-                  <span className="font-semibold text-base group-hover/benefit:text-primary transition-colors duration-300">{text}</span>
+                  <span className="font-semibold text-sm sm:text-base group-hover/benefit:text-primary transition-colors duration-300">{text}</span>
                 </li>
               ))}
             </ul>

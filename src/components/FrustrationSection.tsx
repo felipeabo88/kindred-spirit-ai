@@ -68,7 +68,7 @@ const FrustrationSection = () => {
           </div>
         </div>
         <AnimateOnScroll delay={200}>
-          <div className="rounded-3xl border border-border bg-background p-10 md:p-12 text-center shadow-card hover:shadow-card-hover transition-all duration-500 group/alert hover:-translate-y-1 max-w-3xl mx-auto">
+          <div className="rounded-3xl border border-border bg-background p-6 md:p-12 text-center shadow-card hover:shadow-card-hover transition-all duration-500 group/alert hover:-translate-y-1 max-w-3xl mx-auto">
             <div className="flex justify-center mb-5">
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-destructive/10 group-hover/alert:bg-destructive/15 group-hover/alert:scale-110 transition-all duration-300">
                 <AlertCircle className="h-7 w-7 text-destructive group-hover/alert:animate-wiggle" />

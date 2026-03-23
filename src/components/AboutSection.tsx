@@ -17,7 +17,7 @@ const AboutSection = () => {
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-secondary/30 blur-3xl" />
       <div className="absolute top-20 right-0 w-[400px] h-[400px] rounded-full bg-primary/[0.03] blur-3xl animate-pulse-soft" />
       <div className="container max-w-6xl relative">
-        <div className="grid md:grid-cols-[400px_1fr] gap-16 items-start">
+        <div className="grid md:grid-cols-[350px_1fr] gap-10 md:gap-16 items-start">
           <AnimateOnScroll animation="animate-fade-in-left">
             <div className="relative md:sticky md:top-28 flex flex-col gap-4">
                 <img src={aboutPhoto1} alt="Felipe Augusto - Profissional de Educação Física" className="rounded-2xl shadow-card w-full max-w-[400px] mx-auto object-cover" loading="lazy" />

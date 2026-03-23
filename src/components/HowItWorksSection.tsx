@@ -47,7 +47,7 @@ const HowItWorksSection = () => {
           ))}
         </div>
         <AnimateOnScroll className="text-center">
-          <div className="rounded-3xl gradient-primary p-10 md:p-14 text-center space-y-6 shadow-elegant relative overflow-hidden group hover:shadow-cta-hover transition-shadow duration-500">
+          <div className="rounded-3xl gradient-primary p-7 md:p-14 text-center space-y-6 shadow-elegant relative overflow-hidden group hover:shadow-cta-hover transition-shadow duration-500">
             <div className="absolute top-0 right-0 w-60 h-60 rounded-full bg-cta-foreground/[0.05] blur-3xl group-hover:w-80 group-hover:h-80 transition-all duration-700" />
             <div className="absolute bottom-0 left-0 w-40 h-40 rounded-full bg-cta-foreground/[0.03] blur-3xl" />
             <p className="text-cta-foreground text-lg md:text-xl font-medium leading-relaxed max-w-xl mx-auto relative z-10">
