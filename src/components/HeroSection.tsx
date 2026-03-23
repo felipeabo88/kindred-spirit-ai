@@ -26,7 +26,7 @@ const HeroSection = () => {
               Consultoria 100% Online
               <Sparkles className="h-3.5 w-3.5 animate-pulse-soft" />
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-[3.75rem] xl:text-[4.25rem] font-extrabold leading-[1.06] tracking-tight text-foreground">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.75rem] xl:text-[4.25rem] font-extrabold leading-[1.08] tracking-tight text-foreground">
               Volte a se movimentar com liberdade,{" "}
               <span className="text-gradient-animated italic">sem dor no joelho.</span>
             </h1>
