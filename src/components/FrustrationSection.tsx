@@ -31,22 +31,41 @@ const FrustrationSection = () => {
             Muitas pessoas passam por essas tentativas antes de encontrar o caminho certo.
           </p>
         </AnimateOnScroll>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 md:gap-7">
-          {frustrations.map(({ label, image, desc }, i) => (
-            <AnimateOnScroll key={label} delay={i * 100} animation="animate-scale-in">
-              <div className="group flex flex-col items-center gap-4 rounded-3xl bg-background overflow-hidden shadow-card card-interactive text-center cursor-default border border-border hover:border-destructive/30 h-full">
-                <div className="w-full aspect-square overflow-hidden flex items-center justify-center p-6">
-                  <img
-                    src={image}
-                    alt={label}
-                    className="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
-                  />
+        <div className="flex flex-col items-center gap-5 md:gap-7">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-7 w-full max-w-4xl">
+            {frustrations.slice(0, 3).map(({ label, image }, i) => (
+              <AnimateOnScroll key={label} delay={i * 100} animation="animate-scale-in">
+                <div className="group flex flex-col items-center gap-4 rounded-3xl bg-background overflow-hidden shadow-card card-interactive text-center cursor-default border border-border hover:border-destructive/30 h-full">
+                  <div className="w-full aspect-square overflow-hidden flex items-center justify-center p-6">
+                    <img
+                      src={image}
+                      alt={label}
+                      className="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                  </div>
+                  <span className="text-sm md:text-base font-semibold text-foreground leading-snug group-hover:text-destructive transition-colors duration-300 px-5 pb-5">{label}</span>
                 </div>
-                <span className="text-sm md:text-base font-semibold text-foreground leading-snug group-hover:text-destructive transition-colors duration-300 px-5 pb-5">{label}</span>
-              </div>
-            </AnimateOnScroll>
-          ))}
+              </AnimateOnScroll>
+            ))}
+          </div>
+          <div className="grid grid-cols-2 gap-5 md:gap-7 w-full max-w-2xl">
+            {frustrations.slice(3).map(({ label, image }, i) => (
+              <AnimateOnScroll key={label} delay={(i + 3) * 100} animation="animate-scale-in">
+                <div className="group flex flex-col items-center gap-4 rounded-3xl bg-background overflow-hidden shadow-card card-interactive text-center cursor-default border border-border hover:border-destructive/30 h-full">
+                  <div className="w-full aspect-square overflow-hidden flex items-center justify-center p-6">
+                    <img
+                      src={image}
+                      alt={label}
+                      className="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                  </div>
+                  <span className="text-sm md:text-base font-semibold text-foreground leading-snug group-hover:text-destructive transition-colors duration-300 px-5 pb-5">{label}</span>
+                </div>
+              </AnimateOnScroll>
+            ))}
+          </div>
         </div>
         <AnimateOnScroll delay={200}>
           <div className="rounded-3xl border border-border bg-background p-10 md:p-12 text-center shadow-card hover:shadow-card-hover transition-all duration-500 group/alert hover:-translate-y-1 max-w-3xl mx-auto">
