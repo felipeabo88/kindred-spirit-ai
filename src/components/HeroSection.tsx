@@ -12,7 +12,7 @@ const benefits: { text: string; icon: LucideIcon }[] = [
 
 const HeroSection = () => {
   return (
-    <section id="inicio" className="relative overflow-hidden gradient-hero pt-28 md:pt-40 pb-20 md:pb-32">
+    <section id="inicio" className="relative overflow-hidden gradient-hero pt-24 md:pt-40 pb-16 md:pb-32">
       {/* Decorative shapes */}
       <div className="absolute top-20 right-0 w-[600px] h-[600px] rounded-full bg-primary/[0.04] blur-3xl animate-pulse-soft" />
       <div className="absolute bottom-0 -left-20 w-[500px] h-[500px] rounded-full bg-secondary/40 blur-3xl" />
