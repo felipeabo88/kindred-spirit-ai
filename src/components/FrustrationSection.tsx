@@ -39,7 +39,7 @@ const FrustrationSection = () => {
                   <img
                     src={image}
                     alt={label}
-                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
                 </div>
