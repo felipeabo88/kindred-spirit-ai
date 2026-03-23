@@ -12,7 +12,7 @@ const steps = [
 
 const HowItWorksSection = () => {
   return (
-    <section id="como-funciona" className="bg-section-alt py-24 md:py-36 relative overflow-hidden">
+    <section id="como-funciona" className="bg-section-alt py-16 md:py-36 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-primary/[0.03] blur-3xl animate-pulse-soft" />
       <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-secondary/20 blur-3xl" />
       <div className="container max-w-4xl space-y-20 relative">
