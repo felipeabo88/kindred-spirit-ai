@@ -30,8 +30,8 @@ const HowItWorksSection = () => {
           <div className="absolute left-8 md:left-9 top-8 bottom-8 w-0.5 bg-gradient-to-b from-primary/30 via-primary/15 to-transparent hidden md:block" />
           {steps.map(({ icon: Icon, num, title, desc }, i) => (
             <AnimateOnScroll key={num} delay={i * 160} animation="animate-slide-up">
-              <div className="group flex items-start gap-7 md:gap-9 rounded-3xl bg-background p-8 md:p-10 shadow-card card-interactive relative border border-border hover:border-primary/20">
-                <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl gradient-primary text-cta-foreground font-bold text-lg shadow-cta relative z-10 font-body group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-cta-hover transition-all duration-500">
+              <div className="group flex items-start gap-4 md:gap-9 rounded-3xl bg-background p-5 md:p-10 shadow-card card-interactive relative border border-border hover:border-primary/20">
+                <div className="flex h-12 w-12 md:h-16 md:w-16 flex-shrink-0 items-center justify-center rounded-xl md:rounded-2xl gradient-primary text-cta-foreground font-bold text-base md:text-lg shadow-cta relative z-10 font-body group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-cta-hover transition-all duration-500">
                   {num}
                 </div>
                 <div className="space-y-2.5 pt-1">
