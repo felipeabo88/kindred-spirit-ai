@@ -49,7 +49,7 @@ const FrustrationSection = () => {
               </AnimateOnScroll>
             ))}
           </div>
-          <div className="grid grid-cols-2 gap-5 md:gap-7 w-full max-w-2xl">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-7 w-full max-w-2xl">
             {frustrations.slice(3).map(({ label, image }, i) => (
               <AnimateOnScroll key={label} delay={(i + 3) * 100} animation="animate-scale-in">
                 <div className="group flex flex-col items-center gap-4 rounded-3xl bg-background overflow-hidden shadow-card card-interactive text-center cursor-default border border-border hover:border-destructive/30 h-full">
