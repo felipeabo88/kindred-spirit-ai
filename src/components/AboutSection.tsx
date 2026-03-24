@@ -21,13 +21,16 @@ const AboutSection = () => {
           <AnimateOnScroll animation="animate-fade-in-left">
             <div className="relative md:sticky md:top-28 flex flex-col gap-4">
               <div className="relative w-full max-w-[450px] mx-auto">
-                {/* Decorative background shape mimicking the organic petal form */}
-                <div className="absolute -inset-4 bg-gradient-to-br from-primary/15 via-primary/5 to-transparent" style={{ borderRadius: '60% 40% 40% 0%' }} />
+                {/* Decorative shadow shape */}
+                <div
+                  className="absolute -inset-3 bg-primary/10 blur-md"
+                  style={{ borderRadius: '45% 45% 45% 4px' }}
+                />
                 <img
                   src={aboutPhoto1}
                   alt="Felipe Augusto - Profissional de Educação Física"
-                  className="relative w-full aspect-[3/4] object-cover object-top shadow-2xl"
-                  style={{ borderRadius: '50% 30% 30% 0%' }}
+                  className="relative w-full aspect-[3/4] object-cover object-top shadow-xl"
+                  style={{ borderRadius: '45% 45% 45% 4px' }}
                   loading="lazy"
                 />
               </div>
