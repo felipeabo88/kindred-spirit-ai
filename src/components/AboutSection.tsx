@@ -20,17 +20,17 @@ const AboutSection = () => {
         <div className="grid md:grid-cols-[350px_1fr] gap-10 md:gap-16 items-start">
           <AnimateOnScroll animation="animate-fade-in-left">
             <div className="relative md:sticky md:top-28 flex flex-col gap-4">
-              <div className="relative w-full max-w-[450px] mx-auto">
-                {/* Decorative shadow shape */}
+              <div className="relative w-full max-w-[450px] mx-auto overflow-visible">
+                {/* Decorative shadow behind the shape */}
                 <div
-                  className="absolute -inset-3 bg-primary/8 blur-lg"
-                  style={{ borderRadius: '50% 50% 50% 0' }}
+                  className="absolute -inset-4 bg-primary/10 blur-xl"
+                  style={{ clipPath: 'ellipse(55% 55% at 55% 45%)' }}
                 />
                 <img
                   src={aboutPhoto1}
                   alt="Felipe Augusto - Profissional de Educação Física"
                   className="relative w-full aspect-[3/4] object-cover object-top shadow-xl"
-                  style={{ borderRadius: '50% 50% 50% 0' }}
+                  style={{ clipPath: 'polygon(50% 0%, 100% 0%, 100% 50%, 100% 85%, 85% 100%, 50% 100%, 0% 100%, 0% 50%)' }}
                   loading="lazy"
                 />
               </div>
