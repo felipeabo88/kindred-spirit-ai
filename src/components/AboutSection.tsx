@@ -23,14 +23,14 @@ const AboutSection = () => {
               <div className="relative w-full max-w-[450px] mx-auto">
                 {/* Decorative shadow shape */}
                 <div
-                  className="absolute -inset-3 bg-primary/10 blur-md"
-                  style={{ borderRadius: '45% 45% 45% 4px' }}
+                  className="absolute -inset-3 bg-primary/8 blur-lg"
+                  style={{ borderRadius: '50% 50% 50% 0' }}
                 />
                 <img
                   src={aboutPhoto1}
                   alt="Felipe Augusto - Profissional de Educação Física"
                   className="relative w-full aspect-[3/4] object-cover object-top shadow-xl"
-                  style={{ borderRadius: '45% 45% 45% 4px' }}
+                  style={{ borderRadius: '50% 50% 50% 0' }}
                   loading="lazy"
                 />
               </div>
