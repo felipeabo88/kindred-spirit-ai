@@ -20,7 +20,17 @@ const AboutSection = () => {
         <div className="grid md:grid-cols-[350px_1fr] gap-10 md:gap-16 items-start">
           <AnimateOnScroll animation="animate-fade-in-left">
             <div className="relative md:sticky md:top-28 flex flex-col gap-4">
-                <img src={aboutPhoto1} alt="Felipe Augusto - Profissional de Educação Física" className="rounded-2xl shadow-card w-full max-w-[400px] mx-auto object-cover" loading="lazy" />
+              <div className="relative w-full max-w-[400px] mx-auto">
+                {/* Decorative background shape */}
+                <div className="absolute -inset-3 rounded-3xl bg-gradient-to-br from-primary/20 via-primary/10 to-transparent blur-sm" />
+                <div className="absolute -bottom-2 -right-2 w-24 h-24 rounded-full bg-primary/15 blur-xl" />
+                <img
+                  src={aboutPhoto1}
+                  alt="Felipe Augusto - Profissional de Educação Física"
+                  className="relative rounded-3xl shadow-2xl w-full aspect-[3/4] object-cover object-top border-2 border-primary/10"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </AnimateOnScroll>
 
