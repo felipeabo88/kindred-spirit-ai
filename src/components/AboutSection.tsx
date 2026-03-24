@@ -21,18 +21,23 @@ const AboutSection = () => {
           <AnimateOnScroll animation="animate-fade-in-left">
             <div className="relative md:sticky md:top-28 flex flex-col gap-4">
               <div className="relative w-full max-w-[450px] mx-auto">
-                {/* Decorative shadow shape */}
+                {/* Decorative glow behind */}
                 <div
-                  className="absolute -inset-3 bg-primary/8 blur-lg"
+                  className="absolute -inset-4 bg-primary/8 blur-xl"
                   style={{ borderRadius: '50% 50% 50% 0' }}
                 />
-                <img
-                  src={aboutPhoto1}
-                  alt="Felipe Augusto - Profissional de Educação Física"
-                  className="relative w-full aspect-[3/4] object-cover object-top shadow-xl"
+                {/* Container with the organic shape — clips the image cleanly */}
+                <div
+                  className="relative overflow-hidden shadow-xl"
                   style={{ borderRadius: '50% 50% 50% 0' }}
-                  loading="lazy"
-                />
+                >
+                  <img
+                    src={aboutPhoto1}
+                    alt="Felipe Augusto - Profissional de Educação Física"
+                    className="w-full aspect-[3/4] object-cover object-top"
+                    loading="lazy"
+                  />
+                </div>
               </div>
             </div>
           </AnimateOnScroll>
