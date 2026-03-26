@@ -49,9 +49,14 @@ const FrustrationSection = () => {
               </AnimateOnScroll>
             ))}
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-7 w-full max-w-[36.75rem]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-4 md:gap-7 w-full max-w-4xl">
             {frustrations.slice(3).map(({ label, image }, i) => (
-              <AnimateOnScroll key={label} delay={(i + 3) * 100} animation="animate-scale-in">
+              <AnimateOnScroll
+                key={label}
+                delay={(i + 3) * 100}
+                animation="animate-scale-in"
+                className={i === 0 ? "md:col-start-2 md:col-span-2" : "md:col-start-4 md:col-span-2"}
+              >
                 <div className="group flex flex-col items-center gap-4 rounded-3xl bg-background overflow-hidden shadow-card card-interactive text-center cursor-default border border-border hover:border-destructive/30 h-full">
                   <div className="w-full aspect-[4/3] overflow-hidden">
                     <img
