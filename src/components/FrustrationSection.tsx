@@ -36,11 +36,11 @@ const FrustrationSection = () => {
             {frustrations.slice(0, 3).map(({ label, image }, i) => (
               <AnimateOnScroll key={label} delay={i * 100} animation="animate-scale-in">
                 <div className="group flex flex-col items-center gap-4 rounded-3xl bg-background overflow-hidden shadow-card card-interactive text-center cursor-default border border-border hover:border-destructive/30 h-full">
-                  <div className="w-full aspect-square overflow-hidden flex items-center justify-center p-6">
+                  <div className="w-full aspect-[4/3] overflow-hidden">
                     <img
                       src={image}
                       alt={label}
-                      className="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       loading="lazy"
                     />
                   </div>
@@ -53,11 +53,11 @@ const FrustrationSection = () => {
             {frustrations.slice(3).map(({ label, image }, i) => (
               <AnimateOnScroll key={label} delay={(i + 3) * 100} animation="animate-scale-in">
                 <div className="group flex flex-col items-center gap-4 rounded-3xl bg-background overflow-hidden shadow-card card-interactive text-center cursor-default border border-border hover:border-destructive/30 h-full">
-                  <div className="w-full aspect-square overflow-hidden flex items-center justify-center p-6">
+                  <div className="w-full aspect-[4/3] overflow-hidden">
                     <img
                       src={image}
                       alt={label}
-                      className="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       loading="lazy"
                     />
                   </div>
