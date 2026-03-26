@@ -1,4 +1,4 @@
-import aboutPhoto1 from "@/assets/about/foto05.png";
+
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { Button } from "@/components/ui/button";
 import { WHATSAPP_URL } from "@/components/WhatsAppFab";
@@ -17,22 +17,7 @@ const AboutSection = () => {
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-secondary/30 blur-3xl" />
       <div className="absolute top-20 right-0 w-[400px] h-[400px] rounded-full bg-primary/[0.03] blur-3xl animate-pulse-soft" />
       <div className="container max-w-6xl relative">
-        <div className="grid md:grid-cols-[350px_1fr] gap-10 md:gap-16 items-start">
-          <AnimateOnScroll animation="animate-fade-in-left">
-            <div className="relative md:sticky md:top-28 flex flex-col gap-4">
-              <div className="relative w-full max-w-[450px] mx-auto">
-                <div className="absolute -inset-4 rounded-[2rem] bg-primary/8 blur-xl" />
-                <div className="relative overflow-hidden rounded-[2rem] shadow-xl">
-                  <img
-                    src={aboutPhoto1}
-                    alt="Felipe Augusto - Profissional de Educação Física"
-                    className="w-full h-auto object-contain"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            </div>
-          </AnimateOnScroll>
+        <div className="max-w-3xl mx-auto">
 
           <AnimateOnScroll animation="animate-fade-in-right" className="space-y-8">
             <span className="inline-block text-sm font-bold uppercase tracking-[0.2em] text-primary font-body bg-primary/10 px-4 py-1.5 rounded-full">
