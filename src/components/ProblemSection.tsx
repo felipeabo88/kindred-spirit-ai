@@ -26,22 +26,46 @@ const ProblemSection = () => {
             A sua dor no joelho aparece em situações como estas?
           </h2>
         </AnimateOnScroll>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-7">
-          {symptoms.map(({ image, label }, i) => (
-            <AnimateOnScroll key={label} delay={i * 100} animation="animate-scale-in">
-              <div className="group flex flex-col items-center gap-4 rounded-3xl bg-section-alt overflow-hidden shadow-card card-interactive text-center cursor-default border border-border hover:border-primary/20 h-full">
-                <div className="w-full aspect-[4/3] overflow-hidden">
-                  <img
-                    src={image}
-                    alt={label}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
-                  />
+        <div className="flex flex-col items-center gap-4 md:gap-7">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-7 w-full max-w-4xl">
+            {symptoms.slice(0, 3).map(({ image, label }, i) => (
+              <AnimateOnScroll key={label} delay={i * 100} animation="animate-scale-in">
+                <div className="group flex flex-col items-center gap-4 rounded-3xl bg-section-alt overflow-hidden shadow-card card-interactive text-center cursor-default border border-border hover:border-primary/20 h-full">
+                  <div className="w-full aspect-[4/3] overflow-hidden">
+                    <img
+                      src={image}
+                      alt={label}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                  </div>
+                  <span className="text-sm md:text-base font-semibold text-foreground leading-snug group-hover:text-primary transition-colors duration-300 px-5 pb-5">{label}</span>
                 </div>
-                <span className="text-sm md:text-base font-semibold text-foreground leading-snug group-hover:text-primary transition-colors duration-300 px-5 pb-5">{label}</span>
-              </div>
-            </AnimateOnScroll>
-          ))}
+              </AnimateOnScroll>
+            ))}
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-4 md:gap-7 w-full max-w-4xl">
+            {symptoms.slice(3).map(({ image, label }, i) => (
+              <AnimateOnScroll
+                key={label}
+                delay={(i + 3) * 100}
+                animation="animate-scale-in"
+                className={i === 0 ? "md:col-start-2 md:col-span-2" : "md:col-start-4 md:col-span-2"}
+              >
+                <div className="group flex flex-col items-center gap-4 rounded-3xl bg-section-alt overflow-hidden shadow-card card-interactive text-center cursor-default border border-border hover:border-primary/20 h-full">
+                  <div className="w-full aspect-[4/3] overflow-hidden">
+                    <img
+                      src={image}
+                      alt={label}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                  </div>
+                  <span className="text-sm md:text-base font-semibold text-foreground leading-snug group-hover:text-primary transition-colors duration-300 px-5 pb-5">{label}</span>
+                </div>
+              </AnimateOnScroll>
+            ))}
+          </div>
         </div>
         <AnimateOnScroll className="text-center space-y-7 max-w-2xl mx-auto">
           <p className="text-muted-foreground text-lg leading-relaxed">
