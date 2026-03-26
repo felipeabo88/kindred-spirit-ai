@@ -1,4 +1,4 @@
-import aboutPhoto1 from "@/assets/about/foto05.png";
+
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { Button } from "@/components/ui/button";
 import { WHATSAPP_URL } from "@/components/WhatsAppFab";
