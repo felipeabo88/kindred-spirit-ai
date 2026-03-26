@@ -4,7 +4,6 @@ import AnimateOnScroll from "@/components/AnimateOnScroll";
 import stairsImg from "@/assets/problems/stairs.png";
 import morningBedImg from "@/assets/problems/morning-bed.png";
 import sittingImg from "@/assets/problems/sitting.png";
-import squatImg from "@/assets/problems/squat.png";
 import runningImg from "@/assets/problems/running.png";
 import limitationImg from "@/assets/problems/limitation.png";
 
@@ -12,7 +11,6 @@ const symptoms = [
   { image: stairsImg, label: "Dor ao subir escadas" },
   { image: morningBedImg, label: "Dor ao levantar da cama pela manhã" },
   { image: sittingImg, label: "Dor ao levantar depois de ficar muito tempo sentado" },
-  { image: squatImg, label: "Dor ao agachar ou levantar de uma cadeira" },
   { image: runningImg, label: "Dificuldade para caminhar ou correr por mais tempo" },
   { image: limitationImg, label: "Sensação de que seu corpo não se movimenta como antes" },
 ];
