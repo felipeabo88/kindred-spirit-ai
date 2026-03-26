@@ -1,12 +1,18 @@
-import { Video, ClipboardList, CalendarCheck, TrendingUp, MessageCircle, Play, Dumbbell, BarChart3, ShieldCheck, CheckCircle2, Zap, Target, ArrowUpRight } from "lucide-react";
+import { Video, ClipboardList, CalendarCheck, TrendingUp, MessageCircle } from "lucide-react";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { Button } from "@/components/ui/button";
 import { WHATSAPP_URL } from "@/components/WhatsAppFab";
+import step01 from "@/assets/steps/step-01.png";
+import step02 from "@/assets/steps/step-02.png";
+import step03 from "@/assets/steps/step-03.png";
+import step04 from "@/assets/steps/step-04.png";
 
 const steps = [
-  {
-    icon: Video,
-    num: "01",
+  { icon: Video, num: "01", title: "Avaliação online do movimento", desc: "Por vídeo, analisamos seus padrões de movimento e identificamos a origem da dor.", img: step01 },
+  { icon: ClipboardList, num: "02", title: "Plano de exercícios personalizado", desc: "Você recebe um programa completo de exercícios feito para o seu caso.", img: step02 },
+  { icon: CalendarCheck, num: "03", title: "Acompanhamento semanal", desc: "Reuniões semanais online para ajustar exercícios e monitorar progresso.", img: step03 },
+  { icon: TrendingUp, num: "04", title: "Progressão segura", desc: "Evolução gradual para que você retome sua rotina com segurança.", img: step04 },
+];
     title: "Avaliação online do movimento",
     desc: "Por vídeo, analisamos seus padrões de movimento e identificamos a origem da dor.",
     visual: {
