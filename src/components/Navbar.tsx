@@ -49,7 +49,7 @@ const Navbar = () => {
           <Button variant="cta" size="sm" asChild className="btn-shine">
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="gap-2">
               <MessageCircle className="h-4 w-4" />
-              Agendar agora
+              Saiba mais
             </a>
           </Button>
         </nav>
@@ -85,7 +85,7 @@ const Navbar = () => {
           <Button variant="cta" size="lg" asChild className="mt-2 btn-shine">
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="gap-2">
               <MessageCircle className="h-5 w-5" />
-              Agendar agora
+              Saiba mais
             </a>
           </Button>
         </nav>

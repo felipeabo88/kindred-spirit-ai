@@ -1,5 +1,7 @@
 import AnimateOnScroll from "@/components/AnimateOnScroll";
-import { AlertCircle } from "lucide-react";
+import { AlertCircle, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { WHATSAPP_URL } from "@/components/WhatsAppFab";
 
 import fisioterapiaImg from "@/assets/frustrations/fisioterapia.png";
 import medicosImg from "@/assets/frustrations/medicos.png";
@@ -83,6 +85,14 @@ const FrustrationSection = () => {
               <strong className="text-foreground">a causa real do problema não foi tratada.</strong>
             </p>
           </div>
+        </AnimateOnScroll>
+        <AnimateOnScroll delay={300} className="text-center">
+          <Button variant="cta" size="xl" className="group text-base btn-shine" asChild>
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+              Quero saber a verdadeira causa
+              <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1.5" />
+            </a>
+          </Button>
         </AnimateOnScroll>
       </div>
     </section>

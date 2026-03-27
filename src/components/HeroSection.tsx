@@ -20,21 +20,16 @@ const HeroSection = () => {
       <div className="container relative">
         <div className="grid gap-12 lg:gap-16 lg:grid-cols-2 items-center">
           <AnimateOnScroll animation="animate-fade-in-left" className="space-y-8">
-            <div className="inline-flex items-center gap-2.5 rounded-full bg-primary/10 px-5 py-2.5 text-sm font-semibold text-primary border border-primary/20">
-              <Video className="h-4 w-4 animate-bounce-subtle" />
-              Consultoria 100% Online
-              <Sparkles className="h-3.5 w-3.5 animate-pulse-soft" />
-            </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-extrabold leading-[1.1] tracking-tight text-foreground">
               Volte a se movimentar com liberdade,{" "}
               <span className="text-gradient-animated italic">sem dor no joelho.</span>
             </h1>
             <div className="space-y-3 max-w-lg">
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                Se você já tentou de tudo e ainda não conseguiu melhorar dessas dores, conheça minha <strong className="text-foreground font-semibold">consultoria online especializada</strong>.
+                Se você já tentou de tudo e ainda não conseguiu melhorar dessas dores, conheça minha <strong className="text-foreground font-semibold">mentoria online especializada</strong>.
               </p>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                Um método focado em ajudar você a voltar a se movimentar <strong className="text-foreground font-semibold">sem depender de remédios ou cirurgia</strong>.
+                Um método focado em ajudar você a voltar a se movimentar <strong className="text-foreground font-semibold">sem depender de remédios ou cirurgias</strong>.
               </p>
             </div>
             <ul className="space-y-3.5">
