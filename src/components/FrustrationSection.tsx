@@ -23,7 +23,7 @@ const FrustrationSection = () => {
       <div className="absolute top-0 left-0 w-full h-1 bg-destructive/30" />
       <div className="container space-y-12 md:space-y-16">
         <AnimateOnScroll className="text-center space-y-4 max-w-2xl mx-auto">
-          <span className="inline-block text-sm font-bold uppercase tracking-[0.2em] text-destructive font-body bg-destructive/10 px-4 py-1.5 rounded-full">Frustração comum</span>
+          <span className="inline-block text-sm font-bold uppercase tracking-[0.2em] text-destructive font-body bg-destructive/10 px-4 py-1.5 rounded-full">Frustrações comuns</span>
           <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-extrabold text-foreground leading-tight">
             Talvez você já tenha tentado várias soluções
           </h2>
