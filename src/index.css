@@ -200,9 +200,9 @@
   .text-gradient-animated {
     background: linear-gradient(
       90deg,
-      hsl(158 50% 30%),
-      hsl(168 45% 36%),
-      hsl(158 50% 30%)
+      hsl(174 42% 48%),
+      hsl(180 38% 42%),
+      hsl(174 42% 48%)
     );
     background-size: 200% auto;
     -webkit-background-clip: text;
