@@ -32,7 +32,7 @@ const Navbar = () => {
     >
       <div className="container flex items-center justify-between">
         <a href="#inicio" className="flex items-center gap-2 hover:scale-105 transition-transform duration-300">
-          <img src={logo} alt="Felipe Augusto" className="h-9 w-auto" />
+          <span className="text-xl font-extrabold tracking-tight text-primary">Joelhosemdor</span>
         </a>
 
         {/* Desktop nav */}
