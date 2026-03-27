@@ -1,4 +1,6 @@
-import { Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { Star, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { WHATSAPP_URL } from "@/components/WhatsAppFab";
 import { useState, useEffect, useCallback } from "react";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 
@@ -180,6 +182,15 @@ const ResultsSection = () => {
                 aria-label={`Ir para slide ${i + 1}`}
               />
             ))}
+          </div>
+
+          <div className="flex justify-center pt-10">
+            <Button variant="cta" size="lg" className="group btn-shine" asChild>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                Quero ter resultado igual a essas pessoas
+                <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1.5" />
+              </a>
+            </Button>
           </div>
         </div>
       </div>

@@ -72,20 +72,12 @@ const AboutSection = () => {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 mt-2">
-              <Button variant="cta" size="lg" className="group btn-shine" asChild>
-                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                  Fale comigo
-                  <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1.5" />
-                </a>
-              </Button>
-              <Button variant="cta" size="lg" className="group btn-shine" asChild>
-                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                  Quero ter resultado igual a essas pessoas
-                  <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1.5" />
-                </a>
-              </Button>
-            </div>
+            <Button variant="cta" size="lg" className="group mt-2 btn-shine" asChild>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                Fale comigo
+                <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1.5" />
+              </a>
+            </Button>
           </AnimateOnScroll>
         </div>
       </div>
