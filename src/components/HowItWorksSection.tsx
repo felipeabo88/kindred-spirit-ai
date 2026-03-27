@@ -16,45 +16,42 @@ const steps = [
 
 const HowItWorksSection = () => {
   return (
-    <section id="como-funciona" className="bg-section-alt py-16 md:py-36 relative overflow-hidden">
+    <section id="como-funciona" className="bg-section-alt py-16 md:py-32 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-primary/[0.03] blur-3xl animate-pulse-soft" />
-      <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-secondary/20 blur-3xl" />
-      <div className="container max-w-4xl space-y-12 md:space-y-20 relative">
-        <AnimateOnScroll className="text-center space-y-5">
-          <span className="inline-block text-sm font-bold uppercase tracking-[0.2em] text-primary font-body bg-primary/10 px-4 py-1.5 rounded-full">Passo a passo</span>
-          <h2 className="text-3xl md:text-4xl lg:text-[3.25rem] font-extrabold text-foreground leading-tight">
+      <div className="container max-w-4xl space-y-12 md:space-y-16 relative">
+        <AnimateOnScroll className="text-center space-y-4">
+          <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-extrabold text-foreground leading-tight uppercase tracking-wide">
             Como funciona a consultoria online?
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Cuide da sua saúde no conforto da sua casa, sem deslocamentos. O processo é simples:
           </p>
         </AnimateOnScroll>
-        <div className="space-y-7 relative">
+        <div className="space-y-5 relative">
           {/* Vertical line */}
           <div className="absolute left-8 md:left-9 top-8 bottom-8 w-0.5 bg-gradient-to-b from-primary/30 via-primary/15 to-transparent hidden md:block" />
           {steps.map(({ num, title, desc, img }, i) => (
-            <AnimateOnScroll key={num} delay={i * 160} animation="animate-slide-up">
-              <div className="group flex items-start gap-4 md:gap-9 rounded-3xl bg-background p-5 md:p-10 shadow-card card-interactive relative border border-border hover:border-primary/20 overflow-hidden">
-                <div className="flex h-12 w-12 md:h-16 md:w-16 flex-shrink-0 items-center justify-center rounded-xl md:rounded-2xl gradient-primary text-cta-foreground font-bold text-base md:text-lg shadow-cta relative z-10 font-body group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-cta-hover transition-all duration-500">
+            <AnimateOnScroll key={num} delay={i * 140} animation="animate-slide-up">
+              <div className="group flex items-start gap-4 md:gap-8 rounded-2xl bg-background p-5 md:p-8 shadow-card card-interactive relative border border-border hover:border-primary/20 overflow-hidden">
+                <div className="flex h-12 w-12 md:h-14 md:w-14 flex-shrink-0 items-center justify-center rounded-xl gradient-primary text-cta-foreground font-bold text-base shadow-cta relative z-10 font-body group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
                   {num}
                 </div>
-                <div className="space-y-2.5 pt-1 flex-1 relative z-10">
-                  <h3 className="text-lg md:text-xl font-bold text-foreground font-heading group-hover:text-primary transition-colors duration-300">{title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{desc}</p>
+                <div className="space-y-2 pt-0.5 flex-1 relative z-10">
+                  <h3 className="text-base md:text-lg font-bold text-foreground font-heading group-hover:text-primary transition-colors duration-300">{title}</h3>
+                  <p className="text-muted-foreground leading-relaxed text-sm md:text-base">{desc}</p>
                 </div>
                 {/* Figurinha ilustrativa */}
-                <div className="hidden md:flex items-center justify-center flex-shrink-0 w-20 h-20 lg:w-24 lg:h-24 relative z-10 group-hover:scale-110 transition-transform duration-500">
-                  <img src={img} alt={title} loading="lazy" width={96} height={96} className="w-full h-full object-contain drop-shadow-md" />
+                <div className="hidden md:flex items-center justify-center flex-shrink-0 w-16 h-16 lg:w-20 lg:h-20 relative z-10 group-hover:scale-110 transition-transform duration-500">
+                  <img src={img} alt={title} loading="lazy" width={80} height={80} className="w-full h-full object-contain drop-shadow-md" />
                 </div>
               </div>
             </AnimateOnScroll>
           ))}
         </div>
         <AnimateOnScroll className="text-center">
-          <div className="rounded-3xl gradient-primary p-7 md:p-14 text-center space-y-6 shadow-elegant relative overflow-hidden group hover:shadow-cta-hover transition-shadow duration-500">
+          <div className="rounded-2xl gradient-primary p-7 md:p-12 text-center space-y-5 shadow-elegant relative overflow-hidden group hover:shadow-cta-hover transition-shadow duration-500">
             <div className="absolute top-0 right-0 w-60 h-60 rounded-full bg-cta-foreground/[0.05] blur-3xl group-hover:w-80 group-hover:h-80 transition-all duration-700" />
-            <div className="absolute bottom-0 left-0 w-40 h-40 rounded-full bg-cta-foreground/[0.03] blur-3xl" />
-            <p className="text-cta-foreground text-lg md:text-xl font-medium leading-relaxed max-w-xl mx-auto relative z-10">
+            <p className="text-cta-foreground text-base md:text-lg font-medium leading-relaxed max-w-xl mx-auto relative z-10">
               Durante todo o processo você terá um profissional dedicado! Disponibilidade via WhatsApp para dúvidas e motivação.
             </p>
             <Button variant="whatsapp" size="xl" className="group/btn relative z-10 btn-shine" asChild>

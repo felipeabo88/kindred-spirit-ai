@@ -13,16 +13,15 @@ const credentials = [
 
 const AboutSection = () => {
   return (
-    <section id="sobre" className="bg-background py-16 md:py-36 relative overflow-hidden">
+    <section id="sobre" className="bg-background py-16 md:py-32 relative overflow-hidden">
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-secondary/30 blur-3xl" />
-      <div className="absolute top-20 right-0 w-[400px] h-[400px] rounded-full bg-primary/[0.03] blur-3xl animate-pulse-soft" />
-      <div className="container max-w-6xl relative">
-        <div className="grid md:grid-cols-[350px_1fr] gap-10 md:gap-16 items-start">
+      <div className="container max-w-5xl relative">
+        <div className="grid md:grid-cols-[320px_1fr] gap-10 md:gap-14 items-start">
           <AnimateOnScroll animation="animate-fade-in-left">
             <div className="relative md:sticky md:top-28 flex flex-col gap-4">
-              <div className="relative w-full max-w-[450px] mx-auto">
-                <div className="absolute -inset-4 rounded-[2rem] bg-primary/8 blur-xl" />
-                <div className="relative overflow-hidden rounded-[2rem] shadow-xl">
+              <div className="relative w-full max-w-[400px] mx-auto">
+                <div className="absolute -inset-3 rounded-[2rem] bg-primary/8 blur-xl" />
+                <div className="relative overflow-hidden rounded-[2rem] shadow-elegant">
                   <img
                     src={aboutPhoto1}
                     alt="Felipe Augusto - Profissional de Educação Física"
@@ -34,19 +33,19 @@ const AboutSection = () => {
             </div>
           </AnimateOnScroll>
 
-          <AnimateOnScroll animation="animate-fade-in-right" className="space-y-8">
+          <AnimateOnScroll animation="animate-fade-in-right" className="space-y-6">
             <span className="inline-block text-sm font-bold uppercase tracking-[0.2em] text-primary font-body bg-primary/10 px-4 py-1.5 rounded-full">
               Sobre
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-[3.25rem] font-extrabold text-foreground leading-tight font-heading">
+            <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-extrabold text-foreground leading-tight font-heading">
               Felipe Augusto
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed font-body">
+            <p className="text-lg text-muted-foreground leading-relaxed font-body">
               Me chamo Felipe Augusto, sou Profissional de Educação Física, faixa preta de judô e especialista em reabilitação e movimento humano.
             </p>
 
             {/* Credentials grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
               {credentials.map(({ icon: Icon, label }) => (
                 <div
                   key={label}
@@ -58,7 +57,7 @@ const AboutSection = () => {
               ))}
             </div>
 
-            <div className="space-y-5 text-base text-muted-foreground leading-[1.85] font-body">
+            <div className="space-y-4 text-base text-muted-foreground leading-[1.85] font-body">
               <p>
                 Sou graduado em Educação Física pela UFRN, com pós-graduação em Fisiologia do Exercício, atualmente estudante de Fisioterapia e certificado internacionalmente em <strong className="text-foreground font-semibold">NeuroKinetic Therapy (NKT)</strong>.
               </p>
@@ -73,7 +72,7 @@ const AboutSection = () => {
               </p>
             </div>
 
-            <Button variant="cta" size="lg" className="group mt-3 btn-shine" asChild>
+            <Button variant="cta" size="lg" className="group mt-2 btn-shine" asChild>
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                 Fale comigo
                 <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1.5" />

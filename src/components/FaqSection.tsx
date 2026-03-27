@@ -50,46 +50,48 @@ const faqs = [
 
 const FaqSection = () => {
   return (
-    <section id="duvidas" className="bg-background py-16 md:py-36 relative overflow-hidden">
+    <section id="duvidas" className="bg-section-alt py-16 md:py-32 relative overflow-hidden">
       <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-primary/[0.03] blur-3xl" />
-      <div className="container max-w-3xl space-y-16">
-        <AnimateOnScroll className="text-center space-y-5">
-          
-          <h2 className="text-3xl md:text-4xl lg:text-[3.25rem] font-extrabold text-foreground leading-tight">
+      <div className="container max-w-3xl space-y-14">
+        <AnimateOnScroll className="text-center space-y-4">
+          <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-extrabold text-foreground leading-tight uppercase tracking-wide">
             Dúvidas frequentes
           </h2>
-          <p className="text-muted-foreground text-lg max-w-xl mx-auto">
+          <p className="text-muted-foreground text-base md:text-lg max-w-xl mx-auto">
             Ainda tem dúvidas sobre como funciona a consultoria?<br />
             Veja algumas respostas para as perguntas mais comuns.
           </p>
         </AnimateOnScroll>
         <AnimateOnScroll delay={100}>
-          <Accordion type="single" collapsible className="space-y-5">
+          <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, i) => (
               <AccordionItem
                 key={i}
                 value={`faq-${i}`}
-                className="rounded-2xl bg-section-alt px-4 md:px-8 border border-border data-[state=open]:shadow-card-hover data-[state=open]:border-primary/20 transition-all duration-500 hover:border-primary/10 hover:-translate-y-0.5 group/faq"
+                className="rounded-2xl bg-background px-4 md:px-7 border border-border data-[state=open]:shadow-card-hover data-[state=open]:border-primary/20 transition-all duration-500 hover:border-primary/10 group/faq"
               >
-                <AccordionTrigger className="text-left text-base md:text-lg font-bold text-foreground hover:no-underline py-7 gap-4">
+                <AccordionTrigger className="text-left text-base md:text-[17px] font-bold text-foreground hover:no-underline py-6 gap-4">
                   <span className="flex items-center gap-3">
                     <HelpCircle className="h-5 w-5 text-primary shrink-0 group-hover/faq:rotate-12 transition-transform duration-300" />
                     {faq.q}
                   </span>
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed pb-7 text-[15px] pl-8">
+                <AccordionContent className="text-muted-foreground leading-relaxed pb-6 text-[15px] pl-8">
                   {faq.a}
                 </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
         </AnimateOnScroll>
-        <AnimateOnScroll delay={200} className="text-center space-y-4">
-          <p className="text-muted-foreground text-lg">Se ainda tiver alguma dúvida, clique no botão abaixo e fale diretamente comigo.</p>
-          <Button variant="cta" size="lg" asChild className="gap-2 btn-shine group">
+        <AnimateOnScroll delay={200} className="text-center space-y-5">
+          <p className="text-muted-foreground text-base md:text-lg">
+            Ainda tem dúvidas?<br />
+            <strong className="text-foreground">Entre em contato para obter mais informações e agendar sua consultoria!</strong>
+          </p>
+          <Button variant="cta" size="xl" asChild className="gap-2 btn-shine group">
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
               <MessageCircle className="h-5 w-5 group-hover:animate-wiggle" />
-              Tire sua dúvida pessoalmente comigo
+              Agendar consultoria agora
             </a>
           </Button>
         </AnimateOnScroll>
