@@ -31,8 +31,10 @@ const Navbar = () => {
       }`}
     >
       <div className="container flex items-center justify-between">
-        <a href="#inicio" className="flex items-center gap-2 hover:scale-105 transition-transform duration-300">
-          <span className="text-xl font-extrabold tracking-tight text-primary">Joelhosemdor</span>
+        <a href="#inicio" className="flex items-center gap-0.5 hover:scale-105 transition-transform duration-300">
+          <span className="text-xl font-extrabold tracking-tight text-foreground">Joelho</span>
+          <span className="text-xl font-extrabold tracking-tight text-primary">Sem</span>
+          <span className="text-xl font-extrabold tracking-tight text-foreground">Dor</span>
         </a>
 
         {/* Desktop nav */}
