@@ -15,10 +15,10 @@
     --popover: 42 25% 97%;
     --popover-foreground: 220 22% 12%;
 
-    --primary: 158 50% 30%;
+    --primary: 174 42% 48%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 158 35% 92%;
-    --primary-glow: 168 45% 36%;
+    --primary-light: 174 30% 93%;
+    --primary-glow: 180 38% 42%;
 
     --secondary: 24 40% 91%;
     --secondary-foreground: 220 22% 12%;
@@ -26,7 +26,7 @@
     --muted: 42 12% 92%;
     --muted-foreground: 220 12% 44%;
 
-    --accent: 158 50% 30%;
+    --accent: 174 42% 48%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 68% 50%;
@@ -34,13 +34,13 @@
 
     --border: 42 18% 86%;
     --input: 42 18% 86%;
-    --ring: 158 50% 30%;
+    --ring: 174 42% 48%;
 
     --radius: 0.75rem;
 
-    --cta: 158 50% 30%;
+    --cta: 174 42% 48%;
     --cta-foreground: 0 0% 100%;
-    --cta-hover: 158 50% 24%;
+    --cta-hover: 174 42% 40%;
 
     --section-alt: 42 22% 94%;
     --section-warm: 24 38% 92%;
@@ -50,16 +50,16 @@
     --cta-warm: 16 55% 38%;
     --cta-warm-end: 24 50% 32%;
 
-    --gradient-primary: linear-gradient(135deg, hsl(158 50% 30%), hsl(168 45% 36%));
-    --gradient-hero: linear-gradient(180deg, hsl(42 25% 97%) 0%, hsl(158 30% 94%) 40%, hsl(42 25% 97%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(174 42% 48%), hsl(180 38% 42%));
+    --gradient-hero: linear-gradient(180deg, hsl(42 25% 97%) 0%, hsl(174 25% 94%) 40%, hsl(42 25% 97%) 100%);
     --gradient-dark: linear-gradient(135deg, hsl(220 28% 10%), hsl(220 32% 16%));
     --gradient-warm: linear-gradient(135deg, hsl(24 40% 91%), hsl(24 38% 87%));
     --gradient-cta-warm: linear-gradient(135deg, hsl(16 55% 38%), hsl(24 50% 32%));
 
     --shadow-card: 0 2px 10px 0 hsl(220 18% 55% / 0.07), 0 6px 20px -6px hsl(220 18% 55% / 0.09);
     --shadow-card-hover: 0 10px 30px 0 hsl(220 18% 55% / 0.13), 0 16px 40px -10px hsl(220 18% 55% / 0.11);
-    --shadow-cta: 0 6px 24px -4px hsl(158 50% 30% / 0.35);
-    --shadow-cta-hover: 0 10px 32px -4px hsl(158 50% 30% / 0.5);
+    --shadow-cta: 0 6px 24px -4px hsl(174 42% 48% / 0.35);
+    --shadow-cta-hover: 0 10px 32px -4px hsl(174 42% 48% / 0.5);
     --shadow-nav: 0 2px 24px 0 hsl(220 18% 55% / 0.1);
     --shadow-elegant: 0 20px 50px -12px hsl(220 28% 10% / 0.15);
 
@@ -200,9 +200,9 @@
   .text-gradient-animated {
     background: linear-gradient(
       90deg,
-      hsl(158 50% 30%),
-      hsl(168 45% 36%),
-      hsl(158 50% 30%)
+      hsl(174 42% 48%),
+      hsl(180 38% 42%),
+      hsl(174 42% 48%)
     );
     background-size: 200% auto;
     -webkit-background-clip: text;

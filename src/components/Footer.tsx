@@ -1,5 +1,6 @@
 import { MessageCircle, Instagram, Mail, Phone, Heart } from "lucide-react";
 import { WHATSAPP_URL } from "@/components/WhatsAppFab";
+import logo from "@/assets/logo.jpg";
 
 const Footer = () => {
   return (
@@ -7,9 +8,7 @@ const Footer = () => {
       <div className="container">
         <div className="grid md:grid-cols-3 gap-8 items-center">
           <div className="space-y-2 text-center md:text-left">
-            <p className="font-heading text-xl font-bold text-section-dark-foreground">
-              Joelho<span className="text-primary">Sem Dor</span>
-            </p>
+            <img src={logo} alt="Felipe Augusto" className="h-10 w-auto mx-auto md:mx-0 brightness-0 invert opacity-90" />
             <p className="text-section-dark-foreground/50 text-sm leading-relaxed">
               Consultoria online especializada em dor no joelho.
             </p>
