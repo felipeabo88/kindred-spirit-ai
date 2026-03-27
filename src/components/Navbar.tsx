@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { WHATSAPP_URL } from "@/components/WhatsAppFab";
-import logo from "@/assets/logo.jpg";
 
 const links = [
   { label: "Início", href: "#inicio" },
@@ -31,12 +30,12 @@ const Navbar = () => {
       }`}
     >
       <div className="container flex items-center justify-between">
-        <a href="#inicio" className="flex flex-col items-start leading-[1.1] hover:scale-105 transition-transform duration-300">
-          <span className="text-[1.1rem] font-extrabold tracking-tight">
+        <a href="#inicio" className="flex flex-col items-start leading-[1.02] hover:scale-105 transition-transform duration-300">
+          <span className="font-heading text-[2rem] font-extrabold tracking-[-0.02em]">
             <span className="text-foreground">Joelho</span>
-            <span className="text-primary italic">Sem</span>
+            <span className="text-primary">Sem</span>
           </span>
-          <span className="text-[1.1rem] font-extrabold tracking-tight text-foreground">Dor</span>
+          <span className="font-heading text-[2rem] font-extrabold tracking-[-0.02em] text-foreground">Dor</span>
         </a>
 
         {/* Desktop nav */}
