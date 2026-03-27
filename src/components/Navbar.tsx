@@ -5,9 +5,9 @@ import { WHATSAPP_URL } from "@/components/WhatsAppFab";
 
 const links = [
   { label: "Início", href: "#inicio" },
-  { label: "Método", href: "#metodo" },
   { label: "Como funciona", href: "#como-funciona" },
   { label: "Depoimentos", href: "#depoimentos" },
+  { label: "Sobre", href: "#sobre" },
   { label: "Dúvidas", href: "#duvidas" },
 ];
 
