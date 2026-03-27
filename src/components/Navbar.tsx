@@ -30,7 +30,7 @@ const Navbar = () => {
       }`}
     >
       <div className="container flex items-center justify-between">
-        <a href="#inicio" className="flex flex-col items-start leading-[1.02] hover:scale-105 transition-transform duration-300">
+        <a href="#inicio" className="flex flex-col items-center leading-[1.02] hover:scale-105 transition-transform duration-300">
           <span className="font-heading text-base font-extrabold tracking-[-0.02em]">
             <span className="text-foreground">Joelho</span>
             <span className="text-primary">Sem</span>
