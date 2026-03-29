@@ -11,10 +11,10 @@ const Footer = () => {
           <div className="space-y-5 text-center md:text-left">
             <p className="text-section-dark-foreground font-bold text-sm uppercase tracking-wider">Contato</p>
             <a
-              href="tel:+5527999281649"
+              href="tel:+5584991261061"
               className="block text-section-dark-foreground text-2xl md:text-3xl font-bold hover:text-primary transition-colors"
             >
-              (27) 99928-1649
+              (84) 99126-1061
             </a>
             <div className="space-y-3">
               <p className="text-section-dark-foreground/70 text-sm">Também no WhatsApp:</p>
