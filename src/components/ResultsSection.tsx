@@ -116,7 +116,7 @@ const ResultsSection = () => {
           </p>
         </AnimateOnScroll>
 
-        {/* Carousel */}
+        {/* Testimonials Carousel */}
         <div
           className="relative"
           onMouseEnter={() => setIsAutoPlaying(false)}
@@ -191,57 +191,74 @@ const ResultsSection = () => {
               />
             ))}
           </div>
+        </div>
 
-          {/* WhatsApp Screenshots Carousel */}
-          <div className="relative mt-8">
-            <button
-              onClick={() => setWaCurrent((c) => (c <= 0 ? waMaxIndex : c - 1))}
-              className="absolute -left-3 md:-left-5 top-1/2 -translate-y-1/2 z-10 h-10 w-10 rounded-full bg-background border border-border shadow-card flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/30 hover:shadow-card-hover transition-all duration-300"
-              aria-label="Anterior"
-            >
-              <ChevronLeft className="h-5 w-5" />
-            </button>
-            <button
-              onClick={() => setWaCurrent((c) => (c >= waMaxIndex ? 0 : c + 1))}
-              className="absolute -right-3 md:-right-5 top-1/2 -translate-y-1/2 z-10 h-10 w-10 rounded-full bg-background border border-border shadow-card flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/30 hover:shadow-card-hover transition-all duration-300"
-              aria-label="Próximo"
-            >
-              <ChevronRight className="h-5 w-5" />
-            </button>
+        {/* WhatsApp Screenshots Carousel */}
+        <div className="relative">
+          <button
+            onClick={() => setWaCurrent((c) => (c <= 0 ? waMaxIndex : c - 1))}
+            className="absolute -left-3 md:-left-5 top-1/2 -translate-y-1/2 z-10 h-10 w-10 rounded-full bg-background border border-border shadow-card flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/30 hover:shadow-card-hover transition-all duration-300"
+            aria-label="Anterior"
+          >
+            <ChevronLeft className="h-5 w-5" />
+          </button>
+          <button
+            onClick={() => setWaCurrent((c) => (c >= waMaxIndex ? 0 : c + 1))}
+            className="absolute -right-3 md:-right-5 top-1/2 -translate-y-1/2 z-10 h-10 w-10 rounded-full bg-background border border-border shadow-card flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/30 hover:shadow-card-hover transition-all duration-300"
+            aria-label="Próximo"
+          >
+            <ChevronRight className="h-5 w-5" />
+          </button>
 
-            <div className="overflow-hidden mx-6 md:mx-8">
-              <div
-                className="flex transition-transform duration-500 ease-out"
-                style={{ transform: `translateX(-${waCurrent * (100 / itemsPerView)}%)` }}
-              >
-                {whatsappScreenshots.map((src, i) => (
-                  <div
-                    key={i}
-                    className="flex-shrink-0 px-3"
-                    style={{ width: `${100 / itemsPerView}%` }}
-                  >
-                    <div className="rounded-2xl overflow-hidden border border-border shadow-card hover:shadow-card-hover hover:border-primary/20 transition-all duration-300 h-[320px]">
-                      <img
-                        src={src}
-                        alt={`Depoimento WhatsApp ${i + 1}`}
-                        className="w-full h-full object-cover object-top"
-                        loading="lazy"
-                      />
-                    </div>
+          <div className="overflow-hidden mx-6 md:mx-8">
+            <div
+              className="flex transition-transform duration-500 ease-out"
+              style={{ transform: `translateX(-${waCurrent * (100 / itemsPerView)}%)` }}
+            >
+              {whatsappScreenshots.map((src, i) => (
+                <div
+                  key={i}
+                  className="flex-shrink-0 px-3"
+                  style={{ width: `${100 / itemsPerView}%` }}
+                >
+                  <div className="rounded-2xl overflow-hidden border border-border shadow-card hover:shadow-card-hover hover:border-primary/20 transition-all duration-300 h-[320px]">
+                    <img
+                      src={src}
+                      alt={`Depoimento WhatsApp ${i + 1}`}
+                      className="w-full h-full object-cover object-top"
+                      loading="lazy"
+                    />
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
 
-          <div className="flex justify-center pt-10">
-            <Button variant="cta" size="lg" className="group btn-shine" asChild>
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                Quero ter resultado igual a essas pessoas
-                <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1.5" />
-              </a>
-            </Button>
+          {/* Dots */}
+          <div className="flex justify-center gap-2 pt-6">
+            {Array.from({ length: waMaxIndex + 1 }).map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setWaCurrent(i)}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  i === waCurrent
+                    ? "w-8 bg-primary"
+                    : "w-2 bg-primary/20 hover:bg-primary/40"
+                }`}
+                aria-label={`Ir para foto ${i + 1}`}
+              />
+            ))}
           </div>
+        </div>
+
+        {/* CTA */}
+        <div className="flex justify-center pt-4">
+          <Button variant="cta" size="lg" className="group btn-shine" asChild>
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+              Quero ter resultado igual a essas pessoas
+              <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1.5" />
+            </a>
+          </Button>
         </div>
       </div>
     </section>
