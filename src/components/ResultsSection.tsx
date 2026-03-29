@@ -12,11 +12,10 @@ import client5 from "@/assets/clients/client-5.png";
 import client6 from "@/assets/clients/client-6.png";
 
 import whatsapp1 from "@/assets/whatsapp/whatsapp-1.jpeg";
-import whatsapp2 from "@/assets/whatsapp/whatsapp-2.jpeg";
 import whatsapp3 from "@/assets/whatsapp/whatsapp-3.jpeg";
 import whatsapp4 from "@/assets/whatsapp/whatsapp-4.jpeg";
 
-const whatsappScreenshots = [whatsapp1, whatsapp2, whatsapp3, whatsapp4];
+const whatsappScreenshots = [whatsapp1, whatsapp3, whatsapp4];
 
 const testimonials = [
   {
