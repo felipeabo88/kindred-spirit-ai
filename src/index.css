@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@600;700;800&display=swap');
 
+/* Performance: reduce layout thrashing for animated elements */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -212,9 +214,34 @@
   }
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
+/* Smooth scrolling - only when no preference for reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Reduce animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* GPU-accelerated animations */
+.animate-fade-in,
+.animate-fade-in-left,
+.animate-fade-in-right,
+.animate-scale-in,
+.animate-slide-up {
+  will-change: transform, opacity;
+}
+
+/* Optimize images */
+img {
+  content-visibility: auto;
 }
 
 /* Custom scrollbar */
