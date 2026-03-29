@@ -12,11 +12,10 @@ import client5 from "@/assets/clients/client-5.png";
 import client6 from "@/assets/clients/client-6.png";
 
 import whatsapp1 from "@/assets/whatsapp/whatsapp-1.jpeg";
-import whatsapp2 from "@/assets/whatsapp/whatsapp-2.jpeg";
 import whatsapp3 from "@/assets/whatsapp/whatsapp-3.jpeg";
 import whatsapp4 from "@/assets/whatsapp/whatsapp-4.jpeg";
 
-const whatsappScreenshots = [whatsapp1, whatsapp2, whatsapp3, whatsapp4];
+const whatsappScreenshots = [whatsapp1, whatsapp3, whatsapp4];
 
 const testimonials = [
   {
@@ -69,6 +68,8 @@ const ResultsSection = () => {
   const [current, setCurrent] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [itemsPerView, setItemsPerView] = useState(1);
+  const [waCurrent, setWaCurrent] = useState(0);
+  const waMaxIndex = Math.max(0, whatsappScreenshots.length - itemsPerView);
 
   useEffect(() => {
     const update = () => {
@@ -191,25 +192,45 @@ const ResultsSection = () => {
             ))}
           </div>
 
-          {/* WhatsApp Screenshots - same carousel style as testimonials above */}
-          <div className="overflow-hidden mx-6 md:mx-8 mt-8">
-            <div className="flex gap-4">
-              {whatsappScreenshots.map((src, i) => (
-                <div
-                  key={i}
-                  className="flex-shrink-0 px-1"
-                  style={{ width: `${100 / itemsPerView}%` }}
-                >
-                  <div className="rounded-2xl overflow-hidden border border-border shadow-card hover:shadow-card-hover hover:border-primary/20 transition-all duration-300 h-[320px]">
-                    <img
-                      src={src}
-                      alt={`Depoimento WhatsApp ${i + 1}`}
-                      className="w-full h-full object-cover object-top"
-                      loading="lazy"
-                    />
+          {/* WhatsApp Screenshots Carousel */}
+          <div className="relative mt-8">
+            <button
+              onClick={() => setWaCurrent((c) => (c <= 0 ? waMaxIndex : c - 1))}
+              className="absolute -left-3 md:-left-5 top-1/2 -translate-y-1/2 z-10 h-10 w-10 rounded-full bg-background border border-border shadow-card flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/30 hover:shadow-card-hover transition-all duration-300"
+              aria-label="Anterior"
+            >
+              <ChevronLeft className="h-5 w-5" />
+            </button>
+            <button
+              onClick={() => setWaCurrent((c) => (c >= waMaxIndex ? 0 : c + 1))}
+              className="absolute -right-3 md:-right-5 top-1/2 -translate-y-1/2 z-10 h-10 w-10 rounded-full bg-background border border-border shadow-card flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/30 hover:shadow-card-hover transition-all duration-300"
+              aria-label="Próximo"
+            >
+              <ChevronRight className="h-5 w-5" />
+            </button>
+
+            <div className="overflow-hidden mx-6 md:mx-8">
+              <div
+                className="flex transition-transform duration-500 ease-out"
+                style={{ transform: `translateX(-${waCurrent * (100 / itemsPerView)}%)` }}
+              >
+                {whatsappScreenshots.map((src, i) => (
+                  <div
+                    key={i}
+                    className="flex-shrink-0 px-3"
+                    style={{ width: `${100 / itemsPerView}%` }}
+                  >
+                    <div className="rounded-2xl overflow-hidden border border-border shadow-card hover:shadow-card-hover hover:border-primary/20 transition-all duration-300 h-[320px]">
+                      <img
+                        src={src}
+                        alt={`Depoimento WhatsApp ${i + 1}`}
+                        className="w-full h-full object-cover object-top"
+                        loading="lazy"
+                      />
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
 
