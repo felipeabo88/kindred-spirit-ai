@@ -68,7 +68,7 @@ const AboutSection = () => {
                 Hoje ajudo pessoas com dores e limitações de movimento, especialmente no joelho, a recuperarem <strong className="text-foreground font-semibold">mobilidade e confiança no movimento</strong>.
               </p>
               <p>
-                Através da consultoria online, acompanho alunos de diversas regiões do Brasil e também de países como <strong className="text-foreground font-semibold">Estados Unidos, Alemanha, Holanda, Japão e Argentina</strong>.
+                Através da mentoria online, acompanho alunos de diversas regiões do Brasil e também de países como <strong className="text-foreground font-semibold">Estados Unidos, Alemanha, Holanda, Japão e Argentina</strong>.
               </p>
             </div>
 

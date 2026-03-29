@@ -20,7 +20,7 @@ const whatsappScreenshots = [whatsapp1, whatsapp3, whatsapp4];
 const testimonials = [
   {
     name: "Carlos M.",
-    text: "Tinha dor no joelho há 3 anos e já tinha tentado de tudo. Com a consultoria online, em 2 meses voltei a correr sem dor. Recomendo demais!",
+    text: "Tinha dor no joelho há 3 anos e já tinha tentado de tudo. Com a mentoria online, em 2 meses voltei a correr sem dor. Recomendo demais!",
     photo: client1,
     stars: 5,
   },
@@ -32,7 +32,7 @@ const testimonials = [
   },
   {
     name: "Roberto S.",
-    text: "A consultoria me deu confiança para voltar a treinar. O método é muito claro e os exercícios são progressivos. Resultado real!",
+    text: "A mentoria me deu confiança para voltar a treinar. O método é muito claro e os exercícios são progressivos. Resultado real!",
     photo: client3,
     stars: 5,
   },
