@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode, memo } from "react";
 
 interface AnimateOnScrollProps {
   children: ReactNode;
@@ -8,7 +8,7 @@ interface AnimateOnScrollProps {
   threshold?: number;
 }
 
-const AnimateOnScroll = ({
+const AnimateOnScroll = memo(({
   children,
   className = "",
   animation = "animate-fade-in",
@@ -19,6 +19,9 @@ const AnimateOnScroll = ({
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -29,7 +32,7 @@ const AnimateOnScroll = ({
       { threshold, rootMargin: "0px 0px -40px 0px" }
     );
 
-    if (ref.current) observer.observe(ref.current);
+    observer.observe(el);
     return () => observer.disconnect();
   }, [threshold]);
 
@@ -37,7 +40,10 @@ const AnimateOnScroll = ({
     <div
       ref={ref}
       className={`${className} transition-opacity ${isVisible ? animation : "opacity-0 translate-y-4"}`}
-      style={{
+      style={isVisible ? {
+        animationDelay: `${delay}ms`,
+        animationFillMode: "forwards",
+      } : {
         animationDelay: `${delay}ms`,
         animationFillMode: "forwards",
       }}
@@ -45,6 +51,8 @@ const AnimateOnScroll = ({
       {children}
     </div>
   );
-};
+});
+
+AnimateOnScroll.displayName = "AnimateOnScroll";
 
 export default AnimateOnScroll;

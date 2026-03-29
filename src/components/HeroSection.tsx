@@ -60,6 +60,9 @@ const HeroSection = () => {
               alt="Profissional avaliando movimento do joelho de um aluno"
               className="relative rounded-3xl shadow-elegant w-full object-cover aspect-[4/3] z-10 hover:scale-[1.02] transition-transform duration-700"
               loading="eager"
+              width={600}
+              height={450}
+              fetchPriority="high"
             />
           </AnimateOnScroll>
         </div>

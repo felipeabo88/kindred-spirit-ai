@@ -1,29 +1,33 @@
+import { lazy, Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import AboutSection from "@/components/AboutSection";
-import HowItWorksSection from "@/components/HowItWorksSection";
-import ProblemSection from "@/components/ProblemSection";
-import FrustrationSection from "@/components/FrustrationSection";
-import BeliefSection from "@/components/BeliefSection";
-import CtaSection from "@/components/CtaSection";
-import ResultsSection from "@/components/ResultsSection";
-import FaqSection from "@/components/FaqSection";
-import Footer from "@/components/Footer";
 import WhatsAppFab from "@/components/WhatsAppFab";
+
+// Lazy load below-the-fold sections
+const ProblemSection = lazy(() => import("@/components/ProblemSection"));
+const FrustrationSection = lazy(() => import("@/components/FrustrationSection"));
+const HowItWorksSection = lazy(() => import("@/components/HowItWorksSection"));
+const ResultsSection = lazy(() => import("@/components/ResultsSection"));
+const AboutSection = lazy(() => import("@/components/AboutSection"));
+const CtaSection = lazy(() => import("@/components/CtaSection"));
+const FaqSection = lazy(() => import("@/components/FaqSection"));
+const Footer = lazy(() => import("@/components/Footer"));
 
 const Index = () => {
   return (
     <>
       <Navbar />
       <HeroSection />
-      <ProblemSection />
-      <FrustrationSection />
-      <HowItWorksSection />
-      <ResultsSection />
-      <AboutSection />
-      <CtaSection />
-      <FaqSection />
-      <Footer />
+      <Suspense fallback={null}>
+        <ProblemSection />
+        <FrustrationSection />
+        <HowItWorksSection />
+        <ResultsSection />
+        <AboutSection />
+        <CtaSection />
+        <FaqSection />
+        <Footer />
+      </Suspense>
       <WhatsAppFab />
     </>
   );
