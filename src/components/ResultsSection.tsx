@@ -105,7 +105,7 @@ const ResultsSection = () => {
         {/* Header */}
         <AnimateOnScroll className="text-center space-y-4 max-w-3xl mx-auto">
           <span className="inline-block text-sm font-bold uppercase tracking-[0.2em] text-primary font-body bg-primary/10 px-4 py-1.5 rounded-full">
-            Depoimentos reais
+            Depoimentos
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-[3.25rem] font-extrabold text-foreground leading-tight">
             Pessoas que recuperaram o{" "}
