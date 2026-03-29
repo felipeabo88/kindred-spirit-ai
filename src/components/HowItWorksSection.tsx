@@ -97,7 +97,7 @@ const HowItWorksSection = () => {
           <div className="rounded-2xl gradient-primary p-7 md:p-12 text-center space-y-5 shadow-elegant relative overflow-hidden group hover:shadow-cta-hover transition-shadow duration-500">
             <div className="absolute top-0 right-0 w-60 h-60 rounded-full bg-cta-foreground/[0.05] blur-3xl group-hover:w-80 group-hover:h-80 transition-all duration-700" />
             <p className="text-cta-foreground text-base md:text-lg font-medium leading-relaxed max-w-xl mx-auto relative z-10">
-              Durante todo o processo você terá um profissional dedicado! Disponibilidade via WhatsApp para dúvidas e motivação.
+              Durante todo o processo você terá um profissional dedicado!
             </p>
             <Button variant="whatsapp" size="xl" className="group/btn relative z-10 btn-shine" asChild>
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
