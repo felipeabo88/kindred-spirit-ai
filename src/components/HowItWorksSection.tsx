@@ -52,7 +52,7 @@ const HowItWorksSection = () => {
             Como funciona a minha mentoria online
           </h2>
           <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Cuide da sua saúde no conforto da sua casa, sem deslocamentos. O processo é simples:
+            Cuide da sua saúde em qualquer lugar de acordo com a sua rotina. O processo é simples:
           </p>
         </AnimateOnScroll>
 
