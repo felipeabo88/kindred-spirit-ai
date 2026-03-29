@@ -199,6 +199,28 @@ const ResultsSection = () => {
               </a>
             </Button>
           </div>
+
+          {/* WhatsApp Screenshots */}
+          <AnimateOnScroll className="pt-14">
+            <p className="text-center text-muted-foreground text-sm font-medium uppercase tracking-[0.15em] mb-6">
+              Mensagens reais de pacientes
+            </p>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+              {whatsappScreenshots.map((src, i) => (
+                <div
+                  key={i}
+                  className="rounded-2xl overflow-hidden border border-border shadow-card hover:shadow-card-hover hover:border-primary/20 transition-all duration-300"
+                >
+                  <img
+                    src={src}
+                    alt={`Depoimento WhatsApp ${i + 1}`}
+                    className="w-full h-auto object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+          </AnimateOnScroll>
         </div>
       </div>
     </section>
