@@ -68,6 +68,8 @@ const ResultsSection = () => {
   const [current, setCurrent] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [itemsPerView, setItemsPerView] = useState(1);
+  const [waCurrent, setWaCurrent] = useState(0);
+  const waMaxIndex = Math.max(0, whatsappScreenshots.length - itemsPerView);
 
   useEffect(() => {
     const update = () => {
