@@ -86,12 +86,12 @@ const FaqSection = () => {
         <AnimateOnScroll delay={200} className="text-center space-y-5">
           <p className="text-muted-foreground text-base md:text-lg">
             Ainda tem dúvidas?<br />
-            <strong className="text-foreground">Entre em contato para obter mais informações e agendar sua mentoria!</strong>
+            <strong className="text-foreground">Entre em contato para obter mais informações e agendar a sua reunião.</strong>
           </p>
           <Button variant="cta" size="xl" asChild className="gap-2 btn-shine group">
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
               <MessageCircle className="h-5 w-5 group-hover:animate-wiggle" />
-              Agendar mentoria agora
+              Agendar minha reunião agora
             </a>
           </Button>
         </AnimateOnScroll>
