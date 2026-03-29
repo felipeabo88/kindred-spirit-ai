@@ -11,6 +11,13 @@ import client4 from "@/assets/clients/client-4.png";
 import client5 from "@/assets/clients/client-5.png";
 import client6 from "@/assets/clients/client-6.png";
 
+import whatsapp1 from "@/assets/whatsapp/whatsapp-1.jpeg";
+import whatsapp2 from "@/assets/whatsapp/whatsapp-2.jpeg";
+import whatsapp3 from "@/assets/whatsapp/whatsapp-3.jpeg";
+import whatsapp4 from "@/assets/whatsapp/whatsapp-4.jpeg";
+
+const whatsappScreenshots = [whatsapp1, whatsapp2, whatsapp3, whatsapp4];
+
 const testimonials = [
   {
     name: "Carlos M.",
@@ -192,6 +199,28 @@ const ResultsSection = () => {
               </a>
             </Button>
           </div>
+
+          {/* WhatsApp Screenshots */}
+          <AnimateOnScroll className="pt-14">
+            <p className="text-center text-muted-foreground text-sm font-medium uppercase tracking-[0.15em] mb-6">
+              Mensagens reais de pacientes
+            </p>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+              {whatsappScreenshots.map((src, i) => (
+                <div
+                  key={i}
+                  className="rounded-2xl overflow-hidden border border-border shadow-card hover:shadow-card-hover hover:border-primary/20 transition-all duration-300"
+                >
+                  <img
+                    src={src}
+                    alt={`Depoimento WhatsApp ${i + 1}`}
+                    className="w-full h-auto object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+          </AnimateOnScroll>
         </div>
       </div>
     </section>
