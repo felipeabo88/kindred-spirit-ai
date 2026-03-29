@@ -14,14 +14,14 @@ const CtaSection = () => {
             A sua jornada de transformação pode começar agora mesmo!
           </h2>
           <p className="text-base md:text-lg text-cta-foreground/70 mt-5 leading-relaxed max-w-xl mx-auto font-medium">
-            Agendar uma consultoria online é o primeiro passo para recuperar seu movimento e viver sem dor.
+            Agendar uma mentoria online é o primeiro passo para recuperar seu movimento e viver sem dor.
           </p>
         </AnimateOnScroll>
         <AnimateOnScroll delay={200}>
           <Button variant="whatsapp" size="xl" className="group text-base btn-shine shadow-xl" asChild>
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
               <MessageCircle className="h-5 w-5 group-hover:animate-wiggle" />
-              Agendar consultoria agora
+              Agendar mentoria agora
             </a>
           </Button>
         </AnimateOnScroll>

@@ -12,7 +12,7 @@ import { MessageCircle, HelpCircle } from "lucide-react";
 const faqs = [
   {
     q: "Funciona mesmo sendo online?",
-    a: "Sim. A consultoria online permite avaliar seu movimento por vídeo, identificar padrões que podem estar contribuindo para a dor e prescrever exercícios personalizados para o seu caso. O acompanhamento é feito de forma próxima e individual, com ajustes conforme sua evolução.",
+    a: "Sim. A mentoria online permite avaliar seu movimento por vídeo, identificar padrões que podem estar contribuindo para a dor e prescrever exercícios personalizados para o seu caso. O acompanhamento é feito de forma próxima e individual, com ajustes conforme sua evolução.",
   },
   {
     q: "Posso começar mesmo sentindo dor?",
@@ -28,23 +28,23 @@ const faqs = [
   },
   {
     q: "E se eu já tentei outros tratamentos e não resolveu?",
-    a: "Isso é mais comum do que parece. Muitas vezes a dor persiste porque a causa real do problema não foi identificada. O foco da consultoria é justamente avaliar o movimento para entender o que está contribuindo para a dor e trabalhar na correção disso.",
+    a: "Isso é mais comum do que parece. Muitas vezes a dor persiste porque a causa real do problema não foi identificada. O foco da mentoria é justamente avaliar o movimento para entender o que está contribuindo para a dor e trabalhar na correção disso.",
   },
   {
     q: "Como funciona o acompanhamento?",
-    a: "Após iniciar a consultoria, você passa por uma série de avaliações para entender melhor seu movimento e identificar possíveis causas das dores ou limitações.\n\nCom base nessas avaliações, você recebe um plano de exercícios personalizado por meio de um aplicativo, totalmente adaptado ao seu caso.\n\nO acompanhamento é contínuo, com ajustes conforme sua evolução e suporte direto para esclarecer dúvidas ao longo do processo.",
+    a: "Após iniciar a mentoria, você passa por uma série de avaliações para entender melhor seu movimento e identificar possíveis causas das dores ou limitações.\n\nCom base nessas avaliações, você recebe um plano de exercícios personalizado por meio de um aplicativo, totalmente adaptado ao seu caso.\n\nO acompanhamento é contínuo, com ajustes conforme sua evolução e suporte direto para esclarecer dúvidas ao longo do processo.",
   },
   {
     q: "Esse método serve para o meu caso?",
     a: "Cada pessoa tem uma história e um nível de dor diferente. Por isso o processo começa com uma avaliação do movimento para entender o seu caso específico e definir os exercícios mais adequados para você.",
   },
   {
-    q: "A consultoria é apenas para quem tem dor no joelho?",
-    a: "Não. Embora muitas pessoas procurem a consultoria por causa de dores no joelho, também acompanho alunos que desejam outros objetivos, como emagrecimento, ganho de massa muscular, melhora da performance ou condicionamento físico.",
+     q: "A mentoria é apenas para quem tem dor no joelho?",
+     a: "Não. Embora muitas pessoas procurem a mentoria por causa de dores no joelho, também acompanho alunos que desejam outros objetivos, como emagrecimento, ganho de massa muscular, melhora da performance ou condicionamento físico.",
   },
   {
     q: "Depois que eu melhorar da dor, posso treinar para outros objetivos?",
-    a: "Sim. O objetivo da consultoria é justamente ajudar você a recuperar o movimento e criar uma base segura para evoluir no treinamento. Depois que a dor deixa de ser um problema, é possível direcionar os treinos para objetivos como performance, estética ou condicionamento físico.",
+    a: "Sim. O objetivo da mentoria é justamente ajudar você a recuperar o movimento e criar uma base segura para evoluir no treinamento. Depois que a dor deixa de ser um problema, é possível direcionar os treinos para objetivos como performance, estética ou condicionamento físico.",
   },
 ];
 
@@ -58,7 +58,7 @@ const FaqSection = () => {
             Dúvidas frequentes
           </h2>
           <p className="text-muted-foreground text-base md:text-lg max-w-xl mx-auto">
-            Ainda tem dúvidas sobre como funciona a consultoria?<br />
+            Ainda tem dúvidas sobre como funciona a mentoria?<br />
             Veja algumas respostas para as perguntas mais comuns.
           </p>
         </AnimateOnScroll>
@@ -86,12 +86,12 @@ const FaqSection = () => {
         <AnimateOnScroll delay={200} className="text-center space-y-5">
           <p className="text-muted-foreground text-base md:text-lg">
             Ainda tem dúvidas?<br />
-            <strong className="text-foreground">Entre em contato para obter mais informações e agendar sua consultoria!</strong>
+            <strong className="text-foreground">Entre em contato para obter mais informações e agendar sua mentoria!</strong>
           </p>
           <Button variant="cta" size="xl" asChild className="gap-2 btn-shine group">
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
               <MessageCircle className="h-5 w-5 group-hover:animate-wiggle" />
-              Agendar consultoria agora
+              Agendar mentoria agora
             </a>
           </Button>
         </AnimateOnScroll>

@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="space-y-2 text-center md:text-left">
             <img src={logo} alt="Felipe Augusto" className="h-10 w-auto mx-auto md:mx-0 brightness-0 invert opacity-90" />
             <p className="text-section-dark-foreground/50 text-sm leading-relaxed">
-              Consultoria online especializada em dor no joelho.
+              Mentoria online especializada em dor no joelho.
             </p>
           </div>
           <div className="text-center space-y-2">
