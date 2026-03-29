@@ -221,6 +221,7 @@ const ResultsSection = () => {
               </a>
             </Button>
           </div>
+        </div>
       </div>
     </section>
   );
