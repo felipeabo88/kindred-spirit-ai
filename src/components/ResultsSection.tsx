@@ -1,7 +1,7 @@
 import { Star, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { WHATSAPP_URL } from "@/components/WhatsAppFab";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 import client1 from "@/assets/clients/client-1.png";
@@ -73,11 +73,14 @@ const ResultsSection = () => {
 
   useEffect(() => {
     const update = () => {
-      setItemsPerView(window.innerWidth >= 1024 ? 3 : window.innerWidth >= 768 ? 2 : 1);
+      const w = window.innerWidth;
+      setItemsPerView(w >= 1024 ? 3 : w >= 768 ? 2 : 1);
     };
     update();
-    window.addEventListener("resize", update);
-    return () => window.removeEventListener("resize", update);
+    let timeout: ReturnType<typeof setTimeout>;
+    const debounced = () => { clearTimeout(timeout); timeout = setTimeout(update, 150); };
+    window.addEventListener("resize", debounced);
+    return () => { window.removeEventListener("resize", debounced); clearTimeout(timeout); };
   }, []);
 
   const maxIndex = Math.max(0, testimonials.length - itemsPerView);
