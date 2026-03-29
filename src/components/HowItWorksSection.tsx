@@ -102,7 +102,7 @@ const HowItWorksSection = () => {
             <Button variant="whatsapp" size="xl" className="group/btn relative z-10 btn-shine" asChild>
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="h-5 w-5 group-hover/btn:animate-wiggle" />
-                Agendar consultoria agora
+                Quero saber mais
               </a>
             </Button>
           </div>
