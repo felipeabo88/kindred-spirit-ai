@@ -50,7 +50,7 @@ const faqs = [
 
 const FaqSection = () => {
   return (
-    <section id="duvidas" <section id="duvidas" className="bg-section-alt py-12 md:py-20 relative overflow-hidden">>
+    <section id="duvidas" className="bg-section-alt py-12 md:py-20 relative overflow-hidden">
       <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-primary/[0.03] blur-3xl" />
       <div className="container max-w-3xl space-y-14">
         <AnimateOnScroll className="text-center space-y-4">

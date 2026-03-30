@@ -17,7 +17,7 @@ const symptoms = [
 
 const ProblemSection = () => {
   return (
-    <section <section className="bg-background py-12 md:py-20 relative overflow-hidden">>
+    <section className="bg-background py-12 md:py-20 relative overflow-hidden">
       <div className="absolute top-10 left-0 w-80 h-80 rounded-full bg-destructive/[0.03] blur-3xl" />
       <div className="container space-y-14">
         <AnimateOnScroll className="text-center max-w-2xl mx-auto space-y-4">
