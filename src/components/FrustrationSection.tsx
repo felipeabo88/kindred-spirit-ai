@@ -19,7 +19,7 @@ const frustrations = [
 
 const FrustrationSection = () => {
   return (
-    <section className="bg-section-alt py-16 md:py-32 relative overflow-hidden">
+    <section className="bg-section-alt py-12 md:py-20 relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-1 bg-destructive/30" />
       <div className="container space-y-12 md:space-y-16">
         <AnimateOnScroll className="text-center space-y-4 max-w-2xl mx-auto">

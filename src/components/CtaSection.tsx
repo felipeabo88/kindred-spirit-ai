@@ -5,7 +5,7 @@ import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 const CtaSection = () => {
   return (
-    <section className="gradient-cta-warm py-20 md:py-32 relative overflow-hidden">
+    <section className="gradient-cta-warm py-14 md:py-20 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-cta-foreground/[0.06] blur-3xl animate-pulse-soft" />
       <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-cta-foreground/[0.04] blur-3xl" />
       <div className="container max-w-3xl text-center space-y-8 relative">

@@ -100,7 +100,7 @@ const ResultsSection = () => {
   }, [isAutoPlaying, next]);
 
   return (
-    <section id="depoimentos" className="bg-section-alt py-16 md:py-36 relative overflow-hidden">
+    <section id="depoimentos" className="bg-section-alt py-12 md:py-20 relative overflow-hidden">
       <div className="absolute top-0 left-0 w-96 h-96 rounded-full bg-primary/[0.03] blur-3xl" />
       <div className="absolute bottom-0 right-0 w-72 h-72 rounded-full bg-primary/[0.04] blur-3xl" />
 

@@ -44,7 +44,7 @@ const steps = [
 
 const HowItWorksSection = () => {
   return (
-    <section id="como-funciona" className="bg-section-alt py-16 md:py-32 relative overflow-hidden">
+    <section id="como-funciona" className="bg-section-alt py-12 md:py-20 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-primary/[0.03] blur-3xl animate-pulse-soft" />
       <div className="container max-w-4xl space-y-12 md:space-y-16 relative">
         <AnimateOnScroll className="text-center space-y-4">
