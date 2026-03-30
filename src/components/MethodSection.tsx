@@ -12,7 +12,7 @@ const symptoms = [
 
 const MethodSection = () => {
   return (
-    <section id="metodo" className="bg-section-alt py-24 md:py-36 relative overflow-hidden">
+    <section id="metodo" <section id="metodo" className="bg-section-alt py-12 md:py-20 relative overflow-hidden">>
       <div className="absolute top-0 left-0 w-full h-1.5 gradient-primary" />
       <div className="absolute top-20 right-0 w-96 h-96 rounded-full bg-primary/[0.03] blur-3xl animate-pulse-soft" />
       <div className="absolute bottom-20 left-0 w-72 h-72 rounded-full bg-secondary/20 blur-3xl" />

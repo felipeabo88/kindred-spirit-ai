@@ -16,7 +16,7 @@ const truths = [
 
 const BeliefSection = () => {
   return (
-    <section className="bg-background py-24 md:py-36 relative overflow-hidden">
+    <section <section className="bg-background py-12 md:py-20 relative overflow-hidden">>
       <div className="absolute top-0 left-0 w-80 h-80 rounded-full bg-primary/[0.03] blur-3xl" />
       <div className="container max-w-4xl space-y-16">
         <AnimateOnScroll className="text-center space-y-5 max-w-3xl mx-auto">
