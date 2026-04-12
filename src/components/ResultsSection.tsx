@@ -224,7 +224,7 @@ const ResultsSection = () => {
                   className="flex-shrink-0 px-3"
                   style={{ width: `${100 / itemsPerView}%` }}
                 >
-                  <div className="rounded-2xl overflow-hidden border border-border shadow-card hover:shadow-card-hover hover:border-primary/20 transition-all duration-300 h-[320px]">
+                  <div className="rounded-2xl overflow-hidden border border-border shadow-card hover:shadow-card-hover hover:border-primary/20 transition-all duration-300 h-[280px] sm:h-[320px]">
                     <img
                       src={src}
                       alt={`Depoimento WhatsApp ${i + 1}`}

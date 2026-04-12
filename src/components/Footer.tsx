@@ -40,10 +40,10 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-end gap-4 text-center md:text-right">
             <p className="text-section-dark-foreground font-bold text-sm uppercase tracking-wider">Me acompanhe no Instagram</p>
             <a
-              href="https://instagram.com"
+              href="https://instagram.com/felipe_augusto_personal"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Instagram"
+              aria-label="Instagram de Felipe Augusto"
               className="flex h-16 w-16 items-center justify-center rounded-xl border-2 border-primary/60 text-primary hover:bg-primary hover:text-cta-foreground transition-all duration-300 hover:scale-110"
             >
               <Instagram className="h-8 w-8" />
