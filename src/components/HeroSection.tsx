@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Video, ArrowRight, Sparkles, ScanSearch, Dumbbell, MessageCircle, type LucideIcon } from "lucide-react";
+import { ArrowRight, ScanSearch, Dumbbell, MessageCircle, type LucideIcon } from "lucide-react";
 import heroImg from "@/assets/hero-knee.jpg";
 import { WHATSAPP_URL } from "@/components/WhatsAppFab";
 import AnimateOnScroll from "@/components/AnimateOnScroll";

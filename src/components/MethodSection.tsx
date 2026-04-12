@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { TrendingDown, Footprints, AlertTriangle, Activity, Ban, XCircle, ArrowRight } from "lucide-react";
+import { TrendingDown, Footprints, AlertTriangle, Activity, ArrowRight } from "lucide-react";
 import { WHATSAPP_URL } from "@/components/WhatsAppFab";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 
